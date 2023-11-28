@@ -60,7 +60,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/icons/phantom-camera.svg',
     editLink: {
-      pattern: 'https://github.com/ramokz/phantom-camera/edit/documentation/documentation/docs/:path',
+      pattern: 'https://github.com/ramokz/phantom-camera-docs/edit/main/docs/:path',
       text: 'Suggest changes to this page'
     },
     
