@@ -4,7 +4,7 @@
 
 Determines the positional logic for a given `PCam`.
 
-The different modes has different functionalities and purposes, so choosing the correct mode depends on what each `PCam` is meant to do. 
+The different modes have different functionalities and purposes, so choosing the correct one depends on what each `PCam` is meant to do. 
 
 ## Core Modes
 
