@@ -45,7 +45,7 @@ const propertyNameID = computed(() => {
       align-items: center;
       padding: 6px 12px 6px 12px;
       border-radius: 12px 12px 0 0;
-      opacity: 0.8;
+      opacity: 0.6;
       border: 2px solid transparent;
       margin-bottom: -2px;
       &:hover {
@@ -56,7 +56,7 @@ const propertyNameID = computed(() => {
     &:checked + label {
       opacity: 1;
       background: var(--vp-c-bg-alt);
-      box-shadow: 0px 0px 10px var(--vp-c-bg) inset;
+      box-shadow: 0px 0px 20px -5px var(--vp-c-brand-1);
       border: 2px solid var(--vp-c-gray-3);
       z-index: -10;
     }
