@@ -20,6 +20,7 @@ export default defineConfig({
       ['meta', {name: 'twitter:site', content: '@marcusskov'}],
       ['meta', {name: 'twitter:image', content: '/meta-image.png'}],
   ],
+  cleanUrls: true,
   appearance: 'force-dark',
   transformHead({ assets }) {
     const fontFile = assets.find(file => /Nunito\.\w+\.ttf/)
