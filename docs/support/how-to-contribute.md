@@ -24,6 +24,7 @@ If a bug report or feature proposal already exists and isn't in the current mile
 ### Minor Changes
 **Examples**
 - Minor code changes that only affect specific area(s)
+- Bug fixes
 - Typos
 
 Feel free to submit a PR with any minor changes **without** raising a ticket. Even small things helps a lot!
