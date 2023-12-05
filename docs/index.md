@@ -33,3 +33,43 @@ features:
   - title: And that's not all
     details: Rotate a camera to always point towards a target, preview the camera from the viewfinder and more!
 ---
+
+<div class="vp-doc container">
+
+## Feature Overview
+
+<video controls>
+<source src="/assets/videos/feature-overview.mp4">
+</video>
+</div>
+
+
+<style scoped>
+    .container {
+        margin: auto;
+        width: 100%;
+        max-width: 1280px;
+        padding: 0 24px;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .vp-doc .header-anchor::before {
+        content: '';
+    }
+    
+    @media (min-width: 640px) {
+        .container {
+            padding: 0 48px;
+        }
+    }
+    
+    @media (min-width: 960px) {
+        .container {
+            width: 100%;
+            padding: 0 64px;
+        }
+    }
+</style>

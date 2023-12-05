@@ -98,9 +98,6 @@ export default defineConfig({
         text: 'Core Nodes',
         items: [
           {
-            text: 'Overview', link: '/core-nodes/overview'
-          },
-          {
             text: 'PhantomCamera2D', link: '/core-nodes/phantom-camera-2d'
           },
           {
