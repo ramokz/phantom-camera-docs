@@ -44,7 +44,7 @@ features:
 </div>
 
 
-<style scoped>
+<style module>
     .container {
         margin: auto;
         width: 100%;
@@ -71,5 +71,9 @@ features:
             width: 100%;
             padding: 0 64px;
         }
+    }
+
+    video {
+        margin: auto;
     }
 </style>
