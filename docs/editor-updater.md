@@ -11,9 +11,9 @@ It will download the latest release as a zip, unzip, remove the existing addon a
 
 ### Viewfinder Button Prompt
 Appears in the viewfinder panel if a new update is available.
-![Editor Updater Viewfinder](./assets/editor-updater/editor-updater-viewfinder.png)
+![Editor Updater Viewfinder](/assets/editor-updater/editor-updater-viewfinder.png)
 
 ### Dialogue Prompt
 When starting the editor or when pressing the `Update is Available`.<br>
 Pressing `Update`will initiate the download process. Upon completion, the editor will need to be reloaded in order to finalize the upgrade - this will be prompted from a new dialogue once it's ready.
-![Editor Updater Dialogue](./assets/editor-updater/editor-updater-dialog.png)
+![Editor Updater Dialogue](/assets/editor-updater/editor-updater-dialog.png)
