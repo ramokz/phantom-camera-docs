@@ -167,6 +167,9 @@ export default defineConfig({
         text: 'Timeline Animation', link: "/timeline-animation",
       },
       {
+        text: 'Editor Updater', link: "/editor-updater",
+      },
+      {
         text: 'Support',
         items: [
           {

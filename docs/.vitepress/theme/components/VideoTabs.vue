@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {withBase} from "vitepress";
 import {store} from "../../../store.ts";
 import Tabs2D3D from "./Tabs2D3D.vue";

@@ -33,7 +33,8 @@ Determines how the `Camera2D` should tween to this `PCam2D` upon becoming active
 </div>
 
 ## Secondary Properties
-<!--@include: ./parts/phantom-camera-properties.md-->
+<!-- @include: ./parts/phantom-camera-properties.md -->
+
 
 <Property propertyName="Zoom" propertyType="Vector2" propertyDefault="Vector2(1,1)">
 <template v-slot:propertyDescription>
@@ -71,14 +72,85 @@ pcam.get_zoom()
 </template>
 </Property>
 
-[//]: # (<Property propertyName="Frame Preview" propertyType="bool" propertyDefault="true">)
 
-[//]: # (<template v-slot:propertyDescription>)
+<Property propertyName="Frame Preview" propertyType="bool" propertyDefault="true">
+<template v-slot:propertyDescription>
 
-[//]: # ()
-[//]: # (Enables a preview of what the `PCam2D` will see in the scene. It works identically to how a `Camera2D` shows which area will be visible during runtime. Likewise, this too will be affected by the `Zoom` property and the `Viewport Width` and `Viewport Height` defined in the `Project Settings`.)
+Enables a preview of what the `PCam2D` will see in the scene. It works identically to how a `Camera2D` shows which area will be visible during runtime. Likewise, this too will be affected by the `Zoom` property and the `Viewport Width` and `Viewport Height` defined in the `Project Settings`.
 
-[//]: # ()
-[//]: # (</template>)
+</template>
+</Property>
 
-[//]: # (</Property>)
+
+<Property propertyName="Draw Limit" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Shows the `Camera2D`'s built-in limit border. The `Camera2D` can move around anywhere within it.
+
+</template>
+</Property>
+
+
+<Property propertyName="Limit - Left" propertyType="int" propertyDefault="-10000000">
+<template v-slot:propertyDescription>
+
+Defines the left side of the `Camera2D` limit. The camera will not be able to move past this point.
+
+</template>
+</Property>
+
+
+<Property propertyName="Limit - Top" propertyType="int" propertyDefault="-10000000">
+<template v-slot:propertyDescription>
+
+Defines the top side of the `Camera2D` limit. The camera will not be able to move past this point.
+
+</template>
+</Property>
+
+
+<Property propertyName="Limit - Right" propertyType="int" propertyDefault="10000000">
+<template v-slot:propertyDescription>
+
+Defines the right side of the `Camera2D` limit. The camera will not be able to move past this point.
+
+</template>
+</Property>
+
+
+<Property propertyName="Limit - Bottom" propertyType="int" propertyDefault="10000000">
+<template v-slot:propertyDescription>
+
+Defines the bottom side of the `Camera2D` limit. The camera will not be able to move past this point.
+
+</template>
+</Property>
+
+
+<Property propertyName="Smoothed" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Dampens the `Camera2D` when it reaches the limit. The smoothness amount is based on the value of `Damping` property of the `Follow Mode`. 
+
+</template>
+</Property>
+
+
+<Property propertyName="TileMap Limit Target" propertyType="TileMap" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+Allows for setting a `TileMap` as the limit sizer instead of the `Left`, `Top`, `Right` and `Left` properties.
+
+</template>
+</Property>
+
+
+<Property propertyName="TileMap Limit Margin" propertyType="Vector4" propertyDefault="Vector4(0,0,0,0)">
+<template v-slot:propertyDescription>
+
+Applies an offset to the TileMap Limit.
+
+The values goes from `Left`, `Top`, `Right` and `Bottom`.
+
+</template>
+</Property>
