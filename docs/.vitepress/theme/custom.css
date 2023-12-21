@@ -113,3 +113,7 @@ body {
         width: 100%;
     }
 }
+
+.vp-doc > #feature-overview {
+    text-align: center;
+}

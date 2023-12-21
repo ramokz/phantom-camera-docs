@@ -41,6 +41,7 @@ features:
 <video controls>
 <source src="/assets/videos/feature-overview.mp4">
 </video>
+
 </div>
 
 
@@ -50,10 +51,6 @@ features:
         width: 100%;
         max-width: 1280px;
         padding: 0 24px;
-    }
-    
-    h2 {
-        text-align: center;
     }
     
     .vp-doc .header-anchor::before {
