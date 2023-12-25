@@ -44,7 +44,7 @@ Applies a zoom level to the `PCam2D`, which effectively overrides the `Zoom` pro
 </template>
 <template v-slot:setMethod>
 
-`Vector2` set_zoom()
+`void` set_zoom(`Vector2` value)
 
 </template>
 <template v-slot:setExample>
@@ -77,6 +77,45 @@ pcam.get_zoom()
 <template v-slot:propertyDescription>
 
 Enables a preview of what the `PCam2D` will see in the scene. It works identically to how a `Camera2D` shows which area will be visible during runtime. Likewise, this too will be affected by the `Zoom` property and the `Viewport Width` and `Viewport Height` defined in the `Project Settings`.
+
+</template>
+</Property>
+
+
+<Property propertyName="Pixel Perfect" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+To support pixel perfect camera movement, this can be toggled to snap Camera2D to always snap to whole pixels.
+
+This should be particularly useful in pixel art projects, where assets should always be aligned to the monitor's pixels to avoid unintended stretching.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_pixel_perfect(`bool` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_pixel_perfect(true)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`bool` get_pixel_perfect()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_pixel_perfect()
+```
+:::
 
 </template>
 </Property>
@@ -145,7 +184,7 @@ Allows for setting a `TileMap` as the limit sizer instead of the `Left`, `Top`, 
 </Property>
 
 
-<Property propertyName="TileMap Limit Margin" propertyType="Vector4" propertyDefault="Vector4(0,0,0,0)">
+<Property propertyName="TileMap Limit Margin" propertyType="Vector4i" propertyDefault="Vector4(0,0,0,0)">
 <template v-slot:propertyDescription>
 
 Applies an offset to the TileMap Limit.
