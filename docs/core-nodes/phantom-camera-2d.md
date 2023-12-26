@@ -193,3 +193,7 @@ The values goes from `Left`, `Top`, `Right` and `Bottom`.
 
 </template>
 </Property>
+
+
+## Signals
+<!-- @include: ./parts/phantom-camera-signals.md -->

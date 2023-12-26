@@ -31,7 +31,7 @@ const id = computed<string>(() => {
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${id}`">&#8203;</a>
     </h4>
     
-    <div class="method">
+    <div class="container-code-block">
       <slot name="method">
         <p class="missing-text">MISSING METHOD</p>
       </slot>
@@ -42,20 +42,3 @@ const id = computed<string>(() => {
     </div>
   </div>
 </template>
-
-
-<style scoped>
-.method {
-  --font-size: 16px;
-  font-size: var(--font-size);
-  color: var(--vp-c-white);
-  font-weight: 700;
-  &:deep(p) {
-    font-family: var(--vp-font-family-mono);
-  }
-}
-
-.method :deep(code) {
-  font-size: var(--font-size);
-}
-</style>

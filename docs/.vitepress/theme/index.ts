@@ -12,6 +12,9 @@ import PropertyCore from "./components/properties/PropertyCore.vue";
 import Property from "./components/properties/Property.vue";
 import Property2D3D from "./components/properties/Property2D3D.vue";
 import Property2D3DOnly from "./components/properties/Property2D3DOnly.vue";
+
+import Signal from "./components/signals/Signal.vue";
+
 import VideoTabs from "./components/VideoTabs.vue";
 
 
@@ -29,5 +32,6 @@ export default {
     app.component('Property2D3D', Property2D3D)
     app.component('Property2D3DOnly', Property2D3DOnly)
     app.component('VideoTabs', VideoTabs)
+    app.component('Signal', Signal)
   }
 } satisfies Theme

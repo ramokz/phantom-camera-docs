@@ -225,3 +225,6 @@ pcam.get_camera_fov()
 
 </template>
 </Property>
+
+
+<!-- @include: ./parts/phantom-camera-signals.md -->

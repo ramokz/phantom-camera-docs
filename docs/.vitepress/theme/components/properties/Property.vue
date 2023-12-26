@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {computed, useSlots} from "vue";
-import { store } from '../../store'
 
 const props = defineProps({
   propertyName: {
@@ -57,7 +56,7 @@ const hasGetterContent = computed(() => {
 </script>
 
 <template>
-  <div class="property-method-container">
+  <div class="property-method-signal-container">
     <h3 :id="id" tabindex="-1">
       {{ propertyName }}
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${propertyName}`">&#8203;</a>
@@ -80,7 +79,7 @@ const hasGetterContent = computed(() => {
     <p class="property-usage-note" v-if="hasSetterContent && hasGetterContent"><b><i>Note:</i></b> During runtime, properties should be modified and read via  their setters & getters respectively.</p>
     <hr v-if="hasGetterContent || hasSetterContent" />
     
-    <MethodComponent method-type="Setter" :methodName="propertyName" v-if="hasSetterContent">
+    <MethodComponent class="method-container" method-type="Setter" :methodName="propertyName" v-if="hasSetterContent">
       <template #method>
         <slot :name="setMethod">
           <p class="missing-text">Missing setMethod</p>
@@ -93,7 +92,7 @@ const hasGetterContent = computed(() => {
       </template>
     </MethodComponent>
     
-    <MethodComponent method-type="Getter" :methodName="propertyName" v-if="hasGetterContent">
+    <MethodComponent class="method-container" method-type="Getter" :methodName="propertyName" v-if="hasGetterContent">
       <template #method>
         <slot :name="getMethod">
           <p class="missing-text">Missing getMethod</p>
@@ -117,36 +116,31 @@ const hasGetterContent = computed(() => {
 </template>
 
 <style scoped>
-.property-overview {
-  @media(min-width: 600px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  & > h4 {
-    & >code {
-      color: var(--vp-code-color);
+  .property-overview {
+    @media(min-width: 600px) {
+      display: flex;
+      flex-wrap: wrap;
     }
-    &:last-child {
-      margin: 10px 0 0 0;
-      @media(min-width: 600px) {
-        margin: 0 0 0 20px;
+    & > h4 {
+      & >code {
+        color: var(--vp-code-color);
+      }
+      &:last-child {
+        margin: 10px 0 0 0;
+        @media(min-width: 600px) {
+          margin: 0 0 0 20px;
+        }
       }
     }
   }
-}
-
-.property-usage-note {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-top: 0;
-}
-
-.property-method-container {
-  padding: 30px 30px 20px 30px;
-  margin-bottom: 36px;
-  border-radius: 20px;
-  border: 2px solid var(--vp-c-gray-3);
-  background: var(--vp-c-bg-alt);
-  box-shadow: 0px 0px 40px var(--vp-c-bg) inset;
-}
+  
+  .property-usage-note {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 0;
+  }
+  
+  .method-container {
+    margin-top: 30px;
+  }
 </style>
