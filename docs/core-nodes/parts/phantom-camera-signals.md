@@ -1,5 +1,3 @@
-## Signals
-
 <Signal signalName="Became Active">
 <template v-slot:signalCode>
 
