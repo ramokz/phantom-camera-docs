@@ -190,7 +190,7 @@ pcam.get_camera_v_offset()
 </template>
 </Property>
 
-<Property propertyName="FOV" propertyType="float" propertyDefault="0">
+<Property propertyName="FOV" propertyType="float" propertyDefault="75">
 <template v-slot:propertyDescription>
 
 Overrides the FOV (Field of View) property of the `Camera3D` once becoming active.
@@ -227,4 +227,5 @@ pcam.get_camera_fov()
 </Property>
 
 
+## Signals
 <!-- @include: ./parts/phantom-camera-signals.md -->
