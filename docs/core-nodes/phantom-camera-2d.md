@@ -166,13 +166,6 @@ Defines the bottom side of the `Camera2D` limit. The camera will not be able to 
 </Property>
 
 
-<Property propertyName="Smoothed" propertyType="bool" propertyDefault="false">
-<template v-slot:propertyDescription>
-
-Dampens the `Camera2D` when it reaches the limit. The smoothness amount is based on the value of `Damping` property of the `Follow Mode`. 
-
-</template>
-</Property>
 
 
 <Property propertyName="TileMap Limit Target" propertyType="TileMap" propertyDefault="null">
@@ -180,16 +173,121 @@ Dampens the `Camera2D` when it reaches the limit. The smoothness amount is based
 
 Allows for setting a `TileMap` as the limit sizer instead of the `Left`, `Top`, `Right` and `Left` properties.
 
+The `Limit` will update after the `TileSet` of the `TileMap` has changed. <br>
+Note: Will need to leave the `TileMap` editor panel before the changes go into effect.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_limit_tile_map_node(`TileMap` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit_tile_map_node(tile_map_node)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`TileMap` get_limit_tile_map_node()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit_tile_map_node()
+```
+:::
+
 </template>
 </Property>
 
 
-<Property propertyName="TileMap Limit Margin" propertyType="Vector4i" propertyDefault="Vector4(0,0,0,0)">
+
+
+<Property propertyName="Shape2D Limit Target" propertyType="CollisionShape2D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Applies an offset to the TileMap Limit.
+Allows for setting a `Shape2D` within a `CollisionShape2D` as the limit sizer instead of the `Left`, `Top`, `Right` and `Left` properties.
+
+The Limit will update in realtime as the `Shape2D` changes its size.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_limit_collision_shape_2d_node(`CollisionShape2D` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit_collision_shape_2d_node(collision_shape_2d_node)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`CollisionShape2D` get_limit_collision_shape_2d_node()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit_collision_shape_2d_node()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="Limit Margin" propertyType="Vector4i" propertyDefault="Vector4i(0,0,0,0)">
+<template v-slot:propertyDescription>
+
+Applies an offset to the `TileMap Limit` or `Shape2D Limit`.
 
 The values goes from `Left`, `Top`, `Right` and `Bottom`.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_limit_margin(`Vector4i` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit_margin(Vector4i(200, 200, 200, 200))
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`TileMap` get_limit_margin()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit_margin()
+```
+:::
 
 </template>
 </Property>
