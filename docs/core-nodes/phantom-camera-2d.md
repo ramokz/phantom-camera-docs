@@ -36,6 +36,8 @@ Determines how the `Camera2D` should tween to this `PCam2D` upon becoming active
 <!-- @include: ./parts/phantom-camera-properties.md -->
 
 
+
+
 <Property propertyName="Zoom" propertyType="Vector2" propertyDefault="Vector2(1,1)">
 <template v-slot:propertyDescription>
 
@@ -73,6 +75,8 @@ pcam.get_zoom()
 </Property>
 
 
+
+
 <Property propertyName="Frame Preview" propertyType="bool" propertyDefault="true">
 <template v-slot:propertyDescription>
 
@@ -80,6 +84,8 @@ Enables a preview of what the `PCam2D` will see in the scene. It works identical
 
 </template>
 </Property>
+
+
 
 
 <Property propertyName="Pixel Perfect" propertyType="bool" propertyDefault="false">
@@ -121,6 +127,8 @@ pcam.get_pixel_perfect()
 </Property>
 
 
+
+
 <Property propertyName="Draw Limit" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
@@ -130,13 +138,49 @@ Shows the `Camera2D`'s built-in limit border. The `Camera2D` can move around any
 </Property>
 
 
+
+
 <Property propertyName="Limit - Left" propertyType="int" propertyDefault="-10000000">
 <template v-slot:propertyDescription>
 
 Defines the left side of the `Camera2D` limit. The camera will not be able to move past this point.
 
 </template>
+
+<template v-slot:setMethod>
+
+`void` set_limit(`int` side, `int` value)
+
+</template>
+
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit(SIDE_LEFT, 200)
+```
+:::
+
+</template>
+
+<template v-slot:getMethod>
+
+`int` get_limit(`int` side)
+
+</template>
+
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit(SIDE_LEFT)
+```
+:::
+
+</template>
 </Property>
+
+
 
 
 <Property propertyName="Limit - Top" propertyType="int" propertyDefault="-10000000">
@@ -145,7 +189,42 @@ Defines the left side of the `Camera2D` limit. The camera will not be able to mo
 Defines the top side of the `Camera2D` limit. The camera will not be able to move past this point.
 
 </template>
+
+<template v-slot:setMethod>
+
+`void` set_limit(`int` side, `int` value)
+
+</template>
+
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit(SIDE_TOP, 200)
+```
+:::
+
+</template>
+
+<template v-slot:getMethod>
+
+`int` get_limit(`int` side)
+
+</template>
+
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit(SIDE_TOP)
+```
+:::
+
+</template>
+
 </Property>
+
+
 
 
 <Property propertyName="Limit - Right" propertyType="int" propertyDefault="10000000">
@@ -154,7 +233,41 @@ Defines the top side of the `Camera2D` limit. The camera will not be able to mov
 Defines the right side of the `Camera2D` limit. The camera will not be able to move past this point.
 
 </template>
+
+<template v-slot:setMethod>
+
+`void` set_limit(`int` side, `int` value)
+
+</template>
+
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit(SIDE_RIGHT, 200)
+```
+:::
+
+</template>
+
+<template v-slot:getMethod>
+
+`int` get_limit(`int` side)
+
+</template>
+
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit(SIDE_RIGHT)
+```
+:::
+
+</template>
 </Property>
+
+
 
 
 <Property propertyName="Limit - Bottom" propertyType="int" propertyDefault="10000000">
@@ -163,6 +276,39 @@ Defines the right side of the `Camera2D` limit. The camera will not be able to m
 Defines the bottom side of the `Camera2D` limit. The camera will not be able to move past this point.
 
 </template>
+
+<template v-slot:setMethod>
+
+`void` set_limit(`int` side, `int` value)
+
+</template>
+
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit(SIDE_BOTTOM, 200)
+```
+:::
+
+</template>
+
+<template v-slot:getMethod>
+
+`int` get_limit(`int` side)
+
+</template>
+
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit(SIDE_BOTTOM)
+```
+:::
+
+</template>
+
 </Property>
 
 
