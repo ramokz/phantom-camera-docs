@@ -78,6 +78,12 @@ body {
     margin: 30px 0 20px 0;
 }
 
+/* Changes the weight for the header text on the homepage */
+.name {
+    font-weight: 900 !important;
+}
+
+
 .property-core-group {
     display: flex;
     flex-wrap: wrap;
