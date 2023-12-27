@@ -439,5 +439,43 @@ pcam.get_limit_margin()
 </Property>
 
 
+<Property propertyName="Limit Smoothed" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Dampens the `Camera2D` when it reaches the limit. The smoothness amount is based on the value of `Damping` property of the `Follow Mode`. 
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_limit_smoothing_enabled(`bool` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_limit_smoothing_enabled(true)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`bool` get_limit_smoothing_enabled()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_limit_smoothing_enabled()
+```
+:::
+
+</template>
+</Property>
+
+
 ## Signals
 <!-- @include: ./parts/phantom-camera-signals.md -->
