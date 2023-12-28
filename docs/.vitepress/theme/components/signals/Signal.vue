@@ -28,7 +28,7 @@ const id = computed<String>(() =>{
     </h3>
 
     <div class="container-code-block">
-      <h4>Signal Name</h4>
+      <h4>Signal</h4>
       <slot name="signalCode">
         <p class="missing-text"> MISSING SIGNAL </p>
       </slot>
