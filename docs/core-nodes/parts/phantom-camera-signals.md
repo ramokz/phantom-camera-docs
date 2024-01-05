@@ -43,6 +43,21 @@ Emitted when the `Camera` starts to tween to the `PCam`.
 </Signal>
 
 
+<Signal signalName="Is Tweening">
+<template v-slot:signalCode>
+
+is_tweening
+
+</template>
+
+<template v-slot:signalDescription>
+
+Emitted when the `Camera` is being tweened.
+
+</template>
+</Signal>
+
+
 <Signal signalName="Tween Interrupted">
 <template v-slot:signalCode>
 
