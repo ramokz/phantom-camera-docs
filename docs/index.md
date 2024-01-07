@@ -42,7 +42,7 @@ features:
 <source src="/assets/videos/feature-overview.mp4">
 </video>
 
-## Tutorials
+## Showcases
 
 <div class="external-videos-grid">
 <div class="video-embed">
