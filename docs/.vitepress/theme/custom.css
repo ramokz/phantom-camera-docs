@@ -30,9 +30,22 @@
     --vp-button-brand-hover-bg: var(--vp-c-white);
     --vp-button-brand-hover-text: var(--vp-c-bg);
     
-    /*--vp-home*/
+    /* Homepage Name Gradient */
     --vp-home-hero-name-background: linear-gradient(180deg, rgba(58,185,154,1) 0%, rgba(27,158,127,1) 100%);;
     --vp-home-hero-image-background-image: linear-gradient(180deg, rgba(58,185,154,1) 0%, rgba(27,158,127,1) 100%);
+
+    /* Hero Image */
+    .image-bg {
+        display: none;
+    }
+    .VPImage {
+        max-width: 300px;
+        max-height: 400px;
+        @media(min-width: 640px) {
+            max-width: 400px;
+            max-height: 800px;
+        }
+    }
     
     /* Cards */
     --vp-c-bg-soft: var(--vp-c-bg-alt);
@@ -123,6 +136,41 @@ body {
 .vp-doc > #feature-overview {
     text-align: center;
 }
+
+
+.home-container {
+    video {
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .external-videos-grid {
+        display: flex;
+        gap: 20px;
+        margin: auto;
+        flex-wrap: wrap;
+        max-width: 1152px;
+
+        .video-embed {
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            gap: 6px;
+            
+            iframe {
+                max-width: 100%;
+            }
+
+            h4{
+                text-align: center;
+            }
+        }
+    }
+}
+
 
 .property-method-signal-container {
     padding: 30px 30px 20px 30px;

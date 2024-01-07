@@ -7,7 +7,7 @@ hero:
   text: "Documentation"
   tagline: 👻🎥 A dynamic 2D & 3D camera addon for Godot 4
   image:
-    src: ./assets/icons/phantom-camera-hero.svg
+    src: ./assets/icons/phantom-camera-icon.png
     alt: Phantom Camera icon
   actions:
     - theme: brand
@@ -34,7 +34,7 @@ features:
     details: Rotate a camera to always point towards a target, preview the camera from the viewfinder and more!
 ---
 
-<div class="vp-doc container">
+<div class="home-container vp-doc">
 
 ## Feature Overview
 
@@ -42,17 +42,19 @@ features:
 <source src="/assets/videos/feature-overview.mp4">
 </video>
 
+## Tutorials
+
+<div class="external-videos-grid">
+<div class="video-embed">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/85K0e2Y0U3Q?si=UV3TKO2QmcAXYx3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h4>(Spanish)</h4>
+</div>
+</div>
+
 </div>
 
 
-<style module>
-    .container {
-        margin: auto;
-        width: 100%;
-        max-width: 1280px;
-        padding: 0 24px;
-    }
-    
+<style module> 
     .vp-doc .header-anchor::before {
         content: '';
     }
@@ -68,9 +70,5 @@ features:
             width: 100%;
             padding: 0 64px;
         }
-    }
-
-    video {
-        margin: auto;
     }
 </style>
