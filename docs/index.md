@@ -46,6 +46,10 @@ features:
 
 <div class="external-videos-grid">
 <div class="video-embed">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1Gtvr-Jk-iE?si=Z3aI3vNofj8tRNAp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h4>(English)</h4>
+</div>
+<div class="video-embed">
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/85K0e2Y0U3Q?si=UV3TKO2QmcAXYx3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <h4>(Spanish)</h4>
 </div>
