@@ -230,7 +230,7 @@ pcam.get_max_auto_zoom()
 </template>
 </Property>
 
-<Property propertyName="Zoom Margin (2D)" propertyType="Vector4" propertyDefault="Vector4(0,0,0,0)">
+<Property propertyName="Auto Zoom Margin (2D)" propertyType="Vector4" propertyDefault="Vector4(0,0,0,0)">
 <template v-slot:propertyDescription>
 
 Determines how close to the edges the targets are allowed to be. <br>
