@@ -41,7 +41,7 @@ Determines how the `Camera2D` should tween to this `PCam2D` upon becoming active
 <Property propertyName="Zoom" propertyType="Vector2" propertyDefault="Vector2(1,1)">
 <template v-slot:propertyDescription>
 
-Applies a zoom level to the `PCam2D`, which effectively overrides the `Zoom` property of the `Camera2D` node.
+Applies a zoom amount to the `PCam2D`, which will override the `Zoom` property of the `Camera2D` node.
 
 </template>
 <template v-slot:setMethod>

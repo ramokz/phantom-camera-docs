@@ -15,7 +15,7 @@ Allows for multiple targets to be looked at. The `Pcam3D` will create a `AABB` t
 <Property propertyName="Look At Group" propertyType="Array[Node3D]" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Defines the group of targets targets that the camera should looking at. It will be looking at the centre of all the assigned targets.
+Defines the group of targets that the camera should be looking at. It will be looking at the centre of all the assigned targets.
 
 </template>
 <template v-slot:setMethod>

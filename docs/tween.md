@@ -2,7 +2,7 @@
 
 # Tween
 
-Defines how `PCams` transitions between one another. Changing the tween values for a given `PCam` determines how transitioning _to that_ instance will look like.
+Defines how `PCams` transition between one another. Changing the tween values for a given `PCam` determines how transitioning _to that_ instance will look like.
 
 This is a resource type that can be either used for one `PCam` or reused across multiple.
 

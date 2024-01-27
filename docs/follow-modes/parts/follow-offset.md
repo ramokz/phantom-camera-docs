@@ -2,7 +2,7 @@
 
 <template v-slot:propertyDescription>
 
-Offsets the targeted position.
+Offsets the follow target's position.
 
 </template>
 <template v-slot:setMethod2D>

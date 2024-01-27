@@ -151,7 +151,7 @@ pcam.get_auto_zoom()
 <Property propertyName="Min Auto Zoom (2D)" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Sets the minimum zoom level, in other words how far away the `Camera2D` can be from scene.
+Sets the minimum zoom amount, in other words how far away the `Camera2D` can be from scene.
 
 This only works when `Auto Zoom` is enabled.
 
@@ -192,7 +192,7 @@ pcam.get_min_auto_zoom()
 <Property propertyName="Max Auto Zoom (2D)" propertyType="float" propertyDefault="5">
 <template v-slot:propertyDescription>
 
-Sets the maximum zoom level, in other words how close the `Camera` can move towards the scene.
+Sets the maximum zoom amount, in other words how close the `Camera2D` can move towards the scene.
 
 This only works when `Auto Zoom` is enabled.
 
@@ -243,14 +243,14 @@ The `Vector4` parameter order goes: Left - Top - Right - Bottom.
 </template>
 <template v-slot:setMethod>
 
-`void` set_zoom_margin (`Vector4` zoom_margin)
+`void` set_zoom_auto_margin (`Vector4` zoom_margin)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_zoom_margin(Vector4(10, 30, 10, 40))
+pcam.set_zoom_auto_margin(Vector4(10, 30, 10, 40))
 ```
 :::
 
@@ -258,14 +258,14 @@ pcam.set_zoom_margin(Vector4(10, 30, 10, 40))
 
 <template v-slot:getMethod>
 
-`float` get_zoom_margin()
+`float` get_zoom_auto_margin()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_zoom_margin()
+pcam.get_zoom_auto_margin()
 ```
 :::
 
@@ -322,7 +322,7 @@ pcam.get_auto_follow_distance()
 
 Sets the minimum distance between the `Camera` and centre of `AABB`.
 
-**Note:** This distance will only ever be reached when all the targets' positions are in the exact same `Vector3` coordinate, which will very unlikely happen, so adjust the value here accordingly.
+**Note:** This distance will only ever be reached when all the targets are in the exact same `Vector3` coordinate, which will very unlikely happen, so adjust the value here accordingly.
 
 <Property2D3DOnly :is2D="false" altProp="Max Auto Zoom" altPropLink="./group#max-auto-zoom-(2d)"/>
 

@@ -52,7 +52,7 @@ pcam.get_follow_target_node()
 <Property propertyName="Follow Target Offset" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
 <template v-slot:propertyDescription>
 
-Offsets the targeted position.
+Offsets the follow target's position.
 
 </template>
 
