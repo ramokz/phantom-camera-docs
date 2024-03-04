@@ -87,6 +87,8 @@ pcam.get_camera_3D_resource()
 
 Overrides the Camera Cull Mask property of the `Camera3D` once becoming active.
 
+A simplified helper setter method can be found in the example code below.
+
 </template>
 <template v-slot:setMethod>
 
@@ -98,6 +100,9 @@ Overrides the Camera Cull Mask property of the `Camera3D` once becoming active.
 ::: details Example
 ```gdscript
 pcam.set_camera_cull_mask(cull_mask)
+
+# Use this helper method to enable or disable a specific layer.
+pcam.set_cull_mask_value(int layer_number, bool value)
 ```
 :::
 
