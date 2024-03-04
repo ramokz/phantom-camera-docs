@@ -156,12 +156,13 @@ body {
 
         .video-embed {
             display: flex;
-            margin: auto;
+            flex: 0 0 33.333%;
             flex-direction: column;
             gap: 6px;
+            margin: auto;
             
-            iframe {
-                max-width: 100%;
+            @media(min-width: 1140px) {
+                margin: 0;
             }
 
             h4{
