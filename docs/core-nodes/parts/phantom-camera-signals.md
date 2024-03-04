@@ -27,6 +27,20 @@ Emitted when the `PCam` becomes inactive.
 </template>
 </Signal>
 
+<Signal signalName="Follow Target Changed">
+<template v-slot:signalCode>
+
+follow_target_changed
+
+</template>
+
+<template v-slot:signalDescription>
+
+Emitted when the `follow target` changes.
+
+</template>
+</Signal>
+
 
 <Signal signalName="Tween Started">
 <template v-slot:signalCode>
