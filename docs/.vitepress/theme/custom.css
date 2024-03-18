@@ -14,22 +14,22 @@
     --vp-c-white: #F5F5F5;
     --vp-c-danger-1: #B93A59;
     --vp-c-gray-1: #848686;
-    
+
     /*--vp-font-family-base: */
     --vp-font-family-base: 'Nunito', sans-serif;
     --vp-font-family-mono: 'JetBrains Mono', sans-serif;
     --vp-code-font-size: 14px;
-    
+
     /* Background */
     --vp-c-bg: #141C21;
     --vp-c-bg-alt: #0c1518;
-    
+
     /* Buttons */
     --vp-button-brand-bg: var(--vp-c-brand-1);
     --vp-button-brand-text: var(--vp-c-bg);
     --vp-button-brand-hover-bg: var(--vp-c-white);
     --vp-button-brand-hover-text: var(--vp-c-bg);
-    
+
     /* Homepage Name Gradient */
     --vp-home-hero-name-background: linear-gradient(180deg, rgba(58,185,154,1) 0%, rgba(27,158,127,1) 100%);;
     --vp-home-hero-image-background-image: linear-gradient(180deg, rgba(58,185,154,1) 0%, rgba(27,158,127,1) 100%);
@@ -46,10 +46,10 @@
             max-height: 800px;
         }
     }
-    
+
     /* Cards */
     --vp-c-bg-soft: var(--vp-c-bg-alt);
-    
+
     /* Search Menu */
     --docsearch-hit-active-color: var(--vp-c-bg);
 }
@@ -59,7 +59,7 @@
     color: var(--vp-c-bg);
 }
 
-body {
+body, .vp-doc td {
     font-size: 18px;
 }
 
@@ -127,7 +127,7 @@ body {
     display: flex;
     gap: 42px;
     /*flex-wrap: wrap;*/
-    
+
     & video {
         width: 100%;
     }
@@ -160,7 +160,7 @@ body {
             flex-direction: column;
             gap: 6px;
             margin: auto;
-            
+
             @media(min-width: 1140px) {
                 margin: 0;
             }
@@ -190,7 +190,7 @@ body {
     & p {
         font-family: var(--vp-font-family-mono);
         margin-top: 3px;
-        
+
         & code {
             font-size: calc(var(--font-size) - 2px);
         }
