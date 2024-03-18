@@ -32,8 +32,8 @@ Always make use of source control and read the **Release Notes** before updating
 | **Patch** | `v0.6.4` ➜ `v0.6.5` |
 |**Hotfix** | `v0.6.4` ➜ `v0.6.4.1` |
 
-### Viewfinder Button Prompt
-Appears in the viewfinder panel if a new update is available. If pressed, will trigger the contextual [Updater Prompt](#updater-prompt) to appear.
+## Editor Panel Update Button
+If the initial prompt is dismissed, then it can be triggered again by pressing the update button in the `Phantom Camera` panel in the button of the editor.
 ![Editor Updater Viewfinder](/assets/editor-updater/editor-updater-viewfinder.png)
 
 
