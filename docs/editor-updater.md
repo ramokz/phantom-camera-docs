@@ -7,7 +7,13 @@ The dialogue is also discoverable from the `Phantom Camera` panel located at the
 If this is unwanted, then the updater [can also be disabled](#updater-settings).
 
 ::: info NOTE
-The updater requires an active internet connection on start-up. 
+The updater requires an active internet connection on start-up.
+:::
+
+::: tip FOR FORKS
+For convenience, **forks** of the project will **_not_** have an option to update the addon via the editor.
+
+Read more in the [Updater Settings](#updater-settings) section.
 :::
 
 ## Updater Prompt
