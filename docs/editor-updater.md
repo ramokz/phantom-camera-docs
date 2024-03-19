@@ -1,34 +1,44 @@
+<img src="/assets/icons/editor-updater.svg" height="256" width="256"/>
 
 # Editor Updater
-Whenever a new version of the addon gets released on [GitHub](https://github.com/ramokz/phantom-camera/releases), by default, a dialogue prompt will appear on start-up asking to update the addon to the latest release. Choosing to update option in the prompt will then download the latest release as a zip, unzip, remove the existing addon and replace the addon with the newly downloaded version. The editor will then need to be relaunched before the changes can go into proper effect.
+Whenever a new version of the addon gets released on [GitHub](https://github.com/ramokz/phantom-camera/releases), by default, a dialogue prompt will appear on start-up asking to update the addon to the latest release.
 
-The dialogue is also discoverable from the `Phantom Camera` panel located at the bottom of the editor.
-
+::: warning NOTE
 If this is unwanted, then the updater [can also be disabled](#updater-settings).
-
-::: info NOTE
-The updater requires an active internet connection on start-up.
 :::
 
+<div align="center">
+<img src="/assets/editor-updater/editor-updater-prompt-patch-hotfix.png" width="400" alt="Image example of editor updater prompt"/>
+</div>
+
+Selecting **UPDATE** will then download the latest release as a zip, unzip, remove the existing addon and replace the addon with the newly downloaded version. The editor will then need to be relaunched before the changes can go into proper effect.
+
+The prompt can also be reopened using the button found in the `Phantom Camera` panel located at the bottom of the editor.
+
+![Editor Updater Viewfinder](/assets/editor-updater/editor-updater-viewfinder.png)
+
 ::: tip FOR FORKS
-For convenience, **forks** of the project will **_not_** have an option to update the addon via the editor.
+Forks of the project will **_not_** have an option to update the addon via the editor.
 
 Read more in the [Updater Settings](#updater-settings) section.
 :::
 
-## Updater Prompt
-The main way the addon communicates that a new update is available is via the prompt that appears when the project starts.
+::: info NOTE
+The updater requires an active internet connection on start-up to function.
+:::
 
-The prompt can appear in two different versions, depending on what version is being updated to.
+
+## Updater Prompt Variants
+The updater prompt can appear in two different variants, depending on what version would be updated to.
 For smaller **Patch** and **Hotfix** releases, an update button will be visible straight away, while larger **Major** or **Minor** releases will require a dropdown menu to be checked before the update button can appear. This is to prevent accidentally updating the addon where potential breaking changes might be introduced.
 
 ::: warning KEY ADVICE 
 Always make use of source control and read the **Release Notes** before updating - especially for **Major** and **Minor** releases.
 :::
 
-| Major & Minor Releases | Patch & Hotfix Releases                                                                               | 
-| ---------------------- |-------------------------------------------------------------------------------------------------------|
-|![Editor Updater Major & Minor Prompt](/assets/editor-updater/editor-updater-prompt-major-minor.png) | ![Editor Updater Major & Minor Prompt](/assets/editor-updater/editor-updater-prompt-patch-hotfix.png) |
+| Patch & Hotfix Releases                                                                               |  Major & Minor Releases                                                                               | 
+|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ![Editor Updater Major & Minor Prompt](/assets/editor-updater/editor-updater-prompt-patch-hotfix.png) |![Editor Updater Major & Minor Prompt](/assets/editor-updater/editor-updater-prompt-major-minor.png) |
 
 #### Release Naming Definition
 | Term | Example            |
@@ -37,12 +47,6 @@ Always make use of source control and read the **Release Notes** before updating
 | **Minor** | `v0.6` ➜ `v0.7`     |
 | **Patch** | `v0.6.4` ➜ `v0.6.5` |
 |**Hotfix** | `v0.6.4` ➜ `v0.6.4.1` |
-
-## Editor Panel Update Button
-If the initial prompt is dismissed, then it can be triggered again by pressing the update button in the `Phantom Camera` panel in the button of the editor.
-![Editor Updater Viewfinder](/assets/editor-updater/editor-updater-viewfinder.png)
-
-
 
 ## Updater Settings
 
@@ -73,8 +77,7 @@ You may have to enable `Advanced Settings` in the top right-hand corner for the 
         <td> If enabled, it will trigger the updater dialogue when the Godot project opens and show an updater button in the <code>Phantom Camera</code> editor panel.
             <div class="warning custom-block">
             <p class="custom-block-title">IMPORTANT</p>
-            If you are using the addon by having forked the project, then the updater prompt will always be disabled.
-            This is to prevent an update from overriding your own changes.
+            If you are using the addon by having forked the project, then the updater prompt will <i><b>always</b></i> be disabled.
             </div>
         </td>
         <td>
@@ -84,6 +87,6 @@ You may have to enable `Advanced Settings` in the top right-hand corner for the 
     </tr>
 </table>
 
-::: tip NOTE
-The way a **Fork** and a **End User** project is being distinguished is by the inclusion of a scene in the `dev_scenes` directory in the root level of the project, which is only present in **Forks**.
+::: tip TIP
+The way a **Fork** and a **End User** project is being distinguished is by the inclusion of a scene in the `dev_scenes` directory in the root level of the project, which is only present in the development repo.
 :::

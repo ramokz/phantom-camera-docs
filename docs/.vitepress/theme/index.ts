@@ -33,5 +33,8 @@ export default {
     app.component('Property2D3DOnly', Property2D3DOnly)
     app.component('VideoTabs', VideoTabs)
     app.component('Signal', Signal)
+  },
+  markdown: {
+      lazyLoading: true
   }
 } satisfies Theme
