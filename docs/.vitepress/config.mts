@@ -172,15 +172,8 @@ export default defineConfig({
       {
         text: 'Support',
         items: [
-          {
-            text: 'How To Contribute', link: "/support/how-to-contribute"
-          },
-          {
-            text: 'FAQ', link: "/support/faq"
-          },
-          {
-            text: 'Questions & Help', link: "/support/questions-help"
-          },
+          {text: 'FAQ', link: "/support/faq"},
+          {text: 'How To Contribute', link: "/support/how-to-contribute"},
         ]
       },
       {
