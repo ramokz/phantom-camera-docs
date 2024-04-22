@@ -42,6 +42,19 @@ Short answer, yes. While the addon is written in `GDScript`, it is fully compati
 
 To call methods, set properties etc. from `C#` files, simply follow the guidelines on [Godot's documentation page](https://docs.godotengine.org/en/stable/tutorials/scripting/cross_language_scripting.html).
 
+Using the addon in `C#` is not as elegant as GDScript, which comes down to the addon having been written in GDScript. That might change in the future.
+
+---
+
+### Why was the addon written in `GDScript` instead of `C#` or `C++`?
+`GDScript` is much easier to run, test and ultimately get things done in compared to `C#` and, in particular, `C++`. Although it doesn't boast as many technical features as either and comes with its shortcomings, ultimately it was was
+
+---
+
+### Has rewriting it as an GDExtension been considered?
+It has, and likely will happen one day when the addon reaches a more mature state. Partly for performance reasons, but also to make users of GDScript, C# and others have a similar experience using it in their language of choice.
+
+
 ## Troubleshooting
 ### I'm seeing jitter, what can I do?
 If you're seeing a targeted node rapidly moving back and forth as you move it, then, yes, that is _not_ an intended effect nor something that should be happening.
@@ -91,11 +104,15 @@ Again, this is a very simplistic take on Option 1, which provides more functiona
 
 
 #### Additional Option - Set the target to the Visual Representation Node
+
+<img alt="Target Visual Node" src="/assets/support/follow-visual-node.png" height="1122" width="618"/>
+
 Another thing you can do is to set the target to the visual representation directly. Ultimately, that is what should be followed in any case, though it's a less obvious node to select. The only prerequisite for this is to use either of the two options above so that the visual representation only updates in the `_process`.
 
-<img src="/assets/support/follow-visual-node.png" height="1122" width="618"/>
 
-Depending on your scene structure, this can be more cumbersome to set than the physics-body node. If you're unsure how to select it, you can either set the `pcam`'s `follow_target` value via code directly instead or, if it's nested inside a sub-scene, enable `editable children` and select the visual node from the inspector there.
+<img alt="Editable children" src="/assets/support/editable-children.png" height="648" width="334"/>
+
+Depending on your scene structure, this can be more cumbersome to set than the physics-body node. If you're unsure how to select it, you can either set the `pcam`'s `follow_target` value via code directly or, if it's nested inside a sub-scene, enable `editable children` and select the visual node from the inspector there.
 
 The good thing about Godot is that you can adjust the `PCam`'s properties in the inspector while running the game within the editor. So you don't have to go continuously toggle between running a scene and the editor to make adjustments to things like `damping` and `follow_offset` changes.
 
@@ -105,7 +122,7 @@ As you can probably tell, there is still work to be done in this area, and it is
 #### Is there really no easy fix for this without another addon or having to write additional code?
 There is a planned change for Godot that will enable nodes to [set the physics interpolation](https://docs.godotengine.org/en/3.6/tutorials/physics/interpolation/2d_and_3d_physics_interpolation.html). It's unfortunately only available in Godot 3 at the minute — Godot 3.5 introduced it to 3D scenes, and Godot 3.6 introduces it to 2D.
 
-A port for Godot 4.X should be happening at some point. Until then, either of the two options above should work as an intermediate solution.
+A port for Godot 4.X _should_ be happening at some point.
 
 ---
 
