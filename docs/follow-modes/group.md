@@ -14,7 +14,7 @@ This mode can be useful for single stage experiences that relies on having multi
 
 ## Properties
 
-<Property2D3D propertyName="Group Targets" propertyType2D="Array[Node2D]" propertyDefault2D="null" propertyType3D="Array[Node3D]" propertyDefault3D="null">
+<Property2D3D propertyName="follow_targets" propertyType2D="Array[Node2D]" propertyDefault2D="null" propertyType3D="Array[Node3D]" propertyDefault3D="null">
 
 <template v-slot:propertyDescription>
 
@@ -22,6 +22,8 @@ Defines the nodes that the `PCam` should be following.
 
 </template>
 <template v-slot:setMethod2D>
+
+`void` set_follow_targets(`Array[Node2D]` target_nodes)
 
 `void` append_follow_group_node(`Node2D` target_node)
 
@@ -31,6 +33,8 @@ Defines the nodes that the `PCam` should be following.
 
 </template>
 <template v-slot:setMethod3D>
+
+`void` set_follow_targets(`Array[Node3D]` target_nodes)
 
 `void` append_follow_group_node(`Node3D` target_node)
 
@@ -44,12 +48,14 @@ Defines the nodes that the `PCam` should be following.
 
 ::: details Example
 ```gdscript
+# Assigns a new array of nodes to the Follow Group
+pcam.set_follow_targets(node_collection)
 # Appends one node to the Follow Group
-pcam.append_follow_group_node(player_node)
+pcam.append_follow_targets(player_node)
 # Appends an array of nodes to the Follow Group
-pcam.append_follow_group_node_array(node_array)
+pcam.append_follow_targets_array(node_array)
 # Removes a node from the Follow Group
-pcam.erase_follow_group_node(another_node)
+pcam.erase_follow_targets(another_node)
 ```
 :::
 
@@ -58,12 +64,14 @@ pcam.erase_follow_group_node(another_node)
 
 ::: details Example
 ```gdscript
+# Assigns a new array of nodes to the Follow Group
+pcam.set_follow_targets(node_collection)
 # Appends one node to the Follow Group
-pcam.append_follow_group_node(player_node)
+pcam.append_follow_targets(player_node)
 # Appends an array of nodes to the Follow Group
-pcam.append_follow_group_node_array(node_array)
+pcam.append_follow_targets_array(node_array)
 # Removes a node from the Follow Group
-pcam.erase_follow_group_node(another_node)
+pcam.erase_follow_targets(another_node)
 ```
 :::
 
@@ -105,7 +113,7 @@ pcam.get_follow_group_nodes()
 
 <!--@include: ./parts/damping-value.md-->
 
-<Property propertyName="Auto Zoom (2D)" propertyType="bool" propertyDefault="false">
+<Property propertyName="auto_zoom" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
 Enables the `PCam2D` to dynamically zoom in and out based on the targets' distances between each other.
@@ -114,12 +122,12 @@ Once enabled, the `PCam` will stay as zoomed in as possible, limited by the `Max
 
 Note: Enabling this property hides and disables the `Zoom` property as this effectively overrides that value.
 
-<Property2D3DOnly :is2D="true" altProp="Auto Distance" altPropLink="./group#auto-distance-(3d)"/>
+<Property2D3DOnly :is2D="true" altProp="auto_follow_distance" altPropLink="./group#auto_follow_distance"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_auto_zoom (`bool` should_auto_zoom)
+`void` set_auto_zoom (`bool` enable)
 
 </template>
 <template v-slot:setExample>
@@ -148,26 +156,29 @@ pcam.get_auto_zoom()
 </template>
 </Property>
 
-<Property propertyName="Min Auto Zoom (2D)" propertyType="float" propertyDefault="1">
+
+
+
+<Property propertyName="auto_zoom_min" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
 Sets the minimum zoom amount, in other words how far away the `Camera2D` can be from scene.
 
-This only works when `Auto Zoom` is enabled.
+This only works when `auto_zoom` is enabled.
 
-<Property2D3DOnly :is2D="true" altProp="Min Auto Distance" altPropLink="./group#min-auto-distance-(3d)"/>
+<Property2D3DOnly :is2D="true" altProp="auto_follow_distance_min" altPropLink="./group#auto_follow_distance_min"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_min_auto_zoom (`float` min_zoom)
+`void` set_auto_zoom_min (`float` min_zoom)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_min_auto_zoom(0.42)
+pcam.set_auto_zoom_min(0.42)
 ```
 :::
 
@@ -175,40 +186,43 @@ pcam.set_min_auto_zoom(0.42)
 
 <template v-slot:getMethod>
 
-`float` get_min_auto_zoom()
+`float` get_auto_zoom_min()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_min_auto_zoom()
+pcam.get_auto_zoom_min()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Max Auto Zoom (2D)" propertyType="float" propertyDefault="5">
+
+
+
+<Property propertyName="auto_zoom_max" propertyType="float" propertyDefault="5">
 <template v-slot:propertyDescription>
 
 Sets the maximum zoom amount, in other words how close the `Camera2D` can move towards the scene.
 
-This only works when `Auto Zoom` is enabled.
+This only works when `auto_zoom` is enabled.
 
-<Property2D3DOnly :is2D="true" altProp="Max Auto Distance" altPropLink="./group#max-auto-distance-(3d)"/>
+<Property2D3DOnly :is2D="true" altProp="auto_follow_distance_max" altPropLink="./group#auto_follow_distance_max"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_max_auto_zoom (`float` min_zoom)
+`void` set_auto_zoom_max (`float` max_zoom)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_max_auto_zoom(4)
+pcam.set_auto_zoom_max(4)
 ```
 :::
 
@@ -216,21 +230,24 @@ pcam.set_max_auto_zoom(4)
 
 <template v-slot:getMethod>
 
-`float` get_max_auto_zoom()
+`float` get_auto_zoom_max()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_max_auto_zoom()
+pcam.get_auto_zoom_max()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Auto Zoom Margin (2D)" propertyType="Vector4" propertyDefault="Vector4(0,0,0,0)">
+
+
+
+<Property propertyName="auto_zoom_margin" propertyType="Vector4" propertyDefault="Vector4(0,0,0,0)">
 <template v-slot:propertyDescription>
 
 Determines how close to the edges the targets are allowed to be. <br>
@@ -238,19 +255,19 @@ This is useful to avoid targets being cut off at the edges of the screen.
 
 The `Vector4` parameter order goes: Left - Top - Right - Bottom.
 
-<Property2D3DOnly :is2D="true" altProp="Auto Distance Divisor" altPropLink="./group#auto-distance-divisor-(3d)"/>
+<Property2D3DOnly :is2D="true"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_zoom_auto_margin (`Vector4` zoom_margin)
+`void` set_auto_zoom_margin (`Vector4` zoom_margin)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_zoom_auto_margin(Vector4(10, 30, 10, 40))
+pcam.set_auto_zoom_margin(Vector4(10, 30, 10, 40))
 ```
 :::
 
@@ -258,23 +275,29 @@ pcam.set_zoom_auto_margin(Vector4(10, 30, 10, 40))
 
 <template v-slot:getMethod>
 
-`float` get_zoom_auto_margin()
+`Vector4` get_auto_zoom_margin()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_zoom_auto_margin()
+pcam.get_auto_zoom_margin()
 ```
 :::
 
 </template>
 </Property>
 
+
+
+
 <!--@include: ./parts/follow-distance.md-->
 
-<Property propertyName="Auto Distance (3D)" propertyType="bool" propertyDefault="false">
+
+
+
+<Property propertyName="auto_follow_distance" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
 Enables the `PCam` to automatically distance itself based on the targets' distances between each other.
@@ -283,13 +306,13 @@ It looks at the longest axis between the different targets and interpolates the 
 
 **Note:** Enabling this property hides and disables the `Distance` property as this effectively overrides that value.
 
-<Property2D3DOnly :is2D="false" altProp="Auto Zoom" altPropLink="./group#auto-zoom-(2d)"/>
+<Property2D3DOnly :is2D="false" altProp="auto_zoom" altPropLink="./group#auto_zoom"/>
 
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_auto_follow_distance(`bool` should_auto_distance)
+`void` set_auto_follow_distance(`bool` enable)
 
 </template>
 <template v-slot:setExample>
@@ -317,96 +340,107 @@ pcam.get_auto_follow_distance()
 </template>
 </Property>
 
-<Property propertyName="Min Auto Distance (3D)" propertyType="float" propertyDefault="1">
+
+
+
+<Property propertyName="auto_follow_distance_min" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
 Sets the minimum distance between the `Camera` and centre of `AABB`.
 
 **Note:** This distance will only ever be reached when all the targets are in the exact same `Vector3` coordinate, which will very unlikely happen, so adjust the value here accordingly.
 
-<Property2D3DOnly :is2D="false" altProp="Max Auto Zoom" altPropLink="./group#max-auto-zoom-(2d)"/>
+<Property2D3DOnly :is2D="false" altProp="auto_zoom_max" altPropLink="./group#auto_zoom_max"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_min_auto_follow_distance(`float` min_distance)
+`void` set_auto_follow_distance_min(`float` min_distance)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_min_auto_follow_distance(4.2)
+pcam.set_auto_follow_distance_min(4.2)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_min_auto_follow_distance()
+`float` get_auto_follow_distance_min()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_min_auto_follow_distance()
+pcam.get_auto_follow_distance_min()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Max Auto Distance (3D)" propertyType="float" propertyDefault="5">
+
+
+
+<Property propertyName="auto_follow_distance_max" propertyType="float" propertyDefault="5">
 <template v-slot:propertyDescription>
 
 Sets the maximum distance between the `Camera` and centre of `AABB`.
 
-<Property2D3DOnly :is2D="false" altProp="Min Auto Zoom" altPropLink="./group#min-auto-zoom-(2d)"/>
+<Property2D3DOnly :is2D="false" altProp="auto_zoom_min" altPropLink="./group#auto_zoom_min"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_max_auto_follow_distance(`float` max_distance)
+`void` set_auto_follow_distance_max(`float` max_distance)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_max_auto_follow_distance(4.2)
+pcam.set_auto_follow_distance_max(4.2)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_max_auto_follow_distance()
+`float` get_auto_follow_distance_max()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_max_auto_follow_distance()
+pcam.get_auto_follow_distance_max()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Auto Distance Divisor (3D)" propertyType="float" propertyDefault="10">
+
+
+
+<Property propertyName="auto_follow_distance_divisor" propertyType="float" propertyDefault="10">
 <template v-slot:propertyDescription>
 
-Determines how fast the `Auto Distance` moves between the maximum and minimum distance. The higher the value, the sooner the maximum distance is reached.
+Determines how fast the `auto_follow_distance` moves between the maximum and minimum distance. The higher the value, the sooner the maximum distance is reached.
 
-This value should be based on the sizes of the `Minimum Distance` and `Maximum Distance`. <br>
-E.g. if the value between the `Minimum Distance` and `Maximum Distance` is small, consider keeping the number low and vice versa.
+This value should be based on the sizes of the `auto_follow_distance_min` and `auto_follow_distance_max`. <br>
+E.g. if the value between the `auto_follow_distance_min` and `auto_follow_distance_max` is small, consider keeping the number low and vice versa.
+
+<Property2D3DOnly :is2D="false"/>
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_auto_follow_distance_divisor(`float` distance_divisor)
+`void` set_auto_follow_distance_divisor(`float` division)
 
 </template>
 <template v-slot:setExample>

@@ -1,7 +1,7 @@
-<Property propertyName="Follow Mode" propertyType="int" propertyDefault="0">
+<Property propertyName="follow_mode" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
-Defines the current `Follow Mode` of the `PCam` based on `Constants.FOLLOW_MODE` enum.
+Defines the current `Follow Mode` of the `PCam` based on `FOLLOW_MODE` enum.
 
 | Follow Mode  | Value |
 |--------------|-------|

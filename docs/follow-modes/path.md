@@ -12,7 +12,10 @@ Follows a target while being positionally confined to a `Path` node. The positio
 ## Properties
 <!--@include: ./parts/follow-target.md-->
 
-<Property2D3D propertyName="Follow Path" propertyType2D="Path2D" propertyDefault2D="null" propertyType3D="Path3D" propertyDefault3D="null">
+
+
+
+<Property2D3D propertyName="follow_path" propertyType2D="Path2D" propertyDefault2D="null" propertyType3D="Path3D" propertyDefault3D="null">
 
 <template v-slot:propertyDescription>
 

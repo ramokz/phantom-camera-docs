@@ -24,7 +24,7 @@ Alternatively, enable the [Play Viewfinder](#play-viewfinder) property in the in
 
 <!--@include: ./parts/follow-distance.md-->
 
-<Property propertyName="Dead Zone Horizontal" propertyType="float" propertyDefault="0">
+<Property propertyName="dead_zone_height" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Defines the horizontal dead zone area. While the target is within it, the `PCam` will not move in the horizontal axis. If the targeted node leaves the horizontal bounds, the `PCam` will follow the target horizontally to keep it within bounds.
@@ -32,7 +32,7 @@ Defines the horizontal dead zone area. While the target is within it, the `PCam`
 </template>
 </Property>
 
-<Property propertyName="Dead Zone Vertical" propertyType="float" propertyDefault="0">
+<Property propertyName="dead_zone_height" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Defines the vertical dead zone area. While the target is within it, the `PCam` will not move in the vertical axis. If the targeted node leaves the vertical bounds, the `PCam` will follow vertically to keep it within bounds.
@@ -40,7 +40,7 @@ Defines the vertical dead zone area. While the target is within it, the `PCam` w
 </template>
 </Property>
 
-<Property propertyName="Play Viewfinder" propertyType="bool" propertyDefault="false">
+<Property propertyName="show_viewfinder_in_play" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
 Enables the dead zones to be visible when running the game from the editor.

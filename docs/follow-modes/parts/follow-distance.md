@@ -1,9 +1,9 @@
-<Property propertyName="Distance (3D)" propertyType="float" propertyDefault="1">
+<Property propertyName="follow_distance" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
 Sets a distance offset from the centre of the target. The distance is applied to the `PCam`'s local z axis.
 
-<Property2D3DOnly :is2D="false" altProp="Zoom" altPropLink="../core-nodes/phantom-camera-2d#zoom"/>
+<Property2D3DOnly :is2D="false" altProp="zoom" altPropLink="../core-nodes/phantom-camera-2d#zoom"/>
 
 
 </template>

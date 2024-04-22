@@ -46,7 +46,7 @@ Determines how the `Camera3D` should tween to this `PhantomCamera3D` upon becomi
 ## Secondary Properties
 <!--@include: ./parts/phantom-camera-properties.md-->
 
-<Property propertyName="Camera3D Resource" propertyType="Camera3DResource" propertyDefault="null">
+<Property propertyName="camera_3d_resource" propertyType="Camera3DResource" propertyDefault="null">
 <template v-slot:propertyDescription>
 
 A resource type that allows for overriding the `Camera3D` node's properties.
@@ -54,35 +54,35 @@ A resource type that allows for overriding the `Camera3D` node's properties.
 </template>
 <template v-slot:setMethod>
 
-`void` set_camera_3D_resource(`Camera3DResource` resource)
+`void` set_camera_3d_resource(`Camera3DResource` resource)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_camera_3D_resource(resource)
+pcam.set_camera_3d_resource(resource)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`Camera3DResource` get_camera_3D_resource()
+`Camera3DResource` get_camera_3d_resource()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_camera_3D_resource()
+pcam.get_camera_3d_resource()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Camera Cull Mask" propertyType="int" propertyDefault="1048575">
+<Property propertyName="cull_mask" propertyType="int" propertyDefault="1048575">
 <template v-slot:propertyDescription>
 
 Overrides the Camera Cull Mask property of the `Camera3D` once becoming active.
@@ -92,38 +92,42 @@ A simplified helper setter method can be found in the example code below.
 </template>
 <template v-slot:setMethod>
 
-`void` set_camera_cull_mask(`int` cull_mask)
+`void` set_cull_mask(`int` cull_mask_layer)
+
+`void` set_cull_mask_value(`int` layer_number, `bool` value)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_camera_cull_mask(cull_mask)
+# Use this to assign a specific layer value.
+# Fairly complex to use, so the function below this is recommended.
+pcam.set_cull_mask(1048575)
 
 # Use this helper method to enable or disable a specific layer.
-pcam.set_cull_mask_value(int layer_number, bool value)
+pcam.set_cull_mask_value(2, false)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`int` get_camera_cull_mask()
+`int` get_cull_mask()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_camera_cull_mask()
+pcam.get_cull_mask()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="H Offset" propertyType="float" propertyDefault="0">
+<Property propertyName="h_offset" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Overrides the H Offset property of the `Camera3D` once becoming active.
@@ -131,35 +135,35 @@ Overrides the H Offset property of the `Camera3D` once becoming active.
 </template>
 <template v-slot:setMethod>
 
-`void` set_camera_h_offset(`float` h_offset)
+`void` set_h_offset(`float` offset)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_camera_h_offset(4.2)
+pcam.set_h_offset(4.2)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`int` get_camera_h_offset()
+`float` get_h_offset()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_camera_h_offset()
+pcam.get_h_offset()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="V Offset" propertyType="float" propertyDefault="0">
+<Property propertyName="v_offset" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Overrides the V Offset property of the `Camera3D` once becoming active.
@@ -167,21 +171,21 @@ Overrides the V Offset property of the `Camera3D` once becoming active.
 </template>
 <template v-slot:setMethod>
 
-`void` set_camera_v_offset(`float` v_offset)
+`void` v_offset(`float` offset)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_camera_v_offset(4.2)
+pcam.set_v_offset(4.2)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`int` get_camera_v_offset()
+`float` get_v_offset()
 
 </template>
 <template v-slot:getExample>
@@ -195,7 +199,7 @@ pcam.get_camera_v_offset()
 </template>
 </Property>
 
-<Property propertyName="FOV" propertyType="float" propertyDefault="75">
+<Property propertyName="fov" propertyType="float" propertyDefault="75">
 <template v-slot:propertyDescription>
 
 Overrides the FOV (Field of View) property of the `Camera3D` once becoming active.
@@ -203,28 +207,28 @@ Overrides the FOV (Field of View) property of the `Camera3D` once becoming activ
 </template>
 <template v-slot:setMethod>
 
-`void` set_camera_fov(`float` fov)
+`void` set_fov(`float` fov)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_camera_fov(4.2)
+pcam.set_fov(4.2)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`int` get_camera_fov()
+`float` get_fov()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_camera_fov()
+pcam.get_fov()
 ```
 :::
 
@@ -234,13 +238,10 @@ pcam.get_camera_fov()
 
 ## Signals
 
-<Signal signalName="Became Active">
-<template v-slot:signalCode>
-
+<Signal signalRef="became_active">
+<template v-slot:signalName>
 became_active
-
 </template>
-
 <template v-slot:signalDescription>
 
 Emitted when the `PCam` becomes active.
@@ -249,13 +250,12 @@ Emitted when the `PCam` becomes active.
 </Signal>
 
 
-<Signal signalName="Became Inactive">
-<template v-slot:signalCode>
 
+
+<Signal signalRef="became_inactive">
+<template v-slot:signalName>
 became_inactive
-
 </template>
-
 <template v-slot:signalDescription>
 
 Emitted when the `PCam` becomes inactive.
@@ -263,43 +263,13 @@ Emitted when the `PCam` becomes inactive.
 </template>
 </Signal>
 
-<Signal signalName="Follow Target Changed">
-<template v-slot:signalCode>
-
-follow_target_changed
-
-</template>
-
-<template v-slot:signalDescription>
-
-Emitted when the `follow target` changes.
-
-</template>
-</Signal>
 
 
-<Signal signalName="Look At Target Changed">
-<template v-slot:signalCode>
 
-look_at_target_changed
-
-</template>
-
-<template v-slot:signalDescription>
-
-Emitted when [`look_at_target`](/look-at-modes/overview) changes.
-
-</template>
-</Signal>
-
-
-<Signal signalName="Dead Zone Changed">
-<template v-slot:signalCode>
-
+<Signal signalRef="dead_zone_changed">
+<template v-slot:signalName>
 dead_zone_changed
-
 </template>
-
 <template v-slot:signalDescription>
 
 Emitted when the dead zone changes. Note: This is only applicable in [Framed Follow](/follow-modes/framed) mode.
@@ -308,28 +278,26 @@ Emitted when the dead zone changes. Note: This is only applicable in [Framed Fol
 </Signal>
 
 
-<Signal signalName="Tween Started">
-<template v-slot:signalCode>
 
-tween_started
 
+<Signal signalRef="follow_target_changed">
+<template v-slot:signalName>
+follow_target_changed
 </template>
-
 <template v-slot:signalDescription>
 
-Emitted when the `Camera` starts to tween to the `PCam`.
+Emitted when the `follow target` changes.
 
 </template>
 </Signal>
 
 
-<Signal signalName="Is Tweening">
-<template v-slot:signalCode>
 
+
+<Signal signalRef="is_tweening">
+<template v-slot:signalName>
 is_tweening
-
 </template>
-
 <template v-slot:signalDescription>
 
 Emitted when the `Camera` is being tweened.
@@ -338,13 +306,40 @@ Emitted when the `Camera` is being tweened.
 </Signal>
 
 
-<Signal signalName="Tween Interrupted">
-<template v-slot:signalCode>
 
-tween_interrupted (`PhantomCamera` pcam)
+
+<Signal signalRef="look_at_target_changed">
+<template v-slot:signalName>
+look_at_target_changed
+</template>
+<template v-slot:signalDescription>
+
+Emitted when [`look_at_target`](/look-at-modes/overview) changes.
 
 </template>
+</Signal>
 
+
+
+
+<Signal signalRef="tween_started">
+<template v-slot:signalName>
+tween_started
+</template>
+<template v-slot:signalDescription>
+
+Emitted when the `Camera` starts to tween to the `PCam`.
+
+</template>
+</Signal>
+
+
+
+
+<Signal signalRef="tween_interrupted">
+<template v-slot:signalName>
+tween_interrupted
+</template>
 <template v-slot:signalDescription>
 
 Emitted when the tween is interrupted due to another `PCam` becoming active.
@@ -355,13 +350,12 @@ The argument is the `PCam` that interrupted the tween.
 </Signal>
 
 
-<Signal signalName="Tween Completed">
-<template v-slot:signalCode>
 
+
+<Signal signalRef="tween_completed">
+<template v-slot:signalName>
 tween_completed
-
 </template>
-
 <template v-slot:signalDescription>
 
 Emitted when the `Camera` completes its tween to the `PCam`.

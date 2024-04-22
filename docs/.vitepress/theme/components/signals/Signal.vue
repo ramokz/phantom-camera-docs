@@ -2,7 +2,7 @@
 import { computed } from "vue";
 
 const props = defineProps({
-  signalName: {
+  signalRef: {
     type: String,
     required: true,
   },
@@ -12,27 +12,22 @@ const props = defineProps({
   }
 })
 
-const id = computed<String>(() =>{
-  if (props.disableOutlineEntry) { return null }
-
-  return props.signalName.replace(/ /g, '-').toLowerCase()
-})
+// const id = computed<String>(() =>{
+//   if (props.disableOutlineEntry) { return null }
+//
+//   return props.signalRef.replace(/ /g, '-').toLowerCase()
+// })
 
 </script>
 
 <template>
   <div class="property-method-signal-container">
-    <h3 :id="id" tabindex="-1">
-      {{ signalName }}
+    <h3 :id="signalRef" tabindex="-1">
+      <slot name="signalName">
+        Missing name
+      </slot>
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${signalName}`">&#8203;</a>
     </h3>
-
-    <div class="container-code-block">
-      <h4>Signal</h4>
-      <slot name="signalCode">
-        <p class="missing-text"> MISSING SIGNAL </p>
-      </slot>
-    </div>
 
     <slot name="signalDescription">
       <p class="missing-text">

@@ -11,7 +11,7 @@ Changing `Priority` will send an event to the scene's `PCamHost`, which will the
 
 
 ## Properties 
-<Property propertyName="Priority" propertyType="int" propertyDefault="0">
+<Property propertyName="priority" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Determines which `PCam` is currently active. The one with the highest priority will be what decides what `PCam` a scene's `Camera` is attached to.

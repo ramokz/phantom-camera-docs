@@ -13,7 +13,7 @@ To adjust the orbit rotation around the target, use either [set_third_person_rot
 
 ## Properties
 
-<Property propertyName="Follow Target" propertyType="Node3D" propertyDefault="null">
+<Property propertyName="follow_target" propertyType="Node3D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
 Determines which Node should be followed. The `PCam3D` will follow the position of the Follow Target based on the Follow Mode and its parameters.
@@ -21,35 +21,38 @@ Determines which Node should be followed. The `PCam3D` will follow the position 
 </template>
 <template v-slot:setMethod>
 
-`void` set_follow_target_node(`Node3D` target_node)
+`void` set_follow_target(`Node3D` target_node)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_follow_target_node(player_node)
+pcam.set_follow_target(player_node)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`Node3D` get_follow_target_node()
+`Node3D` get_follow_target()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_follow_target_node()
+pcam.get_follow_target()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Follow Target Offset" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
+
+
+
+<Property propertyName="follow_offset" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
 <template v-slot:propertyDescription>
 
 Offsets the follow target's position.
@@ -58,28 +61,28 @@ Offsets the follow target's position.
 
 <template v-slot:setMethod>
 
-`void` set_follow_target_offset(`Vector3` offset)
+`void` set_follow_offset(`Vector3` offset)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_follow_target_offset(Vector3(1, 1, 1))
+pcam.set_follow_offset(Vector3(1, 1, 1))
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`Vector3` get_follow_target_offset()
+`Vector3` get_follow_offset()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_follow_target_offset()
+pcam.get_follow_offset()
 ```
 :::
 
@@ -87,11 +90,17 @@ pcam.get_follow_target_offset()
 
 </Property>
 
+
+
+
 <!--@include: ./parts/damping.md-->
 
 <!--@include: ./parts/damping-value.md-->
 
-<Property propertyName="Spring Length" propertyType="float" propertyDefault="1.0">
+
+
+
+<Property propertyName="spring_length" propertyType="float" propertyDefault="1.0">
 <template v-slot:propertyDescription>
 
 Defines the `SpringArm3D` node's spring length.
@@ -99,71 +108,86 @@ Defines the `SpringArm3D` node's spring length.
 </template>
 <template v-slot:setMethod>
 
-`void` set_spring_arm_spring_length(`float` length)
+`void` set_spring_length(`float` length)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_spring_arm_spring_length(4.2)
+pcam.set_spring_length(4.2)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_spring_arm_spring_length()
+`float` get_spring_length()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_spring_arm_spring_length()
+pcam.get_spring_length()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Collision Mask" propertyType="int" propertyDefault="1">
+
+
+
+<Property propertyName="collision_mask" propertyType="int" propertyDefault="1">
 <template v-slot:propertyDescription>
 
 Defines the `SpringArm3D` node's `Collision Mask`.
 
+A simplified helper setter method can be found in the example code below.
+
 </template>
 <template v-slot:setMethod>
 
-`void` set_spring_arm_collision_mask(`int` mask_int)
+`void` set_collision_mask(`int` mask_int)
+
+`void` set_collision_mask_value(`int` mask_layer, `bool` enable)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_spring_arm_collision_mask(4)
+# Use this to assign a specific layer value.
+# Fairly complex to use, so the function below this is recommended.
+pcam.set_collision_mask(4)
+
+# Use this helper method to enable or disable a specific layer.
+pcam.set_collision_mask_value(2, true)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_spring_arm_collision_mask()
+`float` get_collision_mask()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_spring_arm_collision_mask()
+pcam.get_collision_mask()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Shape" propertyType="Shape3D" propertyDefault="null">
+
+
+
+<Property propertyName="shape" propertyType="Shape3D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
 Defines the `SpringArm3D` node's `Shape3D`.
@@ -171,35 +195,38 @@ Defines the `SpringArm3D` node's `Shape3D`.
 </template>
 <template v-slot:setMethod>
 
-`void` set_spring_arm_shape(`Shape3D` shape)
+`void` set_shape(`Shape3D` shape)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_spring_arm_shape(shape)
+pcam.set_shape(shape)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_spring_arm_shape()
+`float` get_shape()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_spring_arm_shape()
+pcam.get_shape()
 ```
 :::
 
 </template>
 </Property>
 
-<Property propertyName="Margin" propertyType="float" propertyDefault="0.01">
+
+
+
+<Property propertyName="margin" propertyType="float" propertyDefault="0.01">
 <template v-slot:propertyDescription>
 
 Defines the `SpringArm3D` node's `Margin`.
@@ -207,28 +234,28 @@ Defines the `SpringArm3D` node's `Margin`.
 </template>
 <template v-slot:setMethod>
 
-`void` set_spring_arm_margin(`float` margin)
+`void` set_margin(`float` margin)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam.set_spring_arm_margin(0.42)
+pcam.set_margin(0.42)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_spring_arm_margin()
+`float` get_margin()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.get_spring_arm_margin()
+pcam.get_margin()
 ```
 :::
 
@@ -237,7 +264,7 @@ pcam.get_spring_arm_margin()
 
 ## Methods
 
-<Property propertyName="Third Person Rotation" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
+<Property propertyName="Rotation (Radians)" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
 <template v-slot:propertyDescription>
 
 Defines the rotation (in radians) value of the Third Person `SpringArm3D` node.
@@ -273,7 +300,7 @@ pcam.get_third_person_rotation()
 </template>
 </Property>
 
-<Property propertyName="Third Person Rotation Degrees" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
+<Property propertyName="Rotation (Degrees)" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
 <template v-slot:propertyDescription>
 
 Defines the rotation (in degrees) value of the Third Person `SpringArm3D` node.
@@ -303,6 +330,43 @@ pcam.set_third_person_rotation_degrees(Vector3(-30, 0, 0))
 ::: details Example
 ```gdscript
 pcam.get_third_person_rotation_degrees()
+```
+:::
+
+</template>
+</Property>
+
+
+<Property propertyName="Rotation (Quaternion)" propertyType="Quaternion" propertyDefault="n/a">
+<template v-slot:propertyDescription>
+
+Defines the quaternion value of the Third Person `SpringArm3D` node.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_third_person_quaternion(`Quaternion` spring_arm_rotation_deg)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_third_person_quaternion(quaternion)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`Quaternion` get_third_person_quaternion()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_third_person_quaternion()
 ```
 :::
 
