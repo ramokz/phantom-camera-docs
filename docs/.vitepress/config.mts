@@ -158,7 +158,15 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Tween', link: "/tween",
+        text: 'Resource Types',
+        items: [
+          {
+            text: 'Tween', link: "/resource-types/tween",
+          },
+          {
+            text: 'Camera3D Resource', link: "/resource-types/camera-3d-resource",
+          },
+        ]
       },
       {
         text: 'Viewfinder', link: "/viewfinder",

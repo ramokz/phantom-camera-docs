@@ -17,47 +17,6 @@ To have an instant transitions, simply apply a value of `0` to the duration prop
 
 ## Properties
 
-<Property propertyName="tween_resource" propertyType="PhantomCameraTween" propertyDefault="null">
-<template v-slot:propertyDescription>
-
-The resource that defines how this `PCam` should be transitioned to.
-
-Can be shared across multiple `PCams`.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_tween_resource(`PhantomCameraTween` tween_resource)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.set_tween_resource(tween_resource)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`PhantomCameraTween` get_tween_resource()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.get_tween_resource()
-```
-:::
-
-</template>
-</Property>
-
-
-
-
 <Property propertyName="duration" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 

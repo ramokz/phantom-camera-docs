@@ -88,9 +88,13 @@ Enables a preview of what the `PCam2D` will see in the scene. It works identical
 <Property propertyName="snap_to_pixel" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
-To support pixel perfect camera movement, this can be toggled to snap Camera2D to always snap to whole pixels.
+If enabled, will make the `Camera2D` always snap to whole pixels.
 
 This should be particularly useful in pixel art projects, where assets should always be aligned to the monitor's pixels to avoid unintended stretching.
+
+::: info Note
+This is not an intended solution for making a camera pixel perfect. That is a more complex issue to solve.
+:::
 
 </template>
 <template v-slot:setMethod>
@@ -318,15 +322,15 @@ Allows for setting either a `TileMap` or `CollisionShape2D` node to automaticall
 
 **TileMap**
 
-The `Limit` will update after the `TileSet` of the `TileMap` has changed..
+The `Limit` will update after the `TileSet` of the `TileMap` has changed.
 
 _Note:_ The limit size will only update after closing the `TileMap` editor bottom panel.
 
 **CollisionShape2D**
 
-The limit will update in realtime as the `Shape2D` changes its size.
+The limit will update in realtime as the `Shape2D` changes its size whilst in the editor.
 
-_Note:_ For performance reasons, resizing the `Shape2D` during runtime will _not_ change the `Limits` sides.
+_Note:_ For performance reasons, resizing the `Shape2D` while running the game will _not_ change the `Limit` sides.
 
 </template>
 
@@ -372,6 +376,8 @@ Applies an offset to the `TileMap Limit` or `Shape2D Limit`.
 
 The values go from `Left`, `Top`, `Right` and `Bottom`.
 
+The values can be either positive or negative, which will decrease and increase the limit size respectively.
+
 </template>
 
 <template v-slot:setMethod>
@@ -383,7 +389,7 @@ The values go from `Left`, `Top`, `Right` and `Bottom`.
 
 ::: details Example
 ```gdscript
-pcam.set_limit_margin(Vector4i(200, 200, 200, 200))
+pcam.set_limit_margin(Vector4i(200, -200, 200, -200))
 ```
 :::
 
