@@ -187,7 +187,7 @@ Emitted when the `Camera` starts to tween to the `PCam`.
 
 <Signal signalRef="tween_interrupted">
 <template v-slot:signalName>
-tween_interrupted
+tween_interrupted(<code>PhantomCamera</code> pcam)
 </template>
 <template v-slot:signalDescription>
 
