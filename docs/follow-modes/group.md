@@ -218,7 +218,7 @@ pcam.set_max_auto_zoom(4)
 
 `float` get_max_auto_zoom()
 
-</template>
+</template> 
 <template v-slot:getExample>
 
 ::: details Example
