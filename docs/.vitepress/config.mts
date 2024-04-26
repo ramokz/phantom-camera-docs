@@ -72,6 +72,9 @@ export default defineConfig({
       {
         text: 'Docs', link: '/introduction/what-is-this'
       },
+      {
+        text: 'Latest Release', link: 'https://phantom-camera.dev'
+      },
     ],
     
     outline: {

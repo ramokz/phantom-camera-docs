@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: GitHub Repo
       link: https://github.com/ramokz/phantom-camera
+    - theme: brand
+      text: Latest Release
+      link: https://phantom-camera.dev
 
 features:
   - icon:
