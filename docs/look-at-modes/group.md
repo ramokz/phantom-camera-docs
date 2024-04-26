@@ -22,11 +22,11 @@ Defines the group of targets that the camera should be looking at. It will be lo
 
 `void` set_look_at_targets(`Array[Node3D]` targets)
 
-`void` append_look_at_group_node(`Node3D` target)
+`void` append_look_at_targets(`Node3D` target)
 
-`void` append_look_at_group_node_array(`Array[Node3D]` targets)
+`void` append_look_at_targets_array(`Array[Node3D]` targets)
 
-`void` erase_look_at_group_node(`Node3D` target)
+`void` erase_look_at_targets(`Node3D` target)
 
 </template>
 <template v-slot:setExample>
@@ -37,13 +37,13 @@ Defines the group of targets that the camera should be looking at. It will be lo
 pcam.set_look_at_targets(targets)
 
 # Appends one node to the Look At Group
-pcam.append_look_at_group_node(target)
+pcam.append_look_at_targets(target)
 
 # Appends an array of nodes to the Look At Group
-pcam.append_look_at_group_node_array(targets)
+pcam.append_look_at_targets_array(targets)
 
 # Removes a node from the Look At Group
-pcam.erase_look_at_group_node(target)
+pcam.erase_look_at_targets(target)
 ```
 :::
 
@@ -65,3 +65,4 @@ pcam.get_look_at_targets()
 </Property>
 
 <!--@include: ./parts/look-at-offset.md-->
+<!--@include: ./parts/look-at-damping.md-->

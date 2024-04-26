@@ -2,7 +2,7 @@
 
 # Simple Look At (3D)
 
-Looks At the target with an optional offset.
+Rotates towards, essentially look directly at, its target with an optional offset.
 
 ## Video Example
 
@@ -14,3 +14,4 @@ Looks At the target with an optional offset.
 
 <!--@include: ./parts/look-at-target.md-->
 <!--@include: ./parts/look-at-offset.md-->
+<!--@include: ./parts/look-at-damping.md-->

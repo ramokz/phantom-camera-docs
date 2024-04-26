@@ -27,7 +27,7 @@ const props = defineProps({
         This property is for <code>PCam{{ is2D ? '2D' : '3D' }}</code> <b><i>only</i></b>.
         <span v-if="altProp">
           <br>
-          The <code>PCam{{ !is2D ? '2D' : '3D' }}</code> alternative to this is can be found in the <a src :alt="altProp" :href="altPropLink"> {{altProp}}</a> section.
+          The <code>PCam{{ !is2D ? '2D' : '3D' }}</code> alternative to this can be found in the <a src :alt="altProp" :href="altPropLink"> {{altProp}}</a> section.
         </span>
       </p>
     </div>

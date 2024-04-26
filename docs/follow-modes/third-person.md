@@ -3,7 +3,10 @@
 # Third Person Follow (3D)
 As the name implies, this mode is meant to be used for third person camera experiences. It works by applying a `SpringArm3D` where the properties, such as `Collison Mask`, `Spring Length` and `Margin`, can be controlled from the `PCam3D`.
 
-To adjust the orbit rotation around the target, use either [set_third_person_rotation()](#third-person-rotation) (radians) or [set_third_person_rotation_degrees()](#third-person-rotation-degrees) (degrees).
+To adjust the orbit rotation around the target, use one of the following setter methods:
+- [set_third_person_quaternion](#rotation-(quaternion)) (quaternion)
+- [set_third_person_rotation()](#rotation-(radians)) (radians)
+- [set_third_person_rotation_degrees()](#rotation-(degrees)) (degrees).
 
 ## Video Example
 
@@ -103,7 +106,7 @@ pcam.get_follow_offset()
 <Property propertyName="spring_length" propertyType="float" propertyDefault="1.0">
 <template v-slot:propertyDescription>
 
-Defines the `SpringArm3D` node's spring length.
+Defines the `SpringArm3D` node's spring length. This is the equivalent of defining the `distance` property in other `FollowModes`.
 
 </template>
 <template v-slot:setMethod>
@@ -264,6 +267,45 @@ pcam.get_margin()
 
 ## Methods
 
+
+<Property propertyName="Rotation (Quaternion)" propertyType="Quaternion" propertyDefault="n/a">
+<template v-slot:propertyDescription>
+
+Defines the quaternion value of the Third Person `SpringArm3D` node.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_third_person_quaternion(`Quaternion` spring_arm_rotation_deg)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_third_person_quaternion(quaternion)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`Quaternion` get_third_person_quaternion()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_third_person_quaternion()
+```
+:::
+
+</template>
+</Property>
+
+
+
 <Property propertyName="Rotation (Radians)" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
 <template v-slot:propertyDescription>
 
@@ -299,6 +341,9 @@ pcam.get_third_person_rotation()
 
 </template>
 </Property>
+
+
+
 
 <Property propertyName="Rotation (Degrees)" propertyType="Vector3" propertyDefault="Vector3(0,0,0)">
 <template v-slot:propertyDescription>
@@ -337,41 +382,7 @@ pcam.get_third_person_rotation_degrees()
 </Property>
 
 
-<Property propertyName="Rotation (Quaternion)" propertyType="Quaternion" propertyDefault="n/a">
-<template v-slot:propertyDescription>
 
-Defines the quaternion value of the Third Person `SpringArm3D` node.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_third_person_quaternion(`Quaternion` spring_arm_rotation_deg)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.set_third_person_quaternion(quaternion)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`Quaternion` get_third_person_quaternion()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.get_third_person_quaternion()
-```
-:::
-
-</template>
-</Property>
 
 ## Example Setup
 ```gdscript

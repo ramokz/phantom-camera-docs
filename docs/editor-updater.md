@@ -23,8 +23,8 @@ Forks of the project will **_not_** have an option to update the addon via the e
 Read more in the [Updater Settings](#updater-settings) section.
 :::
 
-::: info NOTE
-The updater requires an active internet connection on start-up to function.
+::: info Note
+The updater will only check when a project is opened.
 :::
 
 

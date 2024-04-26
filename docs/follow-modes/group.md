@@ -120,7 +120,9 @@ Enables the `PCam2D` to dynamically zoom in and out based on the targets' distan
 
 Once enabled, the `PCam` will stay as zoomed in as possible, limited by the `Maximum Zoom` and start zooming out as the targets move further apart, limited by the `Minimum Zoom`.
 
-Note: Enabling this property hides and disables the `Zoom` property as this effectively overrides that value.
+::: info Note
+Enabling this property hides and disables the `Zoom` property as this will override it.
+:::
 
 <Property2D3DOnly :is2D="true" altProp="auto_follow_distance" altPropLink="./group#auto_follow_distance"/>
 
@@ -162,11 +164,11 @@ pcam.get_auto_zoom()
 <Property propertyName="auto_zoom_min" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Sets the minimum zoom amount, in other words how far away the `Camera2D` can be from scene.
+Sets the minimum zoom amount, in other words how far away the `Camera2D` can be from the scene.
 
 This only works when `auto_zoom` is enabled.
 
-<Property2D3DOnly :is2D="true" altProp="auto_follow_distance_min" altPropLink="./group#auto_follow_distance_min"/>
+<Property2D3DOnly :is2D="true" altProp="auto_follow_distance_max" altPropLink="./group#auto_follow_distance_max"/>
 
 </template>
 <template v-slot:setMethod>
@@ -210,7 +212,7 @@ Sets the maximum zoom amount, in other words how close the `Camera2D` can move t
 
 This only works when `auto_zoom` is enabled.
 
-<Property2D3DOnly :is2D="true" altProp="auto_follow_distance_max" altPropLink="./group#auto_follow_distance_max"/>
+<Property2D3DOnly :is2D="true" altProp="auto_follow_distance_min" altPropLink="./group#auto_follow_distance_min"/>
 
 </template>
 <template v-slot:setMethod>
@@ -300,11 +302,13 @@ pcam.get_auto_zoom_margin()
 <Property propertyName="auto_follow_distance" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
-Enables the `PCam` to automatically distance itself based on the targets' distances between each other.
+Enables the `PCam` to automatically move further away based on the targets' distances between each other.
 
 It looks at the longest axis between the different targets and interpolates the distance length between the `Minimum Distance` and `Maximum Distance` properties below.
 
-**Note:** Enabling this property hides and disables the `Distance` property as this effectively overrides that value.
+::: info Note
+Enabling this property hides and disables the `Distance` property as this will override it.
+:::
 
 <Property2D3DOnly :is2D="false" altProp="auto_zoom" altPropLink="./group#auto_zoom"/>
 
@@ -348,7 +352,9 @@ pcam.get_auto_follow_distance()
 
 Sets the minimum distance between the `Camera` and centre of `AABB`.
 
-**Note:** This distance will only ever be reached when all the targets are in the exact same `Vector3` coordinate, which will very unlikely happen, so adjust the value here accordingly.
+::: info Note
+This distance will only ever be reached when all the targets are in the exact same `Vector3` coordinate, which will very unlikely happen, so adjust the value here accordingly.
+:::
 
 <Property2D3DOnly :is2D="false" altProp="auto_zoom_max" altPropLink="./group#auto_zoom_max"/>
 

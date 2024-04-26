@@ -4,7 +4,9 @@
 
 Follows a target while being positionally confined to a `Path` node. The position on the path is based on the closest baked point relative to the target's position.
 
-**_Note:_** This _can_ lead to sudden camera jumps if the `Path` spline has steep curvatures.
+::: warning Warning
+This _can_ lead to sudden camera jumps if the `Path` spline has steep curvatures.
+:::
 
 ## Video Examples
 <VideoTabs propertyName="follow-path-videos" video2d="../assets/videos/follow-path-2d.mp4" video3d="../assets/videos/follow-path-3d.mp4"/>
@@ -54,12 +56,12 @@ pcam.set_follow_path(follow_path_3d)
 
 <template v-slot:getMethod2D>
 
-`Vector2` get_follow_target_offset()
+`Vector2` get_follow_path()
 
 </template>
 <template v-slot:getMethod3D>
 
-`Vector3` get_follow_target_offset()
+`Vector3` get_follow_path()
 
 </template>
 

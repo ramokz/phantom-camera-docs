@@ -10,9 +10,10 @@ Value is based on `LookAtMode` enum.
 | SIMPLE       | 2     |
 | GROUP        | 3     |
 
-**_Note:_** The Setter for `Look_at_mode` has purposely not been added.<br>
+::: info Note
+The Setter for `Look_at_mode` has purposely not been added.<br>
 A separate `PCam3D` should be used instead.
-
+:::
 
 </template>
 <template v-slot:getMethod>

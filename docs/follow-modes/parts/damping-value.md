@@ -2,9 +2,9 @@
 
 <template v-slot:propertyDescription>
 
-Defines the damping amount. The ideal range should be somewhere between 0-1.
+Defines the damping amount. The ideal range should be somewhere between 0-1, likely somewhere around 0.1-0.25.
 
-The damping amount is specified in the individual axis - X and Y for 2D and X, Y and Z for 3D scenes. To have the damping be consistent in all directions, simply supply the same value in all slots.
+The damping amount is specified in the individual axis. X and Y for 2D and X, Y and Z for 3D scenes. To have the damping be consistent in all directions, simply supply the same value in all slots.
 
 **Lower value** = faster / sharper camera movement.<br>
 **Higher value** = slower / heavier camera movement.
@@ -25,7 +25,7 @@ The damping amount is specified in the individual axis - X and Y for 2D and X, Y
 
 ::: details Example
 ```gdscript
-pcam.set_follow_damping_value(player_node)
+pcam.set_follow_damping_value(Vector2(0.2, 0.2))
 ```
 :::
 
@@ -34,7 +34,7 @@ pcam.set_follow_damping_value(player_node)
 
 ::: details Example
 ```gdscript
-pcam.set_follow_damping_value(player_node)
+pcam.set_follow_damping_value(Vector3(0.2, 0.2, 0.2))
 ```
 :::
 

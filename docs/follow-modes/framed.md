@@ -4,9 +4,9 @@
 
 Enables dynamic framing of a given target using horizontal and vertical dead zones. The dead zones enable the `PCam` to remain still until the target moves beyond them where the `PCam` will then resume following.
 
-Previewing the Dead Zone can be done from the [Viewfinder panel](../viewfinder) (**3D only for now**), which can be found at the bottom of the editor.
+Previewing the Dead Zone can be done from the [Viewfinder panel](../viewfinder), which can be found at the bottom of the editor.
 
-Alternatively, enable the [Play Viewfinder](#play-viewfinder) property in the inspector to show the dead zone while running the game from the editor.
+Alternatively, enable the [show_viewfinder_in_play](#show_viewfinder_in_play) property in the inspector to show the dead zone while running the game from the editor.
 
 ## Video Examples
 
@@ -45,7 +45,7 @@ Defines the vertical dead zone area. While the target is within it, the `PCam` w
 
 Enables the dead zones to be visible when running the game from the editor.
 
-_Dead zones will never be visible in build exports._
+_Dead zones will always be disabled in build exports._
 
 </template>
 </Property>
