@@ -70,8 +70,9 @@ body, .vp-doc td {
 
 .vp-doc h2 {
     font-weight: 800;
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 30px;
+    color: var(--vp-c-brand-1)
 }
 
 .vp-doc h3 {
@@ -82,9 +83,13 @@ body, .vp-doc td {
 }
 
 .vp-doc h4 {
-    /*color: #B2B4B6;*/
-    color: var(--vp-c-gray-1);
+    color: var(--vp-c-brand-1);
+    opacity: 0.8;
     font-size: 20px;
+}
+
+.method-container > h4 {
+    color: var(--vp-c-gray-1);
 }
 
 .vp-doc hr {

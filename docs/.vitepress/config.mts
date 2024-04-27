@@ -158,7 +158,15 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Tween', link: "/tween",
+        text: 'Resource Types',
+        items: [
+          {
+            text: 'Tween', link: "/resource-types/tween",
+          },
+          {
+            text: 'Camera3D Resource', link: "/resource-types/camera-3d-resource",
+          },
+        ]
       },
       {
         text: 'Viewfinder', link: "/viewfinder",
@@ -172,15 +180,8 @@ export default defineConfig({
       {
         text: 'Support',
         items: [
-          {
-            text: 'How To Contribute', link: "/support/how-to-contribute"
-          },
-          {
-            text: 'FAQ', link: "/support/faq"
-          },
-          {
-            text: 'Questions & Help', link: "/support/questions-help"
-          },
+          {text: 'FAQ', link: "/support/faq"},
+          {text: 'How To Contribute', link: "/support/how-to-contribute"},
         ]
       },
       {

@@ -1,4 +1,4 @@
-<Property propertyName="Look At Target" propertyType="Node3D" propertyDefault="null">
+<Property propertyName="look_at_target" propertyType="Node3D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
 Determines which `Node3D` should be looked at. The `PCam3D` will update its rotational value as the target changes its position.
@@ -13,7 +13,7 @@ Determines which `Node3D` should be looked at. The `PCam3D` will update its rota
 
 ::: details Example
 ```gdscript
-pcam.set_look_at_target(node_name)
+pcam.set_look_at_target(target_node)
 ```
 :::
 

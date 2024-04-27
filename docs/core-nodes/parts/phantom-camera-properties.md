@@ -1,4 +1,4 @@
-<Property propertyName="Active State" propertyType="bool" propertyDefault="false">
+<Property propertyName="active" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
 Returns `true` if this `PCam` is the one controlling the scene's `Camera`.
@@ -20,7 +20,7 @@ pcam.is_active()
 
 </template>
 </Property>
-<Property propertyName="Tween on Load" propertyType="bool" propertyDefault="true">
+<Property propertyName="tween_on_load" propertyType="bool" propertyDefault="true">
 <template v-slot:propertyDescription>
 
 By default, the moment a `PCam` is instantiated into a scene, and has the highest priority, it will perform its tween transition.
@@ -32,7 +32,7 @@ Disabling the Tween on Load property will disable this behaviour and skip the tw
 </template>
 <template v-slot:setMethod>
 
-`void` set_tween_on_load(`bool` value)
+`void` set_tween_on_load(`bool` enable)
 
 </template>
 <template v-slot:setExample>
@@ -46,24 +46,24 @@ pcam.set_tween_on_load(false)
 </template>
 <template v-slot:getMethod>
 
-`bool` is_tween_on_load()
+`bool` get_tween_on_load()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.is_tween_on_load()
+pcam.get_tween_on_load()
 ```
 :::
 
 </template>
 </Property>
-<Property propertyName="Inactive Update Mode" propertyType="int" propertyDefault="0" :editorOnly="true">
+<Property propertyName="inactive_update_mode" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Determines how often an inactive `PCam` should update its positional and rotational values.
-This is meant to reduce the amount of calculations inactive `PCams` are doing when idling to improve performance. The value is based on the enum type `Constants.InactiveUpdateMode`.
+This is meant to reduce the amount of calculations inactive `PCams` are doing when idling to improve performance. The value is based on the enum type `InactiveUpdateMode`.
 
 | Inactive Update Mode | Value |
 |----------------------|-------|
@@ -73,9 +73,23 @@ This is meant to reduce the amount of calculations inactive `PCams` are doing wh
 
 
 </template>
+<template v-slot:setMethod>
+
+`void` set_inactive_update_mode(`int` update_mode)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_inactive_update_mode(InactiveUpdateMode.NEVER)
+```
+:::
+
+</template>
 <template v-slot:getMethod>
 
-`string` get_inactive_update_mode()
+`int` get_inactive_update_mode()
 
 </template>
 <template v-slot:getExample>
@@ -83,6 +97,46 @@ This is meant to reduce the amount of calculations inactive `PCams` are doing wh
 ::: details Example
 ```gdscript
 pcam.get_inactive_update_mode()
+```
+:::
+
+</template>
+</Property>
+
+<Property propertyName="tween_resource" propertyType="PhantomCameraTween" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+The resource that defines how this `PCam` should be transitioned to.
+
+Can be shared across multiple `PCams`.
+
+See the [Tween](/resource-types/tween) page for more details.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_tween_resource(`PhantomCameraTween` tween_resource)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_tween_resource(tween_resource)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`PhantomCameraTween` get_tween_resource()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_tween_resource()
 ```
 :::
 

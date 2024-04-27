@@ -6,3 +6,4 @@ The simplest of the available options. Effectively copies the rotational value o
 
 ## Properties
 <!--@include: ./parts/look-at-target.md-->
+<!--@include: ./parts/look-at-damping.md-->

@@ -76,7 +76,6 @@ const hasGetterContent = computed(() => {
       </p>
     </slot>
 
-    <p class="property-usage-note" v-if="hasSetterContent && hasGetterContent"><b><i>Note:</i></b> During runtime, properties should be modified and read via  their setters & getters respectively.</p>
     <hr v-if="hasGetterContent || hasSetterContent" />
     
     <MethodComponent class="method-container" method-type="Setter" :methodName="propertyName" v-if="hasSetterContent">

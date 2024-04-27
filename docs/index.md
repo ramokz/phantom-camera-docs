@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: GitHub Repo
       link: https://github.com/ramokz/phantom-camera
+    - theme: alt
+      text: For v0.6.4 Release
+      link: https://0-6-4--phantom-camera-docs.netlify.app/
 
 features:
   - icon:

@@ -4,9 +4,9 @@
 
 Enables dynamic framing of a given target using horizontal and vertical dead zones. The dead zones enable the `PCam` to remain still until the target moves beyond them where the `PCam` will then resume following.
 
-Previewing the Dead Zone can be done from the [Viewfinder panel](../viewfinder) (**3D only for now**), which can be found at the bottom of the editor.
+Previewing the Dead Zone can be done from the [Viewfinder panel](../viewfinder), which can be found at the bottom of the editor.
 
-Alternatively, enable the [Play Viewfinder](#play-viewfinder) property in the inspector to show the dead zone while running the game from the editor.
+Alternatively, enable the [show_viewfinder_in_play](#show_viewfinder_in_play) property in the inspector to show the dead zone while running the game from the editor.
 
 ## Video Examples
 
@@ -24,7 +24,7 @@ Alternatively, enable the [Play Viewfinder](#play-viewfinder) property in the in
 
 <!--@include: ./parts/follow-distance.md-->
 
-<Property propertyName="Dead Zone Horizontal" propertyType="float" propertyDefault="0">
+<Property propertyName="dead_zone_height" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Defines the horizontal dead zone area. While the target is within it, the `PCam` will not move in the horizontal axis. If the targeted node leaves the horizontal bounds, the `PCam` will follow the target horizontally to keep it within bounds.
@@ -32,7 +32,7 @@ Defines the horizontal dead zone area. While the target is within it, the `PCam`
 </template>
 </Property>
 
-<Property propertyName="Dead Zone Vertical" propertyType="float" propertyDefault="0">
+<Property propertyName="dead_zone_height" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Defines the vertical dead zone area. While the target is within it, the `PCam` will not move in the vertical axis. If the targeted node leaves the vertical bounds, the `PCam` will follow vertically to keep it within bounds.
@@ -40,12 +40,12 @@ Defines the vertical dead zone area. While the target is within it, the `PCam` w
 </template>
 </Property>
 
-<Property propertyName="Play Viewfinder" propertyType="bool" propertyDefault="false">
+<Property propertyName="show_viewfinder_in_play" propertyType="bool" propertyDefault="false">
 <template v-slot:propertyDescription>
 
 Enables the dead zones to be visible when running the game from the editor.
 
-_Dead zones will never be visible in build exports._
+_Dead zones will always be disabled in build exports._
 
 </template>
 </Property>

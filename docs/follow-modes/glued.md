@@ -2,9 +2,9 @@
 
 # Glued Follow
 
-Mimics the positional movement of the target.
+Mimics the positional movement of its target.
 
-This is the simplest of the follow modes and is useful for cases where you just want a camera to follow a target without any additional complications.
+This is the simplest and lightest of the follow modes and is useful for cases where you just want a camera to follow a target without any additional complications.
 
 ## Properties
 <!--@include: ./parts/follow-target.md-->

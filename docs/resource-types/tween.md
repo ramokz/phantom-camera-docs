@@ -17,45 +17,7 @@ To have an instant transitions, simply apply a value of `0` to the duration prop
 
 ## Properties
 
-<Property propertyName="Tween Resource" propertyType="PhantomCameraTween" propertyDefault="null">
-<template v-slot:propertyDescription>
-
-The resource that defines how this `PCam` should be transitioned to.
-
-Can be shared across multiple `PCams`.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_tween_resource(`PhantomCameraTween` tween_resource)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.set_tween_resource(tween_resource)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`PhantomCameraTween` get_tween_resource()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.get_tween_resource()
-```
-:::
-
-</template>
-</Property>
-
-<Property propertyName="Tween Duration" propertyType="float" propertyDefault="1">
+<Property propertyName="duration" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
 Defines how long the transition to this `PCam` should last in **seconds**.
@@ -91,10 +53,13 @@ pcam.get_tween_duration()
 </template>
 </Property>
 
-<Property propertyName="Tween Transition" propertyType="int" propertyDefault="0">
+
+
+
+<Property propertyName="transition" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
-Defines the `Transition` type for the tweening to this `PCam` using the `Constants.TweenTransitions` enum.
+Defines the `Transition` type for the tweening to this `PCam` using the `PhantomCameraTween.TransitionsType` enum.
 
 | Transition Name | Value |
 |-----------------|-------|
@@ -125,7 +90,7 @@ pcam.set_tween_transition(2)
 
 # Instead of applying an int directly,
 # it's also possible to supply an enum value like so:
-pcam.set_tween_transition(pcam.Constants.TweenTransitions.QUINT)
+pcam.set_tween_transition(pcam.PhantomCameraTween.TransitionType.QUINT)
 
 ```
 :::
@@ -147,10 +112,10 @@ pcam.get_tween_transition()
 </template>
 </Property>
 
-<Property propertyName="Tween Ease" propertyType="int" propertyDefault="2">
+<Property propertyName="ease" propertyType="int" propertyDefault="2">
 <template v-slot:propertyDescription>
 
-Defines the `Ease` type for the tweening to this `PCam` using the `Constants.TweenEases` enum.
+Defines the `Ease` type for the tweening to this `PCam` using the `PhantomCameraTween.TweenEases` enum.
 
 | Ease Type   | Value |
 |-------------|-------|
@@ -173,7 +138,7 @@ pcam.set_tween_ease(0)
 
 # Instead of applying an int directly,
 # it's also possible to supply an enum value like so
-pcam.set_tween_ease(pcam.Constants.TweenEases.EASE_IN)
+pcam.set_tween_ease(pcam.PhantomCameraTween.EaseType.EASE_IN)
 
 ```
 :::
