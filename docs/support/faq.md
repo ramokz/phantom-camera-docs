@@ -47,7 +47,7 @@ Using the addon in `C#` is not as elegant as GDScript, which comes down to the a
 ---
 
 ### Why was the addon written in `GDScript` instead of `C#` or `C++`?
-`GDScript` is much easier to run, test and ultimately get things done in compared to `C#` and, in particular, `C++`. Although it doesn't boast as many technical features as either and comes with its shortcomings, ultimately it was allowed for rapid iterations and general improvements to the addon. 
+`GDScript` is much easier to run, test and ultimately get things done in compared to `C#` and, in particular, `C++`. Although it doesn't boast as many technical features as either and comes with its shortcomings, ultimately it was allowed for rapid iterations and general improvements to the addon.
 
 ---
 
@@ -61,11 +61,11 @@ If you're seeing a targeted node rapidly moving back and forth as you move it, t
 
 If you're using a physics object, such as `CharacterBody2D/3D` as a target, and it's moving in the `_physics_process`, then you will likely notice jitter.
 
- > This is not to be confused with stutter, which [Godot has a good example of showing the difference between the two.](https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html)
+> This is not to be confused with stutter, which [Godot has a good example of showing the difference between the two.](https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html)
 
 The Solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node.
 
-#### Option 1 (Recommended) — The [smoothing-addon](https://github.com/lawnjelly/smoothing-addon)
+#### Option 1 (Recommended) — The [smoothing-addon](https://github.com/lawnjelly/smoothing-addon/tree/4.x)
 This is the most straightforward and well-tested approach by someone who very much knows what they're doing.
 
 It essentially requires parenting the visual representation nodes underneath a custom smoothing node. There is a bit more to it than that, and [the GitHub page](https://github.com/lawnjelly/smoothing-addon) has more helpful information and context.
