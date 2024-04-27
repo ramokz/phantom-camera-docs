@@ -68,7 +68,7 @@ The Solution here is to make the visual representation, i.e. the thing you're se
 #### Option 1 (Recommended) — The [smoothing-addon](https://github.com/lawnjelly/smoothing-addon/tree/4.x)
 This is the most straightforward and well-tested approach by someone who very much knows what they're doing.
 
-It essentially requires parenting the visual representation nodes underneath a custom smoothing node. There is a bit more to it than that, and [the GitHub page](https://github.com/lawnjelly/smoothing-addon) has more helpful information and context.
+It essentially requires parenting the visual representation nodes underneath a custom smoothing node. There is a bit more to it than that, and [the GitHub page](https://github.com/lawnjelly/smoothing-addon/tree/4.x) has more helpful information and context.
 
 #### Option 2 — DIY
 It's effectively a simplistic version of the `smoothing-addon`, but is meant for those who would like a solution that doesn't rely on an additional addon. The addon's example scenes use this approach in large part to avoid nesting another addon inside of it.
