@@ -48,18 +48,22 @@ features:
 ## Showcases
 
 <div class="external-videos-grid">
-<div class="video-embed">
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1Gtvr-Jk-iE?si=Z3aI3vNofj8tRNAp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <h4>(English)</h4>
-</div>
-<div class="video-embed">
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/85K0e2Y0U3Q?si=UV3TKO2QmcAXYx3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <h4>(Spanish)</h4>
-</div>
-<div class="video-embed">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Y6AQG-Ik2A?si=aoYWyvPkTsI_s4wy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <h4>(Portuguese)</h4>
-</div>
+    <div class="video-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/1Gtvr-Jk-iE?si=Z3aI3vNofj8tRNAp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h4>(English)</h4>
+    </div>
+    <div class="video-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/85K0e2Y0U3Q?si=UV3TKO2QmcAXYx3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h4>(Spanish)</h4>
+    </div>
+    <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/5Y6AQG-Ik2A?si=aoYWyvPkTsI_s4wy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h4>(Portuguese)</h4>
+    </div>
+    <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/bKNmsae5zXk?si=kx0z_ZWBTDfbJ82V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h4>(English)</h4>
+    </div>
 </div>
 
 </div>
