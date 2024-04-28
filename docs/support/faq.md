@@ -28,7 +28,7 @@ The intent is to support as many versions of Godot as possible, but exceptions a
 ---
 
 ### What about Godot 3?
-GDScript has received a lot of changes and improvements in 4.0, but as a result it would require a rather large rewrite to make it compatible with older versions.
+`GDScript` has received a lot of changes and improvements in 4.0, but as a result it would require a rather large rewrite to make it compatible with older versions.
 
 ---
 
@@ -42,7 +42,7 @@ Short answer, yes. While the addon is written in `GDScript`, it is fully compati
 
 To call methods, set properties etc. from `C#` files, simply follow the guidelines on [Godot's documentation page](https://docs.godotengine.org/en/stable/tutorials/scripting/cross_language_scripting.html).
 
-Using the addon in `C#` is not as elegant as GDScript, which comes down to the addon having been written in GDScript.
+Using the addon in `C#` is not as elegant as `GDScript`, which comes down to the addon having been written in `GDScript`.
 
 ---
 
@@ -52,7 +52,7 @@ Using the addon in `C#` is not as elegant as GDScript, which comes down to the a
 ---
 
 ### Has rewriting it as an GDExtension been considered?
-It has, and likely will happen one day when the addon reaches a more mature state. Partly for performance reasons, but also to make users of GDScript, C# and others have a similar experience when using it in their language of choice.
+It has, and likely will happen one day when the addon reaches a more mature state. Partly for performance reasons, but also to make users of `GDScript`, `C#` and others have a similar experience when using it in their language of choice.
 
 
 ## Troubleshooting
