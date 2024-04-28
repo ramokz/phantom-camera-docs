@@ -22,7 +22,7 @@ pcam.set_look_at_damping(true)
 </template>
 <template v-slot:getMethod>
 
-`Vector3` get_look_at_damping()
+`bool` get_look_at_damping()
 
 </template>
 <template v-slot:getExample>
