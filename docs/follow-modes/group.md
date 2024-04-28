@@ -25,22 +25,22 @@ Defines the nodes that the `PCam` should be following.
 
 `void` set_follow_targets(`Array[Node2D]` target_nodes)
 
-`void` append_follow_group_node(`Node2D` target_node)
+`void` append_follow_targets(`Node2D` target_node)
 
-`void` append_follow_group_node_array(`Array[Node2D]` target_nodes)
+`void` append_follow_targets_array(`Array[Node2D]` target_nodes)
 
-`void` erase_follow_group_node(`Node2D` target_node)
+`void` erase_follow_targets(`Node2D` target_node)
 
 </template>
 <template v-slot:setMethod3D>
 
 `void` set_follow_targets(`Array[Node3D]` target_nodes)
 
-`void` append_follow_group_node(`Node3D` target_node)
+`void` append_follow_targets(`Node3D` target_node)
 
-`void` append_follow_group_node_array(`Array[Node3D]` target_nodes)
+`void` append_follow_targets_array(`Array[Node3D]` target_nodes)
 
-`void` erase_follow_group_node(`Node3D` target_node)
+`void` erase_follow_targets(`Node3D` target_node)
 
 </template>
 
@@ -84,7 +84,7 @@ pcam.erase_follow_targets(another_node)
 </template>
 <template v-slot:getMethod3D>
 
-`Array[Node3D]` get_follow_group_nodes()
+`Array[Node3D]` get_follow_targets()
 
 </template>
 
@@ -92,7 +92,7 @@ pcam.erase_follow_targets(another_node)
 
 ::: details Example
 ```gdscript
-pcam.get_follow_group_nodes()
+pcam.get_follow_targets()
 ```
 :::
 
@@ -101,7 +101,7 @@ pcam.get_follow_group_nodes()
 
 ::: details Example
 ```gdscript
-pcam.get_follow_group_nodes()
+pcam.get_follow_targets()
 ```
 :::
 
