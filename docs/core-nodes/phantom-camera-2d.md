@@ -363,7 +363,7 @@ pcam.get_limit(SIDE_BOTTOM)
 
 
 
-<Property propertyName="limit_node" propertyType="NodePath" propertyDefault="null">
+<Property propertyName="limit_target" propertyType="NodePath" propertyDefault="null">
 <template v-slot:propertyDescription>
 
 Allows for setting either a `TileMap` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
