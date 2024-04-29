@@ -150,6 +150,8 @@ Defines the left side of the `Camera2D` limit. The camera will not be able to mo
 
 <template v-slot:setMethod>
 
+`void` set_limit_left(`int` value)
+
 `void` set_limit(`int` side, `int` value)
 
 </template>
@@ -158,6 +160,10 @@ Defines the left side of the `Camera2D` limit. The camera will not be able to mo
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.set_limit_left(200)
+
+# General Side setter
 pcam.set_limit(SIDE_LEFT, 200)
 ```
 :::
@@ -165,6 +171,8 @@ pcam.set_limit(SIDE_LEFT, 200)
 </template>
 
 <template v-slot:getMethod>
+
+`int` get_limit_left()
 
 `int` get_limit(`int` side)
 
@@ -174,6 +182,10 @@ pcam.set_limit(SIDE_LEFT, 200)
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.get_limit_left()
+
+# General Side getter
 pcam.get_limit(SIDE_LEFT)
 ```
 :::
@@ -193,6 +205,8 @@ Defines the top side of the `Camera2D` limit. The camera will not be able to mov
 
 <template v-slot:setMethod>
 
+`void` set_limit_top(`int` value)
+
 `void` set_limit(`int` side, `int` value)
 
 </template>
@@ -201,6 +215,10 @@ Defines the top side of the `Camera2D` limit. The camera will not be able to mov
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.set_limit_top(200)
+
+# General Side setter
 pcam.set_limit(SIDE_TOP, 200)
 ```
 :::
@@ -208,6 +226,8 @@ pcam.set_limit(SIDE_TOP, 200)
 </template>
 
 <template v-slot:getMethod>
+
+`int` get_limit_top()
 
 `int` get_limit(`int` side)
 
@@ -217,6 +237,10 @@ pcam.set_limit(SIDE_TOP, 200)
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.get_limit_top()
+
+# General Side getter
 pcam.get_limit(SIDE_TOP)
 ```
 :::
@@ -237,6 +261,8 @@ Defines the right side of the `Camera2D` limit. The camera will not be able to m
 
 <template v-slot:setMethod>
 
+`void` set_limit_right(`int` value)
+
 `void` set_limit(`int` side, `int` value)
 
 </template>
@@ -245,6 +271,10 @@ Defines the right side of the `Camera2D` limit. The camera will not be able to m
 
 ::: details Example
 ```gdscript
+## Shorthand
+pcam.set_limit_right(200)
+
+## General Side setter
 pcam.set_limit(SIDE_RIGHT, 200)
 ```
 :::
@@ -252,6 +282,8 @@ pcam.set_limit(SIDE_RIGHT, 200)
 </template>
 
 <template v-slot:getMethod>
+
+`int` get_limit_right()
 
 `int` get_limit(`int` side)
 
@@ -261,6 +293,10 @@ pcam.set_limit(SIDE_RIGHT, 200)
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.get_limit_right()
+
+# General Side getter
 pcam.get_limit(SIDE_RIGHT)
 ```
 :::
@@ -280,6 +316,8 @@ Defines the bottom side of the `Camera2D` limit. The camera will not be able to 
 
 <template v-slot:setMethod>
 
+`void` set_limit_bottom(`int` value)
+
 `void` set_limit(`int` side, `int` value)
 
 </template>
@@ -288,6 +326,10 @@ Defines the bottom side of the `Camera2D` limit. The camera will not be able to 
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.set_limit_bottom(200)
+
+# General Side setter
 pcam.set_limit(SIDE_BOTTOM, 200)
 ```
 :::
@@ -295,6 +337,8 @@ pcam.set_limit(SIDE_BOTTOM, 200)
 </template>
 
 <template v-slot:getMethod>
+
+`int` get_limit_bottom()
 
 `int` get_limit(`int` side)
 
@@ -304,6 +348,10 @@ pcam.set_limit(SIDE_BOTTOM, 200)
 
 ::: details Example
 ```gdscript
+# Shorthand
+pcam.get_limit_bottom()
+
+# General Side getter
 pcam.get_limit(SIDE_BOTTOM)
 ```
 :::
