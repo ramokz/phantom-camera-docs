@@ -63,19 +63,27 @@ If you're using a physics object, such as `CharacterBody2D/3D` as a target, and 
 
 > This is not to be confused with stutter, which [Godot has a good example of showing the difference between the two.](https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html)
 
-The Solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node.
+#### 2D Projects
+If you're making a 2D project, then it's highly recommended to upgrade to Godot **4.3** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody2D` as a `Follow Target` without causing jitter.
 
-#### Option 1 (Recommended) — The [smoothing-addon](https://github.com/lawnjelly/smoothing-addon/tree/4.x)
+#### 3D Projects
+Godot has yet to add physics interpolation for 3D scenes, so if you're making a 3D project follow the steps below to alleviate any jitter.
+
+The solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node. This can be achieved in a few ways.
+
+##### Option 1 (Recommended) — The [smoothing-addon](https://github.com/lawnjelly/smoothing-addon/tree/4.x)
 This is the most straightforward and well-tested approach by someone who very much knows what they're doing.
 
 It essentially requires parenting the visual representation nodes underneath a custom smoothing node. There is a bit more to it than that, and [the GitHub page](https://github.com/lawnjelly/smoothing-addon/tree/4.x) has more helpful information and context.
 
-#### Option 2 — DIY
+##### Option 2 — DIY
 It's effectively a simplistic version of the `smoothing-addon`, but is meant for those who would like a solution that doesn't rely on an additional addon. The addon's example scenes use this approach in large part to avoid nesting another addon inside of it.
 
 In your physics node script, or at least one that has access to it, that should be tracked by the camera, e.g. `CharacterBody2D/3D`, add the following:
 
 ```gdscript
+extends CharacterBody3D # or CharacterBody2D
+
 var _visual_node # Type: Node2D/3D
 
 var _physics_body_tran_last # Type: Transform2D/3D
@@ -83,12 +91,13 @@ var _physics_body_tran_current # Type: Transform2D/3D
 
 
 func _ready() -> void:
-	_player_visual.top_level = true # Prevents the visual node from be affected by the movement of its parent
+	# Prevents the visual node from be affected by the movement of its parent
+	_player_visual.top_level = true
 
 
 func _physics_process(delta: float) -> void:
-	_physics_body_trans_last = _physics_body_trans_current
-	_physics_body_trans_current = global_transform
+	_physics_body_tran_last = _physics_body_trans_current
+	_physics_body_tran_current = global_transform
 	# The global_transform here referring to your physics-node
 	# e.g. CharacterBody2D/3D
 
@@ -96,12 +105,11 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(_delta: float) -> void:
-	_visual_node.global_transform = _physics_body_tran_last.interpolate_with(
-		_physics_body_trans_current,
-		Engine.get_physics_interpolation_fraction()
-	)
-
-	# Other code
+	_visual_node.global_transform = \
+	    _physics_body_tran_last.interpolate_with(
+            _physics_body_tran_current,
+            Engine.get_physics_interpolation_fraction()
+        )
 ```
 
 Again, this is a very simplistic take on Option 1, which provides more functionalities and is generally a more tried and tested solution.
@@ -118,13 +126,10 @@ Another thing you can do is to set the target to the visual representation direc
 
 Depending on your scene structure, this can be more cumbersome to set than the physics-body node. If you're unsure how to select it, you can either set the `pcam`'s `follow_target` value via code directly or, if it's nested inside a sub-scene, enable `editable children` and select the visual node from the inspector there - all the example scenes do the latter.
 
-As you can probably tell, there is still work to be done in this area, and it is a common issue but it's gradually moving in the right direction
-
-
 #### Is there really no easy fix for this without another addon or having to write additional code?
-There is a planned change for Godot that will enable nodes to [set the physics interpolation](https://docs.godotengine.org/en/3.6/tutorials/physics/interpolation/2d_and_3d_physics_interpolation.html). It's unfortunately only available in Godot 3 at the minute — Godot 3.5 introduced it to 3D scenes, and Godot 3.6 introduces it to 2D.
+There is a planned change for Godot that will enable nodes to [set the physics interpolation](https://docs.godotengine.org/en/3.6/tutorials/physics/interpolation/2d_and_3d_physics_interpolation.html). It's unfortunately only fully supported in Godot 3 at the minute — Godot 3.5 introduced it to 3D scenes, and Godot 3.6 introduced it to 2D scene.
 
-A port for Godot 4.X _should_ be happening at some point.
+2D Physics Interpolation was ported for Godot 4.3, and 3D Physics Interpolation should be happening at some point.
 
 ---
 
