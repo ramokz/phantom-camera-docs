@@ -78,12 +78,12 @@ In your physics node script, or at least one that has access to it, that should 
 ```gdscript
 var _visual_node # Type: Node2D/3D
 
-var _physics_body_tran_last # Type: Transform2D/3D
-var _physics_body_tran_current # Type: Transform2D/3D
+var _physics_body_trans_last # Type: Transform2D/3D
+var _physics_body_trans_current # Type: Transform2D/3D
 
 
 func _ready() -> void:
-	_player_visual.top_level = true # Prevents the visual node from be affected by the movement of its parent
+	_visual_node.top_level = true # Prevents the visual node from be affected by the movement of its parent
 
 
 func _physics_process(delta: float) -> void:
@@ -96,7 +96,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(_delta: float) -> void:
-	_visual_node.global_transform = _physics_body_tran_last.interpolate_with(
+	_visual_node.global_transform = _physics_body_trans_last.interpolate_with(
 		_physics_body_trans_current,
 		Engine.get_physics_interpolation_fraction()
 	)
