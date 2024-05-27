@@ -84,7 +84,7 @@ In your physics node script, or at least one that has access to it, that should 
 ```gdscript
 extends CharacterBody3D # or CharacterBody2D
 
-var _visual_node # Type: Node2D/3D
+var _player_visual # Type: Node2D/3D
 
 var _physics_body_tran_last # Type: Transform2D/3D
 var _physics_body_tran_current # Type: Transform2D/3D
