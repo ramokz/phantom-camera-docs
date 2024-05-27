@@ -72,6 +72,12 @@ export default defineConfig({
       {
         text: 'Docs', link: '/introduction/what-is-this'
       },
+      {
+        text: 'FAQ', link: '/support/faq'
+      },
+      {
+        text: 'Discussions', link: 'https://github.com/ramokz/phantom-camera/discussions'
+      },
     ],
     
     outline: {
