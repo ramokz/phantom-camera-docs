@@ -105,7 +105,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(_delta: float) -> void:
-	_visual_node.global_transform = \
+	_player_visual.global_transform = \
 	    _physics_body_tran_last.interpolate_with(
             _physics_body_tran_current,
             Engine.get_physics_interpolation_fraction()
