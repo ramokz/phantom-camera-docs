@@ -66,7 +66,7 @@ If you're using a physics object, such as `CharacterBody2D/3D` as a target, and 
 #### 2D Projects
 If you're making a 2D project, then it's highly recommended to upgrade to Godot **4.3** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody2D` as a `Follow Target` without causing jitter.
 
-#### 3D Projects
+#### 3D Projects, or when using Godot 4.2
 Godot has yet to add physics interpolation for 3D scenes, so if you're making a 3D project follow the steps below to alleviate any jitter.
 
 The solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node. This can be achieved in a few ways.
