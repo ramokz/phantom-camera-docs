@@ -8,7 +8,7 @@ The different modes has different functionalities and purposes, so choosing the 
 ## Core Modes
 
 <div class="property-core-group">
-<PropertyCore propertyName="Glued" propertyPageLink="./mimic" propertyIcon="./../../assets/icons/look-at-mimic.svg">
+<PropertyCore propertyName="Mimic" propertyPageLink="./mimic" propertyIcon="./../../assets/icons/look-at-mimic.svg">
 <template v-slot:propertyDescription>
 
 The simplest of the available options. Effectively copies the rotational value of the targeted `Node3D`.

@@ -65,27 +65,46 @@ body, .vp-doc td {
 
 .vp-doc h1 {
     font-weight: 900;
-    font-size: 40px;
+    font-size: 32px;
+
+    @media(min-width: 600px) {
+        font-size: 42px;
+    }
 }
 
 .vp-doc h2 {
     font-weight: 800;
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: var(--vp-c-brand-1)
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--vp-c-brand-1);
+
+    @media(min-width: 600px) {
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
 }
 
 .vp-doc h3 {
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 28px;
+    margin-bottom: 14px;
+    font-size: 22px;
+
+    @media(min-width: 600px) {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
 }
 
 .vp-doc h4 {
     color: var(--vp-c-brand-1);
     opacity: 0.8;
-    font-size: 20px;
+    font-size: 16px;
+
+    @media(min-width: 600px) {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
 }
 
 .method-container > h4 {
@@ -205,10 +224,16 @@ body, .vp-doc td {
 }
 
 .container-code-block {
-    --font-size: 18px;
+    --font-size: 16px;
     font-size: var(--font-size);
     color: var(--vp-c-white);
     font-weight: 700;
+
+    @media(min-width: 600px) {
+        margin-bottom: 20px;
+        --font-size: 18px;
+    }
+    
     & p {
         font-family: var(--vp-font-family-mono);
         margin-top: 3px;
