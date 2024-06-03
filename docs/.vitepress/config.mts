@@ -175,10 +175,10 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Viewfinder', link: "/viewfinder",
+        text: 'Phantom Camera Manager', link: "/phantom-camera-manager",
       },
       {
-        text: 'Phantom Camera Manager', link: "/phantom-camera-manager",
+        text: 'Viewfinder', link: "/viewfinder",
       },
       {
         text: 'Timeline Animation', link: "/timeline-animation",
