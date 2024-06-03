@@ -175,6 +175,9 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Phantom Camera Manager', link: "/phantom-camera-manager",
+      },
+      {
         text: 'Viewfinder', link: "/viewfinder",
       },
       {
