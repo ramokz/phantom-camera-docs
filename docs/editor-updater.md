@@ -1,21 +1,27 @@
 <img src="/assets/icons/editor-updater.svg" height="256" width="256"/>
 
 # Editor Updater
-Whenever a new version of the addon gets released on [GitHub](https://github.com/ramokz/phantom-camera/releases), by default, a dialogue prompt will appear on start-up asking to update the addon to the latest release.
 
-::: warning NOTE
+::: tip Note
 If this is unwanted, then the updater [can also be disabled](#updater-settings).
 :::
+
+Whenever a new version of the addon gets released on [GitHub](https://github.com/ramokz/phantom-camera/releases), by default, the Phantom Camera panel, at the bottom of the editor window, will change color and show an update icon.
+
+![Editor Updater Panel](/assets/editor-updater/editor-updater-panel.png)
+
+Opening the panel will display an update button in the top right hand corner.
+
+![Editor Updater Viewfinder](/assets/editor-updater/editor-updater-panel-opened.png)
+
+
+Pressing the **Update available** button will then open the updater prompt.
 
 <div align="center">
 <img src="/assets/editor-updater/editor-updater-prompt-patch-hotfix.png" width="400" alt="Image example of editor updater prompt"/>
 </div>
 
-Selecting **UPDATE** will then download the latest release as a zip, unzip, remove the existing addon and replace the addon with the newly downloaded version. The editor will then need to be relaunched before the changes can go into proper effect.
-
-The prompt can also be reopened using the button found in the `Phantom Camera` panel located at the bottom of the editor.
-
-![Editor Updater Viewfinder](/assets/editor-updater/editor-updater-viewfinder.png)
+Pressing **Update** will download the latest release as a zip, unzip, remove the existing addon and replace the addon with the newly downloaded version. The editor will then need to be relaunched before the changes can go into proper effect.
 
 ::: tip FOR FORKS
 Forks of the project will **_not_** have an option to update the addon via the editor.
@@ -29,7 +35,8 @@ The updater will only check when a project is opened.
 
 
 ## Updater Prompt Variants
-The updater prompt can appear in two different variants, depending on what version would be updated to.
+The updater prompt can appear in two different variants depending on what version would be updated to.
+
 For smaller **Patch** and **Hotfix** releases, an update button will be visible straight away, while larger **Major** or **Minor** releases will require a dropdown menu to be checked before the update button can appear. This is to prevent accidentally updating the addon where potential breaking changes might be introduced.
 
 ::: warning KEY ADVICE 
@@ -88,5 +95,5 @@ You may have to enable `Advanced Settings` in the top right-hand corner for the 
 </table>
 
 ::: tip TIP
-The way a **Fork** and a **End User** project is being distinguished is by the inclusion of a scene in the `dev_scenes` directory in the root level of the project, which is only present in the development repo.
+The way a **Fork** and a **End User** project is being distinguished is by the inclusion of a scene in the `dev_scenes` directory in the root level of the project, which is only present in the development repository / forks.
 :::
