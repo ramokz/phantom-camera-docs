@@ -230,7 +230,7 @@ pcam.get_fov()
 
 
 
-<Property propertyName="size" propertyType="size" propertyDefault="75">
+<Property propertyName="size" propertyType="float" propertyDefault="75">
 <template v-slot:propertyDescription>
 
 Overrides the `size` property of the `Camera3D` once becoming active.
@@ -275,7 +275,7 @@ pcam.get_size()
 
 
 
-<Property propertyName="frustum_offset" propertyType="size" propertyDefault="75">
+<Property propertyName="frustum_offset" propertyType="Vector2" propertyDefault="75">
 <template v-slot:propertyDescription>
 
 Overrides the `frustum_offset` property of the `Camera3D` once becoming active.

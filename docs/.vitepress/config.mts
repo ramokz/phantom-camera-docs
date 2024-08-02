@@ -82,7 +82,7 @@ export default defineConfig({
     
     outline: {
       label: "This page",
-      level: [1,4]
+      level: [1,3]
     },
 
     sidebar: [

@@ -6,6 +6,8 @@
 
 `PhantomCamera3D`, shortened to `PCam3D` (text) and `pcam_3d` (code), is used in 3D scenes.
 
+`PCam3Ds` can manually be enabled / disabled by toggling its visibility in the `Scene` hierarchy panel.
+
 ## Core Properties
 <div class="property-core-group">
 
@@ -46,6 +48,9 @@ Determines how the `Camera3D` should tween to this `PhantomCamera3D` upon becomi
 ## Secondary Properties
 <!--@include: ./parts/phantom-camera-properties.md-->
 
+
+
+
 <Property propertyName="camera_3d_resource" propertyType="Camera3DResource" propertyDefault="null">
 <template v-slot:propertyDescription>
 
@@ -83,6 +88,458 @@ pcam.get_camera_3d_resource()
 
 </template>
 </Property>
+
+
+
+
+<Property propertyName="cull_mask" propertyType="int" propertyDefault="1048575">
+<template v-slot:propertyDescription>
+
+Property reference to [cull_mask property of the `Camera3DResource`](/resource-types/camera-3d-resource#cull_mask).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_cull_mask(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_cull_mask(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_cull_mask()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_cull_mask()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="h_offset" propertyType="float" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Property reference to [h_offset property of the `Camera3DResource`](/resource-types/camera-3d-resource#h_offset).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_h_offset(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_h_offset(4.2)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_h_offset()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_h_offset()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="v_offset" propertyType="float" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Property reference to [v_offset property of the `Camera3DResource`](/resource-types/camera-3d-resource#v_offset).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_v_offset(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_v_offset(4.2)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_v_offset()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_v_offset()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="projection" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Property reference to [projection property of the `Camera3DResource`](/resource-types/camera-3d-resource#projection).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_projection(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_projection(2)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_projection()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_projection()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="fov" propertyType="float" propertyDefault="75">
+<template v-slot:propertyDescription>
+
+Property reference to [fov property of the `Camera3DResource`](/resource-types/camera-3d-resource#projection).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_fov(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_fov(4.2)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_fov()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_fov()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="size" propertyType="float" propertyDefault="1">
+<template v-slot:propertyDescription>
+
+Property reference to [size property of the `Camera3DResource`](/resource-types/camera-3d-resource#size).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_size(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_size(4.2)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_size()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_size()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="frustum_offset" propertyType="Vector2" propertyDefault="Vector2(0, 0, 0)">
+<template v-slot:propertyDescription>
+
+Property reference to [frustum_offset property of the `Camera3DResource`](/resource-types/camera-3d-resource#frustum_offset).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_frustum_offset(`Vector2` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_frustum_offset(Vector2(4, 2))
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_frustum_offset()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_frustum_offset()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="near" propertyType="float" propertyDefault="0.05">
+<template v-slot:propertyDescription>
+
+Property reference to [near property of the `Camera3DResource`](/resource-types/camera-3d-resource#near).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_near(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_near(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_near()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_near()
+```
+:::
+
+</template>
+</Property>
+
+
+
+<Property propertyName="far" propertyType="float" propertyDefault="4000">
+<template v-slot:propertyDescription>
+
+Property reference to [far property of the `Camera3DResource`](/resource-types/camera-3d-resource#far).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_far(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_far(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_far()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_far()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="attributes" propertyType="CameraAttributes" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+Allows for setting and dynamically tweening between [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) resources for each `PCam3D`. Used to enable and transition between things like depth-of-field, i.e. camera blur, and camera light exposure.
+
+::: warning Important
+If a [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) resource is already applied to a `Camera3D` node, then adding one to a `PCam3D` will automatically override it once that `PCam3D` becomes active.
+
+Again, using an `Attribute` resource on the `PCam3D` should be intended as a means of dynamically switching between different resources for tweens. In other words, if a project, or scene, only needs one [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) resource, then consider using a [`WorldEnvironemnt`](https://docs.godotengine.org/en/latest/classes/class_worldenvironment.html#class-worldenvironment) node or apply it directly to `Camera3D` node instead.
+:::
+
+::: warning Important
+Aside from a few exposure properties, any tweening between different [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) resources will only occur if the types are the same. So for best results, stick to using just [`CameraAttributePractical`](https://docs.godotengine.org/en/latest/classes/class_cameraattributespractical.html#class-cameraattributespractical) or [`CameraAttributePhysical`](https://docs.godotengine.org/en/latest/classes/class_cameraattributesphysical.html#class-cameraattributesphysical).
+:::
+
+
+::: warning Important
+
+If applying a CameraAttribute resource to a `PCam3D`, then the `Camera3D` will retain the most recently applied one if the consequent active `PCam3Ds` have no [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) applied.
+So if you want to move away from a current [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) setting, or reset it to default values, you would need to have another, active, `PCam3D` with another [`CameraAttribute`](https://docs.godotengine.org/en/latest/classes/class_cameraattributes.html#class-cameraattributes) resource with the desired changes / defaults.
+
+:::
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_attributes(`CameraAttributes` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_attributes(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`CameraAttributes` get_attributes()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_attributes()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="environment" propertyType="Environment" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+Allows for setting a [`Environment`](https://docs.godotengine.org/en/latest/classes/class_environment.html#class-environment) resources for individual `PCam3Ds`. The properties of this resource will **_not_** be tweened between each `PCam3D` that has resource.
+
+::: warning Important
+Only consider using this if there is a desire to change the environment variable per PCam3D instance. Otherwise, consider using a [`WorldEnvironemnt`](https://docs.godotengine.org/en/latest/classes/class_worldenvironment.html#class-worldenvironment) node or apply it directly to `Camera3D` node instead.
+:::
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_environment(`Environment` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_environment(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`Environment` get_environment()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_environment()
+```
+:::
+
+</template>
+</Property>
+
+
 
 
 ## Signals
