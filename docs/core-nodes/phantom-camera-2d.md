@@ -5,6 +5,8 @@
 
 `PhantomCamera2D`, shortened to `PCam2D` (text) and `pcam_2d` (code), is used in 2D scenes.
 
+`PCam2Ds` can manually be enabled / disabled by toggling its visibility in the `Scene` hierarchy panel.
+
 ## Core Properties
 <div class="property-core-group">
 <PropertyCore propertyName="Priority" propertyPageLink="../priority" propertyIcon="feature-priority.svg">

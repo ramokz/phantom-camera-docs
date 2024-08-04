@@ -20,6 +20,10 @@ pcam.is_active()
 
 </template>
 </Property>
+
+
+
+
 <Property propertyName="tween_on_load" propertyType="bool" propertyDefault="true">
 <template v-slot:propertyDescription>
 
@@ -59,6 +63,10 @@ pcam.get_tween_on_load()
 
 </template>
 </Property>
+
+
+
+
 <Property propertyName="inactive_update_mode" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
@@ -69,8 +77,6 @@ This is meant to reduce the amount of calculations inactive `PCams` are doing wh
 |----------------------|-------|
 | ALWAYS               | 0     |
 | NEVER                | 1     |
- 
-
 
 </template>
 <template v-slot:setMethod>
@@ -102,6 +108,9 @@ pcam.get_inactive_update_mode()
 
 </template>
 </Property>
+
+
+
 
 <Property propertyName="tween_resource" propertyType="PhantomCameraTween" propertyDefault="null">
 <template v-slot:propertyDescription>
@@ -137,6 +146,123 @@ pcam.set_tween_resource(tween_resource)
 ::: details Example
 ```gdscript
 pcam.get_tween_resource()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="tween_duration" propertyType="float" propertyDefault="1">
+<template v-slot:propertyDescription>
+
+Property reference to [tween_duration of the `PhantomCameraTween`](/resource-types/tween#duration).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_tween_duration(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_tween_duration(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_tween_duration()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_tween_duration()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="tween_transition" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Property reference to [tween_transition of the `PhantomCameraTween`](/resource-types/tween#transition).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_tween_ease(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_tween_transition(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_tween_transition()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_tween_transition()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="tween_ease" propertyType="int" propertyDefault="2">
+<template v-slot:propertyDescription>
+
+Property reference to [tween_ease of the `PhantomCameraTween`](/resource-types/tween#ease).
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_tween_ease(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_tween_ease(value)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_tween_ease()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_tween_ease()
 ```
 :::
 
