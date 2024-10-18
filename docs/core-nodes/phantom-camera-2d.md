@@ -621,16 +621,32 @@ Emitted when the `PCam` becomes inactive.
 
 
 
+
 <Signal signalRef="dead_zone_changed">
 <template v-slot:signalName>
 dead_zone_changed
 </template>
 <template v-slot:signalDescription>
 
-Emitted when the dead zone changes. Note: This is only applicable in [Framed Follow](/follow-modes/framed) mode.
+Emitted when the dead zone changes when in [Framed Follow](/follow-modes/framed) mode.
 
 </template>
 </Signal>
+
+
+
+
+<Signal signalRef="dead_zone_reached">
+<template v-slot:signalName>
+dead_zone_reached
+</template>
+<template v-slot:signalDescription>
+
+Emitted when a target touches the edge of the dead zone in [Framed Follow](/follow-modes/framed) mode.
+
+</template>
+</Signal>
+
 
 
 
