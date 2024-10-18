@@ -164,18 +164,35 @@ export default defineConfig({
         ]
       },
       {
+        text: "Noise",
+        items: [
+          {
+            text: "PhantomCameraNoiseEmitter2D", link: "/noise/phantom-camera-noise-emitter-2d"
+          },
+          {
+            text: "PhantomCameraNoiseEmitter3D", link: "/noise/phantom-camera-noise-emitter-3d"
+          }
+        ],
+      },
+      {
         text: 'Resource Types',
         items: [
           {
             text: 'Tween', link: "/resource-types/tween",
           },
           {
-            text: 'Camera3D Resource', link: "/resource-types/camera-3d-resource",
+            text: 'Camera3DResource', link: "/resource-types/camera-3d-resource",
+          },
+          {
+            text: 'PhantomCameraNoise2D', link: "/resource-types/phantom-camera-noise-2d",
+          },
+          {
+            text: 'PhantomCameraNoise3D', link: "/resource-types/phantom-camera-noise-3d",
           },
         ]
       },
       {
-        text: 'Phantom Camera Manager', link: "/phantom-camera-manager",
+        text: 'PhantomCameraManager', link: "/phantom-camera-manager",
       },
       {
         text: 'Viewfinder', link: "/viewfinder",

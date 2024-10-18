@@ -542,6 +542,140 @@ pcam.get_environment()
 
 
 
+<Property propertyName="noise" propertyType="PhantomCameraNoise3D" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+Applies a noise, or shake, to a `Camera3D`.
+Once set, the noise will run continuously after the tween to the `PhantomCamera3D` is complete.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_noise(`PhantomCameraNoise3D` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_noise(noise_resource)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`PhantomCameraNoise3D` get_noise()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_noise()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="preview_noise" propertyType="bool" propertyDefault="true">
+<template v-slot:propertyDescription>
+
+If **true**, will trigger the noise while in the editor.
+
+Useful in cases where you want to temporarily disabled the noise in the editor without removing
+the resource.
+
+This property has no effect on runtime behaviour.
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="noise_emitter_layer" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Enable a corresponding layer for a [PhantomCameraNoiseEmitter3D noise_emitter_layer](/noise/phantom-camera-noise-emitter-3d#noise_emitter_layer) to make this `PhantomCamera3D` be affected by it.
+
+**Note:** The value used for this is a bitmask, for improved usability, a helper setter function is also available.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_noise_emitter_layer(`int` value)
+
+`void` set_noise_emitter_layer_value(`int` layer, `bool` enabled)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+## Bitmask assignment
+pcam.get_noise_emitter_layer(16)
+
+## Specific layer change
+pcam.set_noise_emitter_layer_value(2, true)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_noise_emitter_layer()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_noise_emitter_layer()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+## Methods
+<Property propertyName="emit_noise" propertyType="Transform3D" propertyDefault="Transform3D()">
+<template v-slot:propertyDescription>
+
+Emits a noise based on a custom `Transform3D` value.
+
+Use this function if you wish to make use of external noise patterns from, for example, other addons.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` emit_noise(`Transform3D` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.emit_noise(transform_value)
+```
+:::
+
+</template>
+</Property>
+
+
+
+
 ## Signals
 
 <Signal signalRef="became_active">
