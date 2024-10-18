@@ -366,13 +366,13 @@ pcam.get_limit(SIDE_BOTTOM)
 <Property propertyName="limit_target" propertyType="NodePath" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Allows for setting either a `TileMap` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
+Allows for setting either a `TileMap` / `TileMapLayer` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
 
-**TileMap**
+**TileMap / TileMapLayer**
 
-The `Limit` will update after the `TileSet` of the `TileMap` has changed.
+The `Limit` will update after the `TileSet` of the `TileMap` / `TileMapLayer`  has changed.
 
-_Note:_ The limit size will only update after closing the `TileMap` editor bottom panel.
+_Note:_ The limit size will only update after closing the `TileMap` / `TileMapLayer` editor bottom panel.
 
 **CollisionShape2D**
 
@@ -391,7 +391,7 @@ _Note:_ For performance reasons, resizing the `Shape2D` while running the game w
 
 ::: details Example
 ```gdscript
-# TileMap node
+# TileMap / TileMapLayer node
 pcam.set_limit_target(tile_map_node)
 
 # CollisionShape2D node
@@ -420,7 +420,7 @@ pcam.get_limit_target()
 <Property propertyName="limit_margin" propertyType="Vector4i" propertyDefault="Vector4i(0,0,0,0)">
 <template v-slot:propertyDescription>
 
-Applies an offset to the `TileMap Limit` or `Shape2D Limit`.
+Applies an offset to the `TileMap / TileMapLayer Limit` or `Shape2D Limit`.
 
 The values go from `Left`, `Top`, `Right` and `Bottom`.
 
@@ -444,7 +444,7 @@ pcam.set_limit_margin(Vector4i(200, -200, 200, -200))
 </template>
 <template v-slot:getMethod>
 
-`TileMap` get_limit_margin()
+`TileMap / TileMapLayer` get_limit_margin()
 
 </template>
 <template v-slot:getExample>
