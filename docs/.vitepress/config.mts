@@ -167,6 +167,9 @@ export default defineConfig({
         text: "Noise",
         items: [
           {
+            text: "Overview", link: "/noise/overview"
+          },
+          {
             text: "PhantomCameraNoiseEmitter2D", link: "/noise/phantom-camera-noise-emitter-2d"
           },
           {
