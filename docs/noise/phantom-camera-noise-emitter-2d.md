@@ -223,7 +223,7 @@ pcam_emitter.get_decay_time()
 <Property propertyName="noise_emitter_layer" propertyType="int" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Enabled layers will affect [PhantomCamera2D]() nodes with at least one corresponding layer enabled.
+Enabled layers will affect [PhantomCamera2D](/core-nodes/phantom-camera-2d#noise_emitter_layer) nodes with at least one corresponding layer enabled.
 Enabling multiple corresponding layers on the same PhantomCamera2D causes no additional effect.
 
 </template>
