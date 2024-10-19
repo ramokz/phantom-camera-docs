@@ -332,12 +332,10 @@ pcam.noise.get_positional_multiplier_y()
 
 
 
-<Property propertyName="rotational_multiplier_x" propertyType="float" propertyDefault="1">
+<Property propertyName="rotational_multiplier" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Multiplies rotational noise amount in the X-axis.
-
-Set the value to `0` to disable noise in the axis.
+Multiplies rotational noise amount.
 
 </template>
 <template v-slot:setMethod>
@@ -349,232 +347,21 @@ Set the value to `0` to disable noise in the axis.
 
 ::: details Example
 ```gdscript
-pcam.noise.set_rotational_multiplier_x(0.42)
+pcam.noise.set_rotational_multiplier(0.42)
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_rotational_multiplier_x()
+`float` get_rotational_multiplier()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam.noise.get_rotational_multiplier_x()
-```
-:::
-
-</template>
-</Property>
-
-
-
-
-<Property propertyName="rotational_multiplier_y" propertyType="float" propertyDefault="1">
-<template v-slot:propertyDescription>
-
-Multiplies rotational noise amount in the Y-axis.
-
-Set the value to `0` to disable noise in the axis.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_rotational_multiplier_y (`float` value)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.noise.set_rotational_multiplier_y(0.42)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`float` get_rotational_multiplier_y()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.noise.get_rotational_multiplier_y()
-```
-:::
-
-</template>
-</Property>
-
-
-
-
-<Property propertyName="rotational_multiplier_z" propertyType="float" propertyDefault="1">
-<template v-slot:propertyDescription>
-
-Multiplies rotational noise amount in the Z-axis.
-
-Set the value to `0` to disable noise in the axis.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_rotational_multiplier_z (`float` value)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.noise.set_rotational_multiplier_z(0.42)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`float` get_rotational_multiplier_z()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.noise.get_rotational_multiplier_z()
-```
-:::
-
-</template>
-</Property>
-
-
-
-
-<Property propertyName="positional_multiplier_x" propertyType="float" propertyDefault="1">
-<template v-slot:propertyDescription>
-
-Multiplies positional noise amount in the X-axis.
-
-Set the value to `0` to disable noise in the axis.
-
-**Note:** Rotational Offset is recommended to avoid potential camera clipping.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_positional_multiplier_x (`float` value)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.noise.set_positional_multiplier_x(0.42)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`float` get_positional_multiplier_x()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.noise.get_positional_multiplier_x()
-```
-:::
-
-</template>
-</Property>
-
-
-
-
-<Property propertyName="positional_multiplier_y" propertyType="float" propertyDefault="1">
-<template v-slot:propertyDescription>
-
-Multiplies positional noise amount in the Y-axis.
-
-Set the value to `0` to disable noise in the axis.
-
-**Note:** Rotational Offset is recommended to avoid potential camera clipping with the environment.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_positional_multiplier_y (`float` value)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.noise.set_positional_multiplier_y(0.42)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`float` get_positional_multiplier_y()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.noise.get_positional_multiplier_y()
-```
-:::
-
-</template>
-</Property>
-
-
-
-
-<Property propertyName="positional_multiplier_z" propertyType="float" propertyDefault="1">
-<template v-slot:propertyDescription>
-
-Multiplies positional noise amount in the Z-axis.
-
-Set the value to `0` to disable noise in the axis.
-
-**Note:** Rotational Offset is recommended to avoid potential camera clipping with the environment.
-
-</template>
-<template v-slot:setMethod>
-
-`void` set_positional_multiplier_z (`float` value)
-
-</template>
-<template v-slot:setExample>
-
-::: details Example
-```gdscript
-pcam.noise.set_positional_multiplier_z(0.42)
-```
-:::
-
-</template>
-<template v-slot:getMethod>
-
-`float` get_positional_multiplier_z()
-
-</template>
-<template v-slot:getExample>
-
-::: details Example
-```gdscript
-pcam.noise.get_positional_multiplier_z()
+pcam.noise.get_rotational_multiplier()
 ```
 :::
 
