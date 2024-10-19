@@ -1,6 +1,4 @@
-<div style="padding: 10px 0">
-    <img alt="PhantomCameraNoiseEmitter2D" src="/assets/icons/phantom-camera-noise-2d.svg" height="256" width="256"/>
-</div>
+<img alt="PhantomCameraNoiseEmitter2D" src="/assets/icons/phantom-camera-noise-2d.svg" height="256" width="256"/>
 
 # PhantomCameraNoise2D
 > Inherits: Resource

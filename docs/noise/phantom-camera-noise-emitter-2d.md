@@ -1,6 +1,4 @@
-<div style="padding: 10px 0">
-    <img alt="PhantomCameraNoiseEmitter2D" src="/assets/icons/phantom-camera-noise-emitter-2d.svg" height="256" width="256"/>
-</div>
+<img alt="PhantomCameraNoiseEmitter2D" src="/assets/icons/phantom-camera-noise-emitter-2d.svg" height="256" width="256"/>
 
 # PhantomCameraNoiseEmitter2D
 > Inherits: Node2D
