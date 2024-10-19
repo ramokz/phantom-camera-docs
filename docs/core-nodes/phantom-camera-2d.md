@@ -248,7 +248,6 @@ pcam.get_limit(SIDE_TOP)
 :::
 
 </template>
-
 </Property>
 
 
@@ -359,7 +358,6 @@ pcam.get_limit(SIDE_BOTTOM)
 :::
 
 </template>
-
 </Property>
 
 
@@ -368,13 +366,13 @@ pcam.get_limit(SIDE_BOTTOM)
 <Property propertyName="limit_target" propertyType="NodePath" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Allows for setting either a `TileMap` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
+Allows for setting either a `TileMap` / `TileMapLayer` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
 
-**TileMap**
+**TileMap / TileMapLayer**
 
-The `Limit` will update after the `TileSet` of the `TileMap` has changed.
+The `Limit` will update after the `TileSet` of the `TileMap` / `TileMapLayer`  has changed.
 
-_Note:_ The limit size will only update after closing the `TileMap` editor bottom panel.
+_Note:_ The limit size will only update after closing the `TileMap` / `TileMapLayer` editor bottom panel.
 
 **CollisionShape2D**
 
@@ -393,7 +391,7 @@ _Note:_ For performance reasons, resizing the `Shape2D` while running the game w
 
 ::: details Example
 ```gdscript
-# TileMap node
+# TileMap / TileMapLayer node
 pcam.set_limit_target(tile_map_node)
 
 # CollisionShape2D node
@@ -422,7 +420,7 @@ pcam.get_limit_target()
 <Property propertyName="limit_margin" propertyType="Vector4i" propertyDefault="Vector4i(0,0,0,0)">
 <template v-slot:propertyDescription>
 
-Applies an offset to the `TileMap Limit` or `Shape2D Limit`.
+Applies an offset to the `TileMap / TileMapLayer Limit` or `Shape2D Limit`.
 
 The values go from `Left`, `Top`, `Right` and `Bottom`.
 
@@ -446,7 +444,7 @@ pcam.set_limit_margin(Vector4i(200, -200, 200, -200))
 </template>
 <template v-slot:getMethod>
 
-`TileMap` get_limit_margin()
+`TileMap / TileMapLayer` get_limit_margin()
 
 </template>
 <template v-slot:getExample>
@@ -460,6 +458,138 @@ pcam.get_limit_margin()
 </template>
 </Property>
 
+
+
+
+<Property propertyName="noise" propertyType="PhantomCameraNoise2D" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+Applies a noise, or shake, to a `Camera2D`.
+Once set, the noise will run continuously after the tween to the `PhantomCamera2D` is complete.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_noise(`PhantomCameraNoise2D` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_noise(noise_resource)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_noise()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_noise()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="preview_noise" propertyType="bool" propertyDefault="true">
+<template v-slot:propertyDescription>
+
+If **true**, will trigger the noise while in the editor.
+
+Useful in cases where you want to temporarily disabled the noise in the editor without removing
+the resource.
+
+This property has no effect on runtime behaviour.
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="noise_emitter_layer" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Enable a corresponding layer for a [PhantomCameraNoiseEmitter2D noise_emitter_layer](/noise/phantom-camera-noise-emitter-2d#noise_emitter_layer) to make this `PhantomCamera2D` be affected by it.
+
+**Note:** The value used for this is a bitmask, for improved usability, a helper setter function is also available.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_noise_emitter_layer(`int` value)
+
+`void` set_noise_emitter_layer_value(`int` layer, `bool` enabled)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+## Bitmask assignment
+pcam.get_noise_emitter_layer(16)
+
+## Specific layer change
+pcam.set_noise_emitter_layer_value(2, true)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_noise_emitter_layer()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_noise_emitter_layer()
+```
+:::
+
+</template>
+</Property>
+
+
+## Methods
+
+<Property propertyName="emit_noise" propertyType="Transform2D" propertyDefault="Transform2D()">
+<template v-slot:propertyDescription>
+
+Emits a noise based on a custom `Transform2D` value.
+
+Use this function if you wish to make use of external noise patterns from, for example, other addons.
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` emit_noise(`Transform2D` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.emit_noise(transform_value)
+```
+:::
+
+</template>
+</Property>
 
 
 ## Signals
@@ -491,16 +621,32 @@ Emitted when the `PCam` becomes inactive.
 
 
 
+
 <Signal signalRef="dead_zone_changed">
 <template v-slot:signalName>
 dead_zone_changed
 </template>
 <template v-slot:signalDescription>
 
-Emitted when the dead zone changes. Note: This is only applicable in [Framed Follow](/follow-modes/framed) mode.
+Emitted when the dead zone changes when in [Framed Follow](/follow-modes/framed) mode.
 
 </template>
 </Signal>
+
+
+
+
+<Signal signalRef="dead_zone_reached">
+<template v-slot:signalName>
+dead_zone_reached
+</template>
+<template v-slot:signalDescription>
+
+Emitted when a target touches the edge of the dead zone in [Framed Follow](/follow-modes/framed) mode.
+
+</template>
+</Signal>
+
 
 
 
