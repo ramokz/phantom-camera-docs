@@ -13,7 +13,7 @@ export default defineConfig({
       ['meta', {property: 'og:description', content: 'A dynamic 2D & 3D camera addon for Godot 4'}],
       ['meta', {property: 'og:url', content: 'https://phantom-camera.dev'}],
       ['meta', {property: 'og:image', content: '/meta-image.png'}],
-      
+
       ['meta', {name: 'twitter:card', content: "summary"}],
       ['meta', {name: 'twitter:title', content: 'Phantom Camera'}],
       ['meta', {name: 'twitter:description', content: 'A dynamic 2D & 3D camera addon for Godot 4'}],
@@ -55,7 +55,7 @@ export default defineConfig({
     }
   },
   srcExclude: [
-    '**/parts/*.md'  
+    '**/parts/*.md'
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -64,7 +64,7 @@ export default defineConfig({
       pattern: 'https://github.com/ramokz/phantom-camera-docs/edit/main/docs/:path',
       text: 'Suggest changes to this page'
     },
-    
+
     nav: [
       {
         text: 'Home', link: '/'
@@ -79,7 +79,7 @@ export default defineConfig({
         text: 'Discussions', link: 'https://github.com/ramokz/phantom-camera/discussions'
       },
     ],
-    
+
     outline: {
       label: "This page",
       level: [1,3]
@@ -217,7 +217,7 @@ export default defineConfig({
         text: 'Roadmap', link: "/roadmap"
       },
     ],
-    
+
     search: {
       provider: "algolia",
       options: {
@@ -239,8 +239,7 @@ export default defineConfig({
         },
         link: 'https://bsky.app/profile/marcusskov.bsky.social',
         ariaLabel: 'Bluesky'
-      },
-      { icon: 'twitter', link: 'https://twitter.com/marcusskov' },
+      }
     ],
   }
 })

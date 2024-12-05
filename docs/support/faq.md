@@ -132,7 +132,7 @@ There is a planned change for Godot that will enable nodes to [set the physics i
 ### Where can I go for support?
 If there's something you're unsure about or can't quite work out, then feel free to make a [discussion post on the GitHub repo](https://github.com/ramokz/phantom-camera/discussions/new/choose), you're likely not the only person who has had a particular question. Remember, there are **_no_** stupid questions!
 
-Also feel free to reach out to me personally on [Twitter](https://twitter.com/marcusskov), [Mastodon](https://mastodon.gamedev.place/@marcusskov) or [Bluesky](https://bsky.app/profile/marcusskov.bsky.social) - DMs are always open and happy to help!
+Also feel free to reach out to me personally on [Mastodon](https://mastodon.gamedev.place/@marcusskov) or [Bluesky](https://bsky.app/profile/marcusskov.bsky.social) - DMs are always open and happy to help!
 
 #### Some minor house rules when asking for help
 - Always be polite and respectful.
