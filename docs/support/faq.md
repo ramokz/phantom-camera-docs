@@ -1,9 +1,6 @@
 # FAQ
-
-
 ## General
 ### What is the intent behind the addon?
-
 Cameras are an essential part of practically any game for rendering what you see on the screen. But rarely do they remain static and immovable, but instead dynamic and changes based on what happens in a given context.
 
 The addon is meant to simplify some common camera behaviour, such as smoothly moving between different points in space at specified points in time or retain a particular positional/rotational value relative to other elements.
@@ -13,7 +10,6 @@ The end goal is to make it functional enough to become a generalised camera exte
 ---
 
 ### What is the state of the addon?
-
 Ongoing, but still in early stages. Core features have been implemented, but may change as more get added. Things will likely break or change along the way. It's also worth keeping in mind that lots of key and, likely, frequently used features are yet to be done.
 
 See the [project page](https://github.com/users/ramokz/projects/3/views/8) to see planned features.
@@ -54,7 +50,6 @@ Using the addon in `C#` is not as elegant as `GDScript`, which comes down to the
 ### Has rewriting it as an GDExtension been considered?
 It has, and likely will happen one day when the addon reaches a more mature state. Partly for performance reasons, but also to make users of `GDScript`, `C#` and others have a similar experience when using it in their language of choice.
 
-
 ## Troubleshooting
 ### I'm seeing jitter, what can I do?
 If you're seeing a targeted node rapidly moving back and forth as you move it, then, yes, that is _not_ an intended effect nor something that should be happening.
@@ -63,11 +58,14 @@ If you're using a physics object, such as `CharacterBody2D/3D` as a target, and 
 
 > This is not to be confused with stutter, which [Godot has a good example of showing the difference between the two.](https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html)
 
-#### 2D Projects
-If you're making a 2D project, then it's highly recommended to upgrade to Godot **4.3** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody2D` as a `Follow Target` without causing jitter.
+#### 2D
+If you are working on a 2D project, then it's highly recommended to upgrade to **Godot 4.3** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody2D` as a `Follow Target` without causing jitter.
 
-#### 3D Projects, or when using Godot 4.2
-Godot has yet to add physics interpolation for 3D scenes, so if you're making a 3D project follow the steps below to alleviate any jitter.
+#### 3D
+If you are working on a 3D project, then it's highly recommended to upgrade to **Godot 4.4** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody3D` as a `Follow Target` without causing jitter.
+
+#### 2D (Godot 4.2) or 3D (Godot 4.3 / 4.2)
+For older versions of Godot, the steps below are meant to
 
 The solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node. This can be achieved in a few ways.
 
@@ -114,13 +112,11 @@ func _process(_delta: float) -> void:
 
 Again, this is a very simplistic take on Option 1, which provides more functionalities and is generally a more tried and tested solution.
 
-
 #### Additional Option - Set the target to the Visual Representation Node
 
 <img alt="Target Visual Node" src="/assets/support/follow-visual-node.png" height="1122" width="618"/>
 
 Another thing you can do is to set the target to the visual representation directly. Ultimately, that is what should be followed in any case, though it's a less obvious node to select. The only prerequisite for this is to use either of the two options above so that the visual representation only updates in the `_process`.
-
 
 <img alt="Editable children" src="/assets/support/editable-children.png" height="648" width="334"/>
 
