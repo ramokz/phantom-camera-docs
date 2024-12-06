@@ -15,7 +15,7 @@ There are 3 ways to apply noise to a `Camera2D/3D` using this system.
 
 ### Noise Property
 
-![noise-property-setup.png](/public/assets/guides/noise-property-setup.png)
+![noise-property-setup.png](/assets/guides/noise-property-setup.png)
 
 Each `PCam` has a `Noise` property that takes a [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-2d) / [PhantomCameraNoise3D](/resource-types/phantom-camera-noise-3d) resource for [PCam2D](/core-nodes/phantom-camera-2d#noise) / [PCam3D](/core-nodes/phantom-camera-3d#noise) respectively.
 
@@ -30,8 +30,8 @@ The noise will only go into effect after a tween to it has completed.
 ### Noise Emitter Node
 
 <div :class="$style.image_side_by_side">
-    <img alt="Noise Emitter 2D" src="/public/assets/guides/noise-emitter-2d-setup.png" />
-    <img alt="Noise Emitter 3D" src="/public/assets/guides/noise-emitter-3d-setup.png" />
+    <img alt="Noise Emitter 2D" src="/assets/guides/noise-emitter-2d-setup.png" />
+    <img alt="Noise Emitter 3D" src="/assets/guides/noise-emitter-3d-setup.png" />
 </div>
 
 
