@@ -10,4 +10,3 @@ This is the simplest and lightest of the follow modes and is useful for cases wh
 <!--@include: ./parts/follow-target.md-->
 <!--@include: ./parts/damping.md-->
 <!--@include: ./parts/damping-value.md-->
-

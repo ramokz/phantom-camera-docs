@@ -55,3 +55,59 @@ Applies a `SpringArm3D` node to its target and allows for rotating around it.
 
 ## Properties
 <!--@include: ./parts/follow-mode.md-->
+
+<Property propertyName="follow_axis_lock" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Prevents camera movement in one or multiple world axes.
+
+#### 2D
+| FollowLockAxis | Value |
+|----------------|-------|
+| NONE           | 0     |
+| X              | 1     |
+| Y              | 2     |
+
+#### 3D
+| FollowLockAxis | Value |
+|----------------|-------|
+| NONE           | 0     |
+| X              | 1     |
+| Y              | 2     |
+| Z              | 3     |
+| XY             | 4     |
+| XZ             | 5     |
+| YZ             | 6     |
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_follow_lock_axis(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_follow_axis_lock()
+```
+:::
+
+</template>
+
+<template v-slot:getMethod>
+
+`int` get_follow_lock_axis()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_follow_axis_lock()
+```
+:::
+
+</template>
+</Property>
