@@ -67,6 +67,7 @@ Prevents camera movement in one or multiple world axes.
 | NONE           | 0     |
 | X              | 1     |
 | Y              | 2     |
+| XY             | 3     |
 
 #### 3D
 | FollowLockAxis | Value |
@@ -78,6 +79,7 @@ Prevents camera movement in one or multiple world axes.
 | XY             | 4     |
 | XZ             | 5     |
 | YZ             | 6     |
+| XYZ            | 7     |
 
 </template>
 
