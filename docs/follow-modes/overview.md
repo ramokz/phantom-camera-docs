@@ -92,7 +92,7 @@ Prevents camera movement in one or multiple world axes.
 
 ::: details Example
 ```gdscript
-pcam.set_follow_axis_lock()
+pcam.set_follow_axis_lock(2)
 ```
 :::
 
