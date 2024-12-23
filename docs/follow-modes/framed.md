@@ -24,7 +24,7 @@ Alternatively, enable the [show_viewfinder_in_play](#show_viewfinder_in_play) pr
 
 <!--@include: ./parts/follow-distance.md-->
 
-<Property propertyName="dead_zone_height" propertyType="float" propertyDefault="0">
+<Property propertyName="dead_zone_width" propertyType="float" propertyDefault="0">
 <template v-slot:propertyDescription>
 
 Defines the horizontal dead zone area. While the target is within it, the `PCam` will not move in the horizontal axis. If the targeted node leaves the horizontal bounds, the `PCam` will follow the target horizontally to keep it within bounds.
