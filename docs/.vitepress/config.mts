@@ -237,7 +237,7 @@ export default defineConfig({
 </svg>
           `
         },
-        link: 'https://bsky.app/profile/marcusskov.bsky.social',
+        link: 'https://bsky.app/profile/marcusskov.com',
         ariaLabel: 'Bluesky'
       }
     ],
