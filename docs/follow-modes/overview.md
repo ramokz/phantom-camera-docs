@@ -61,6 +61,12 @@ Applies a `SpringArm3D` node to its target and allows for rotating around it.
 
 Prevents camera movement in one or multiple world axes.
 
+Locking a `PCam` does not change its position nor take its `Follow Target`'s transform values into account.
+
+::: info Note
+This only applies once the `PCam` has a valid `Follow Target`.
+:::
+
 #### 2D
 | FollowLockAxis | Value |
 |----------------|-------|
