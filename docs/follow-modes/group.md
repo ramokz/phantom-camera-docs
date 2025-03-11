@@ -356,6 +356,10 @@ Sets the minimum distance between the `Camera` and centre of `AABB`.
 This distance will only ever be reached when all the targets are in the exact same `Vector3` coordinate, which will very unlikely happen, so adjust the value here accordingly.
 :::
 
+::: info Note
+If only one follow target is assigned to [follow_targets](#follow_targets), this value will be used as the `follow_distance`.
+:::
+
 <Property2D3DOnly :is2D="false" altProp="auto_zoom_max" altPropLink="./group#auto_zoom_max"/>
 
 </template>
