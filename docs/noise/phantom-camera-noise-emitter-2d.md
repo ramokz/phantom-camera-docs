@@ -17,7 +17,7 @@ The [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-2d) resource tha
 </template>
 <template v-slot:setMethod>
 
-`void` set_noise (`PhantomCameraNoise2D` value)
+`void` set_noise (`PhantomCameraNoise2D` noise_resource)
 
 </template>
 <template v-slot:setExample>
