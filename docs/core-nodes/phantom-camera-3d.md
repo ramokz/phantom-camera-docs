@@ -604,7 +604,13 @@ This property has no effect on runtime behaviour.
 
 Enable a corresponding layer for a [PhantomCameraNoiseEmitter3D noise_emitter_layer](/noise/phantom-camera-noise-emitter-3d#noise_emitter_layer) to make this `PhantomCamera3D` be affected by it.
 
-**Note:** The value used for this is a bitmask, for improved usability, a helper setter function is also available.
+Enabling multiple corresponding layers on the same `PhantomCamera3D` causes no additional effect.
+
+**Note:** The layer value uses a bitmask.
+
+::: tip Tip
+A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.
+:::
 
 </template>
 
@@ -620,10 +626,10 @@ Enable a corresponding layer for a [PhantomCameraNoiseEmitter3D noise_emitter_la
 ::: details Example
 ```gdscript
 ## Bitmask assignment
-pcam.get_noise_emitter_layer(16)
+pcam.set_noise_emitter_layer(10) # Enables the 2nd and 4th layer using a bitmask value
 
 ## Specific layer change
-pcam.set_noise_emitter_layer_value(2, true)
+pcam.set_noise_emitter_layer_value(4, true) # Enables the 4th layer
 ```
 :::
 
@@ -637,7 +643,7 @@ pcam.set_noise_emitter_layer_value(2, true)
 
 ::: details Example
 ```gdscript
-pcam.get_noise_emitter_layer()
+pcam.get_noise_emitter_layer() # Returns the layer value as a bitmask
 ```
 :::
 
