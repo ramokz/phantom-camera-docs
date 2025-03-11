@@ -223,34 +223,44 @@ pcam_emitter.get_decay_time()
 <Property propertyName="noise_emitter_layer" propertyType="int" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Enabled layers will affect [PhantomCamera3D](/core-nodes/phantom-camera-3d#noise_emitter_layer) nodes with at least one corresponding layer enabled.
+Enabled layers will affect [PhantomCamera3D](/core-nodes/phantom-camera-3d#noise_emitter_layer) nodes with at least one corresponding layer enabled. The layer value uses a bitmask.
 Enabling multiple corresponding layers on the same `PhantomCamera3D` causes no additional effect.
+
+::: tip Tip
+A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.
+:::
 
 </template>
 <template v-slot:setMethod>
 
-`void` set_decay_time (`float` value)
+`void` set_noise_emitter_layer (`int` value)
+
+`void` set_noise_emitter_layer_value (`int` layer, `bool` enabled)
 
 </template>
 <template v-slot:setExample>
 
 ::: details Example
 ```gdscript
-pcam_emitter.set_decay_time(0.1)
+# Bitmask assignment
+pcam_emitter.set_noise_emitter_layer(10) # Enables the 2nd and 4th layer using a bitmask value
+
+## Specific layer change
+pcam_emitter.set_noise_emitter_layer_value(4, true) # Enables the 4th layer
 ```
 :::
 
 </template>
 <template v-slot:getMethod>
 
-`float` get_decay_time()
+`int` get_noise_emitter_layer()
 
 </template>
 <template v-slot:getExample>
 
 ::: details Example
 ```gdscript
-pcam_emitter.get_decay_time()
+pcam_emitter.get_noise_emitter_layer() # Returns the layer value as a bitmask
 ```
 :::
 
