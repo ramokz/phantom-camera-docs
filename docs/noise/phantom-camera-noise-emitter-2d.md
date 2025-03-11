@@ -223,8 +223,11 @@ pcam_emitter.get_decay_time()
 <Property propertyName="noise_emitter_layer" propertyType="int" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Enabled layers will affect [PhantomCamera2D](/core-nodes/phantom-camera-2d#noise_emitter_layer) nodes with at least one corresponding layer enabled. The layer value uses a bitmask.
+Enabled layers will affect [PhantomCamera2D](/core-nodes/phantom-camera-2d#noise_emitter_layer) nodes with at least one corresponding layer enabled.
+
 Enabling multiple corresponding layers on the same `PhantomCamera2D` causes no additional effect.
+
+**Note:** The layer value uses a bitmask.
 
 ::: tip Tip
 A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.

@@ -523,6 +523,10 @@ This property has no effect on runtime behaviour.
 
 Enable a corresponding layer for a [PhantomCameraNoiseEmitter2D noise_emitter_layer](/noise/phantom-camera-noise-emitter-2d#noise_emitter_layer) to make this `PhantomCamera2D` be affected by it.
 
+Enabling multiple corresponding layers on the same `PhantomCamera2D` causes no additional effect.
+
+**Note:** The layer value uses a bitmask.
+
 ::: tip Tip
 A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.
 :::
