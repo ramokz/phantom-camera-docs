@@ -91,8 +91,8 @@ body, .vp-doc td {
     font-size: 22px;
 
     @media(min-width: 600px) {
-        margin-bottom: 20px;
-        font-size: 28px;
+        margin-bottom: 0;
+        font-size: 24px;
     }
 }
 
@@ -233,7 +233,6 @@ body, .vp-doc td {
 
     @media(min-width: 600px) {
         margin-bottom: 1rem;
-        --font-size: 1.1rem;
     }
 
     & p {

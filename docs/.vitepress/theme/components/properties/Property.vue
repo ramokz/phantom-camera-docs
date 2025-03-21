@@ -12,7 +12,12 @@ const props = defineProps({
   },
   propertyDefault: {
     type: String,
-    required: true,
+    required: false,
+  },
+  isMethod: {
+    type: Boolean,
+    required: false,
+    default: false
   },
   disableOutlineEntry: {
     type: String,
@@ -27,7 +32,7 @@ const props = defineProps({
 
 const id = computed<String>(() =>{
   if (props.disableOutlineEntry) { return null }
-  
+
   return props.propertyName.replace(/ /g, '-').toLowerCase()
 })
 
@@ -38,6 +43,10 @@ const setExample: string = "setExample"
 // Getter names
 const getMethod: string = "getMethod"
 const getExample: string = "getExample"
+
+// Caller names
+const callerMethod: string = "callerMethod"
+const callerExample: string = "callerExample"
 
 const slots = useSlots()
 const slotContent: Array<string> = Object.keys(slots)
@@ -58,26 +67,27 @@ const hasGetterContent = computed(() => {
 <template>
   <div class="property-method-signal-container">
     <h3 :id="id" tabindex="-1">
+      <code v-if="isMethod">{{ propertyType }}</code>
       {{ propertyName }}
+      <code v-if="isMethod && propertyDefault">({{ propertyDefault }})</code>
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${propertyName}`">&#8203;</a>
     </h3>
-    <div class="property-overview">
-      <h4>
+    <div class="property-overview" v-if="!isMethod">
+      <h4 v-if="!isMethod">
         Type: <code>{{ propertyType }}</code>
       </h4>
-      <h4>
+      <h4 v-if="propertyDefault && !isMethod">
         Default: <code>{{ propertyDefault }}</code>
       </h4>
     </div>
-      
     <slot name="propertyDescription">
       <p class="missing-text">
         Missing propertyDescription
       </p>
     </slot>
 
-    <hr v-if="hasGetterContent || hasSetterContent" />
-    
+    <hr v-if="hasGetterContent || hasSetterContent || hasCallerContent" />
+
     <MethodComponent class="method-container" method-type="Setter" :methodName="propertyName" v-if="hasSetterContent">
       <template #method>
         <slot :name="setMethod">
@@ -90,7 +100,7 @@ const hasGetterContent = computed(() => {
         </slot>
       </template>
     </MethodComponent>
-    
+
     <MethodComponent class="method-container" method-type="Getter" :methodName="propertyName" v-if="hasGetterContent">
       <template #method>
         <slot :name="getMethod">
@@ -103,14 +113,27 @@ const hasGetterContent = computed(() => {
         </slot>
       </template>
     </MethodComponent>
-    
-    <div v-if="!hasGetterContent && !hasSetterContent">
-      <p class="property-usage-note"><b><i>Note:</i></b> This property is only <i>accessible</i> within the node's inspector panel in the editor. </p> 
+
+    <MethodComponent class="method-container" method-type="Caller" :methodName="propertyName" v-if="hasCallerContent">
+      <template #method>
+        <slot :name="callerMethod">
+          <p class="missing-text">Missing callerMethod</p>
+        </slot>
+      </template>
+      <template #example>
+        <slot :name="callerExample">
+          <p class="missing-text">Missing callerExample</p>
+        </slot>
+      </template>
+    </MethodComponent>
+
+    <div v-if="!hasGetterContent && !hasSetterContent && !isMethod">
+      <p class="property-usage-note"><b><i>Note:</i></b> This property is only <i>accessible</i> within the node's inspector panel in the editor. </p>
     </div>
     <div v-if="editorOnly">
-      <p class="property-usage-note"><b><i>Note:</i></b> This property is only <i>modifiable</i> within the node's inspector panel in the editor. </p> 
+      <p class="property-usage-note"><b><i>Note:</i></b> This property is only <i>modifiable</i> within the node's inspector panel in the editor. </p>
     </div>
-    
+
   </div>
 </template>
 
@@ -119,12 +142,13 @@ const hasGetterContent = computed(() => {
     @media(min-width: 600px) {
       display: flex;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
     & > h4 {
       & >code {
         color: var(--vp-code-color);
       }
-      &:last-child {
+      &:nth-child(2) {
         margin: 10px 0 0 0;
         @media(min-width: 600px) {
           margin: 0 0 0 20px;
@@ -132,13 +156,20 @@ const hasGetterContent = computed(() => {
       }
     }
   }
-  
+
+  h3 {
+    code {
+      font-size: 1.1rem;
+      color: var(--vp-c-brand-1);
+    }
+  }
+
   .property-usage-note {
     font-size: 16px;
     opacity: 0.8;
     margin-top: 0;
   }
-  
+
   .method-container {
     margin-top: 30px;
   }
