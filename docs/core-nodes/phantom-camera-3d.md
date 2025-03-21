@@ -673,6 +673,22 @@ pcam.emit_noise(transform_value)
 
 
 
+<Property propertyName="teleport_position" propertyType="void" isMethod="true">
+<template v-slot:propertyDescription>
+
+Teleports the `PhantomCamera3D` and `Camera3D` to their designated position, bypassing the damping process.
+
+::: details Example
+```gdscript
+pcam.teleport_position()
+```
+:::
+
+</template>
+</Property>
+
+
+
 ## Signals
 
 <Signal signalRef="became_active">
