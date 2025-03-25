@@ -230,7 +230,7 @@ Enabling multiple corresponding layers on the same `PhantomCamera3D` causes no a
 **Note:** The layer value uses a bitmask.
 
 ::: tip Tip
-A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.
+A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not having to supply bitmask values.
 :::
 
 </template>
