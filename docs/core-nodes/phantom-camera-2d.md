@@ -572,7 +572,7 @@ pcam.get_noise_emitter_layer() # Returns the layer value as a bitmask
 
 ## Methods
 
-<Property propertyName="emit_noise" propertyType="void" propertyDefault="transform Transform2D" isMethod="true">
+<Property propertyName="emit_noise" propertyType="void" propertyDefault="(<code>Transform2D</code> transform)" isMethod="true">
 <template v-slot:propertyDescription>
 
 Emits a noise based on a custom `Transform2D` value.

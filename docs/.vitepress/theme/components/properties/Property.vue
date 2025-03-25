@@ -69,7 +69,7 @@ const hasGetterContent = computed(() => {
     <h3 :id="id" tabindex="-1">
       <code v-if="isMethod">{{ propertyType }}</code>
       {{ propertyName }}
-      <code v-if="isMethod && propertyDefault">({{ propertyDefault }})</code>
+      <span v-if="isMethod && propertyDefault" v-html="propertyDefault"></span>
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${propertyName}`">&#8203;</a>
     </h3>
     <div class="property-overview" v-if="!isMethod">
@@ -77,7 +77,7 @@ const hasGetterContent = computed(() => {
         Type: <code>{{ propertyType }}</code>
       </h4>
       <h4 v-if="propertyDefault && !isMethod">
-        Default: <code>{{ propertyDefault }}</code>
+        Default: {{ propertyDefault }}
       </h4>
     </div>
     <slot name="propertyDescription">
