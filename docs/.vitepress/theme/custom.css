@@ -18,7 +18,7 @@
     /*--vp-font-family-base: */
     --vp-font-family-base: 'Nunito', sans-serif;
     --vp-font-family-mono: 'JetBrains Mono', sans-serif;
-    --vp-code-font-size: 1rem;
+    --vp-code-font-size: 0.9rem;
 
     /* Background */
     --vp-c-bg: #141C21;

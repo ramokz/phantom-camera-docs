@@ -68,9 +68,11 @@ You may have to enable `Advanced Settings` in the top right-hand corner for the 
 <table>
     <tr>
         <th>
-            <h5>Enable Updater</h5>
+            <h5>Updater Window</h5>
         </th>
-        <th><h5>Show New Release Info on Editor Launch in Output</h5></th>
+        <th>
+            <h5>Console Output</h5>
+        </th>
     </tr>
     <tr>
         <td>
@@ -81,10 +83,10 @@ You may have to enable `Advanced Settings` in the top right-hand corner for the 
         </td>
     </tr>
     <tr>
-        <td> If enabled, it will trigger the updater dialogue when the Godot project opens and show an updater button in the <code>Phantom Camera</code> editor panel.
+        <td> If enabled, it will trigger the updater button prompt in the viewfinder, as shown above at the <a href="#editor-updater">top of the page</a>, once the button is pressed ths above prompt will appear allowing for updating the addon to the latest version.
             <div class="warning custom-block">
             <p class="custom-block-title">IMPORTANT</p>
-            If you are using the addon by having forked the project, then the updater prompt will <i><b>always</b></i> be disabled.
+            This option is only available on non-forked projects.
             </div>
         </td>
         <td>

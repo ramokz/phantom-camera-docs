@@ -17,7 +17,7 @@ See the [project page](https://github.com/users/ramokz/projects/3/views/8) to se
 ---
 
 ### What Godot version is supported?
-The minimum Godot verison this addon supports is 4.2.
+The minimum Godot version this addon supports is 4.2.
 The version requirement will change over time as the addon evolves and takes advantage of new features.
 The intent is to support as many versions of Godot as possible, but exceptions are made if significant engine changes or additions are introduced in more recent releases that affect the addon's codebase.
 
