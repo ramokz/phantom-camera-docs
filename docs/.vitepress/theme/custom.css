@@ -18,7 +18,7 @@
     /*--vp-font-family-base: */
     --vp-font-family-base: 'Nunito', sans-serif;
     --vp-font-family-mono: 'JetBrains Mono', sans-serif;
-    --vp-code-font-size: 14px;
+    --vp-code-font-size: 0.9rem;
 
     /* Background */
     --vp-c-bg: #141C21;
@@ -91,8 +91,8 @@ body, .vp-doc td {
     font-size: 22px;
 
     @media(min-width: 600px) {
-        margin-bottom: 20px;
-        font-size: 28px;
+        margin-bottom: 0;
+        font-size: 24px;
     }
 }
 
@@ -233,7 +233,6 @@ body, .vp-doc td {
 
     @media(min-width: 600px) {
         margin-bottom: 1rem;
-        --font-size: 1.1rem;
     }
 
     & p {

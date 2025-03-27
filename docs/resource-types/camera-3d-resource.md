@@ -9,6 +9,49 @@ Once a resource has been applied to a `Camera3D` it will retain those property v
 
 ## Properties
 
+<Property propertyName="keep_aspect" propertyType="int" propertyDefault="1">
+<template v-slot:propertyDescription>
+
+Overrides the `keep_aspect` property of the `Camera3D` once becoming active.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_keep_aspect(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+# Applies KEEP_WIDTH values
+pcam.set_keep_aspect(0)
+
+# Alternatively, use the enum value
+pcam.set_keep_aspect(Camera3DResource.KeepAspect.KEEP_WIDTH)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_keep_aspect()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_keep_aspect()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
 <Property propertyName="cull_mask" propertyType="int" propertyDefault="1048575">
 <template v-slot:propertyDescription>
 

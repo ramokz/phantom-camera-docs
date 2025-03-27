@@ -528,7 +528,7 @@ Enabling multiple corresponding layers on the same `PhantomCamera2D` causes no a
 **Note:** The layer value uses a bitmask.
 
 ::: tip Tip
-A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.
+A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not having to supply bitmask values.
 :::
 
 </template>
@@ -572,25 +572,33 @@ pcam.get_noise_emitter_layer() # Returns the layer value as a bitmask
 
 ## Methods
 
-<Property propertyName="emit_noise" propertyType="Transform2D" propertyDefault="Transform2D()">
+<Property propertyName="emit_noise" propertyType="void" propertyDefault="(<code>Transform2D</code> transform)" isMethod="true">
 <template v-slot:propertyDescription>
 
 Emits a noise based on a custom `Transform2D` value.
 
 Use this function if you wish to make use of external noise patterns from, for example, other addons.
 
-</template>
-
-<template v-slot:setMethod>
-
-`void` emit_noise(`Transform2D` value)
-
-</template>
-<template v-slot:setExample>
-
 ::: details Example
 ```gdscript
 pcam.emit_noise(transform_value)
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="teleport_position" propertyType="void" isMethod="true">
+<template v-slot:propertyDescription>
+
+Teleports the `PhantomCamera2D` to their designated position, bypassing the damping process.
+
+::: details Example
+```gdscript
+pcam.teleport_position()
 ```
 :::
 

@@ -230,7 +230,7 @@ Enabling multiple corresponding layers on the same `PhantomCamera2D` causes no a
 **Note:** The layer value uses a bitmask.
 
 ::: tip Tip
-A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not supply bitmask values.
+A helper function also exists called `set_noise_emitter_layer_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not having to supply bitmask values.
 :::
 
 
@@ -274,20 +274,11 @@ pcam_emitter.get_noise_emitter_layer() # Returns the layer value as a bitmask
 
 ## Methods
 
-<Property propertyName="emit" propertyType="n/a" propertyDefault="n/a">
+<Property propertyName="emit" propertyType="void" isMethod="true">
 <template v-slot:propertyDescription>
 
 Emits the noise from the emitter based on the applied [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-2d) resource and various properties assigned.<br>
 It will affect all active `PCam3Ds` with at least one matching [noise_emitter_layer](#noise_emitter_layer).
-
-</template>
-
-<template v-slot:setMethod>
-
-`void` emit()
-
-</template>
-<template v-slot:setExample>
 
 ::: details Example
 ```gdscript
@@ -301,19 +292,10 @@ noise_emitter.emit()
 
 
 
-<Property propertyName="is_emitting" propertyType="n/a" propertyDefault="n/a">
+<Property propertyName="is_emitting" propertyType="bool" isMethod="true">
 <template v-slot:propertyDescription>
 
 Returns the state for the emitter. If true, the emitter is currently emitting.
-
-</template>
-
-<template v-slot:getMethod>
-
-`bool` is_emitting()
-
-</template>
-<template v-slot:getExample>
 
 ::: details Example
 ```gdscript
@@ -327,19 +309,10 @@ noise_emitter.is_emitting()
 
 
 
-<Property propertyName="stop" propertyType="n/a" propertyDefault="n/a">
+<Property propertyName="stop" propertyType="void" isMethod="true">
 <template v-slot:propertyDescription>
 
 Stops the emitter from emitting noise.
-
-</template>
-
-<template v-slot:setMethod>
-
-`void` stop()
-
-</template>
-<template v-slot:setExample>
 
 ::: details Example
 ```gdscript
@@ -353,19 +326,10 @@ noise_emitter.stop()
 
 
 
-<Property propertyName="toggle" propertyType="n/a" propertyDefault="n/a">
+<Property propertyName="toggle" propertyType="void" isMethod="true">
 <template v-slot:propertyDescription>
 
-Toggles the emitter on and off.
-
-</template>
-
-<template v-slot:setMethod>
-
-`void` toggle()
-
-</template>
-<template v-slot:setExample>
+Toggles the emitter on or off.
 
 ::: details Example
 ```gdscript

@@ -112,6 +112,60 @@ pcam.get_inactive_update_mode()
 
 
 
+<Property propertyName="host_layers" propertyType="int" propertyDefault="1">
+<template v-slot:propertyDescription>
+
+Determines which `PCamHost` this `PCam` should recognize.
+
+At least _one_ corresponding layer needs to be set on the `PCam` node for the `PCamHost` to recognize it.
+
+**Note:** The layer value uses a bitmask.
+
+::: tip Tip
+A helper function also exists called `set_host_layers_value()`, where you can supply a specific layer number and then enable / disable it (see setter example below). Use this if you prefer not having to supply bitmask values.
+:::
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_host_layers(`int` value)
+
+`void` set_host_layers_value(`int` layer, `bool` enabled)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+## Bitmask assignment
+pcam.set_host_layers(10) # Enables the 2nd and 4th layer using a bitmask value
+
+## Specific layer change
+pcam.set_host_layers_value(4, true) # Enables the 4th layer
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_host_layers()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_host_layers() # Returns the layer value as a bitmask
+```
+:::
+
+</template>
+</Property>
+
+
+
+
 <Property propertyName="tween_resource" propertyType="PhantomCameraTween" propertyDefault="null">
 <template v-slot:propertyDescription>
 
