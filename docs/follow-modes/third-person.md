@@ -173,7 +173,7 @@ pcam.set_collision_mask_value(2, true)
 </template>
 <template v-slot:getMethod>
 
-`float` get_collision_mask()
+`int` get_collision_mask()
 
 </template>
 <template v-slot:getExample>
@@ -212,7 +212,7 @@ pcam.set_shape(shape)
 </template>
 <template v-slot:getMethod>
 
-`float` get_shape()
+`Shape3D` get_shape()
 
 </template>
 <template v-slot:getExample>
