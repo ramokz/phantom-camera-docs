@@ -87,7 +87,7 @@ This value will be overriden if [up_target](#up_target) is defined.
 
 ::: details Example
 ```gdscript
-pcam.set_up()
+pcam.set_up(Vector3(1, 1, 0))
 ```
 :::
 
@@ -114,7 +114,7 @@ pcam.get_up()
 <Property propertyName="up_target" propertyType="Node3D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Applies the up direction of the assigned node to the `PhantomCamera3D` when [look_at_mode](#look_at_mode) is set.
+Applies and continuously updates the `up` direction of the `PhantomCamera3D` based on this target when [look_at_mode](#look_at_mode) is set.
 
 Setting a value here will override the [up](#up) value.
 
@@ -128,7 +128,7 @@ Setting a value here will override the [up](#up) value.
 
 ::: details Example
 ```gdscript
-pcam.set_up_target()
+pcam.set_up_target(node_target)
 ```
 :::
 
