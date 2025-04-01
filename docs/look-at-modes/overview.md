@@ -32,4 +32,119 @@ Allows for multiple targets to be looked at. The camera will look at the centre 
 </div>
 
 ## Properties
-<!--@include: ./parts/look-at-mode.md-->
+
+<Property propertyName="look_at_mode" propertyType="LookAtEnum" propertyDefault="None">
+<template v-slot:propertyDescription>
+
+Value is based on `LookAtMode` enum.
+
+| Look At Mode | Value |
+|--------------|-------|
+| NONE         | 0     |
+| MIMIC        | 1     |
+| SIMPLE       | 2     |
+| GROUP        | 3     |
+
+::: info Note
+The Setter for `Look_at_mode` has purposely not been added.<br>
+A separate `PCam3D` should be used instead.
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_look_at_mode()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_mode()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="up" propertyType="Vector3" propertyDefault="Vector3(0, 1, 0)">
+<template v-slot:propertyDescription>
+
+Defines the upward direction of the `PhantomCamera3D` when [look_at_mode](#look_at_mode) is set.
+
+This value will be overriden if [up_target](#up_target) is defined.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_up(`Vector3` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_up()
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`Vector3` get_up()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_up()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="up_target" propertyType="Node3D" propertyDefault="null">
+<template v-slot:propertyDescription>
+
+Applies the up direction of the assigned node to the `PhantomCamera3D` when [look_at_mode](#look_at_mode) is set.
+
+Setting a value here will override the [up](#up) value.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_up_target(`Node3D` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_up_target()
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`Node3D` get_up_target()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_up_target()
+```
+:::
+
+</template>
+</Property>
