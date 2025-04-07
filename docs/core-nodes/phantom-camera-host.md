@@ -71,3 +71,19 @@ pcam_host.get_host_layers() # Returns the layer value as a bitmask
 
 </template>
 </Property>
+
+## Methods
+
+<Property propertyName="get_active_pcam" propertyType="Node" propertyDefault="" isMethod="true">
+<template v-slot:propertyDescription>
+
+Returns the currently active [`PCam2D`](/core-nodes/phantom-camera-2d) / [`PCam3D`](/core-nodes/phantom-camera-3d) for this `PCamHost` node.
+
+::: details Example
+```gdscript
+pcam_host.get_active_pcam()
+```
+:::
+
+</template>
+</Property>
