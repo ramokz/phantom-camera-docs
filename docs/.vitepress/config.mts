@@ -207,6 +207,9 @@ export default defineConfig({
         text: 'Editor Updater', link: "/editor-updater",
       },
       {
+        text: "C# Wrapper", link: "/c-sharp-wrapper"
+      },
+      {
         text: 'Support',
         items: [
           {text: 'FAQ', link: "/support/faq"},

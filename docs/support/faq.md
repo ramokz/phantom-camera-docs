@@ -34,15 +34,13 @@ There's no deadline or precise timeframe for when things get implemented. The [m
 ---
 
 ### Is there C# support?
-Short answer, yes. While the addon is written in `GDScript`, it is fully compatible for projects using `C#`.
+Yes! While the addon is written in `GDScript`, it has an official [C# Wrapper](/c-sharp-wrapper). In short, it allows for strongly typed references to the various properties and methods `GDScript` users have access to and makes using the addon in `C#` feel a lot more native.
 
-To call methods, set properties etc. from `C#` files, simply follow the guidelines on [Godot's documentation page](https://docs.godotengine.org/en/stable/tutorials/scripting/cross_language_scripting.html).
-
-Using the addon in `C#` is not as elegant as `GDScript`, which comes down to the addon having been written in `GDScript`.
+_Note:_ the process of creating and maintaining this wrapper is a manual process. If you spot any discrepancies of available properties and methods between the `GDScript` and `C#` wrapper, please submit an [issue](https://github.com/ramokz/phantom-camera/issues/new?template=bug_report.yml) or submit a [pull request](https://github.com/ramokz/phantom-camera/pulls).
 
 ---
 
-### Why was the addon written in `GDScript` instead of `C#` or `C++`?
+### Why was the addon made in `GDScript` instead of `C#` / `C++`?
 `GDScript` is much easier to run, test and ultimately get things done in compared to `C#` and, in particular, `C++`. Although it doesn't boast as many technical features as either and comes with its shortcomings, ultimately it was allowed for rapid iterations and general improvements to the addon.
 
 ---
