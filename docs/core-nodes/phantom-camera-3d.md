@@ -587,7 +587,7 @@ pcam.get_environment()
 <Property propertyName="noise" propertyType="PhantomCameraNoise3D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Applies a noise, or shake, to a `Camera3D`.
+Applies a noise, or shake, to a `Camera3D` using the [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-3d) resource.
 Once set, the noise will run continuously after the tween to the `PhantomCamera3D` is complete.
 
 </template>
