@@ -48,6 +48,16 @@ _Note:_ the process of creating and maintaining this wrapper is a manual process
 ### Has rewriting it as an GDExtension been considered?
 It has, and likely will happen one day when the addon reaches a more mature state. Partly for performance reasons, but also to make users of `GDScript`, `C#` and others have a similar experience when using it in their language of choice.
 
+---
+
+### Can I use the addon in a commercial project?
+The addon is **MIT** licensed.
+
+Put simply, it means you don't have to ask for permission to use it for personal or professional work.
+You can copy, modify and do whatever you want with it.
+The license file can also be found in the [project's repository](https://github.com/ramokz/phantom-camera/blob/main/LICENSE).
+
+
 ## Troubleshooting
 ### I'm seeing jitter, what can I do?
 If you're seeing a targeted node rapidly moving back and forth as you move it, then, yes, that is _not_ an intended effect nor something that should be happening.
