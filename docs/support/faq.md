@@ -43,6 +43,13 @@ There's no deadline or precise timeframe for when things get implemented. The [m
 
 ---
 
+### A property / method does not seem to work when using the C# Wrapper, but is listed on the documentation site / GDScript files
+The process of creating and maintaining this wrapper is a manual process. Meaning, whenever a new property or function is introduced in the original `GDScript` files, they would have to be manually added to the corresponding `C#` file(s).
+
+If you spot any discrepancies of available properties and methods between the `GDScript` and `C#` wrapper, please submit an [issue](https://github.com/ramokz/phantom-camera/issues/new?template=bug_report.yml) or a [pull request](https://github.com/ramokz/phantom-camera/pulls). Any help spotting things like this is always appreciated.
+
+---
+
 ### Has rewriting it as an GDExtension been considered?
 It has, and likely will happen one day when the addon reaches a more mature state. Partly for performance reasons, but also to make users of `GDScript`, `C#` and others have a similar experience when using it in their language of choice.
 
