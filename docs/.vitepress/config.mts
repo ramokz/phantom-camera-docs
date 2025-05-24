@@ -214,6 +214,7 @@ export default defineConfig({
         items: [
           {text: 'FAQ', link: "/support/faq"},
           {text: 'How To Contribute', link: "/support/how-to-contribute"},
+          {text: 'Contact', link: "/support/contact"},
         ]
       },
       {
