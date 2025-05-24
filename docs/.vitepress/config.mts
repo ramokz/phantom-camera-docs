@@ -232,7 +232,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ramokz/phantom-camera' },
-      { icon: 'mastodon', link: 'https://mastodon.gamedev.place/@marcusskov' },
+      { icon: 'mastodon', link: 'https://mastodon.social/@marcusskov' },
       {
         icon:{
           svg: `<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
