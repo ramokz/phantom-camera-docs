@@ -34,9 +34,7 @@ There's no deadline or precise timeframe for when things get implemented. The [m
 ---
 
 ### Is there C# support?
-Yes! While the addon is written in `GDScript`, it has an official [C# Wrapper](/c-sharp-wrapper). In short, it allows for strongly typed references to the various properties and methods `GDScript` users have access to and makes using the addon in `C#` feel a lot more native.
-
-_Note:_ the process of creating and maintaining this wrapper is a manual process. If you spot any discrepancies of available properties and methods between the `GDScript` and `C#` wrapper, please submit an [issue](https://github.com/ramokz/phantom-camera/issues/new?template=bug_report.yml) or submit a [pull request](https://github.com/ramokz/phantom-camera/pulls).
+**Yes**, While the addon is written in `GDScript`, it has an official [C# Wrapper](/c-sharp-wrapper). In short, it allows for strongly typed references to the various properties and methods `GDScript` users have access to and makes using the addon in `C#` feel a lot more native.
 
 ---
 
@@ -51,11 +49,31 @@ It has, and likely will happen one day when the addon reaches a more mature stat
 ---
 
 ### Can I use the addon in a commercial project?
-The addon is **MIT** licensed.
+**Yes**, the addon is **MIT** licensed.
 
 Put simply, it means you don't have to ask for permission to use it for personal or professional work.
 You can copy, modify and do whatever you want with it.
 The license file can also be found in the [project's repository](https://github.com/ramokz/phantom-camera/blob/main/LICENSE).
+
+---
+
+### Does the addon do any data collection?
+#### Addon
+**No**. There's no tracking or any kind of telemetry that tracks the usage of the addon and there **never** will be.
+
+The only "metrics" this project have are [GitHub stars](https://github.com/ramokz/phantom-camera), [donations](https://ko-fi.com/ramokz), [issue reports](https://github.com/ramokz/phantom-camera/issues) / [discussion posts](https://github.com/ramokz/phantom-camera/discussions), and whenever someone posts about the addon.
+
+I have no actual clue about who and how many use the addon, so GitHub stars, messages or social posts are always appreciated.
+
+#### Documentation Site
+**Partially**. This site uses [Algolia via their open source program](https://www.algolia.com/for-open-source), which is the search tool that is used on the site. It is a commonly used tool by many open-source documentation sites, including [VueJS](https://vuejs.org/).
+
+It tracks what people are searching for when using the search bar, but not at any other point in time. It doesn't provide any personalised information, at least to my knowledge, about who uses the search tool, just that _someone_ searched for something specific that may or may not be on the site.
+
+The site uses this for three reasons:
+1. For improved search results; as the tool scraps the sites and allows for a cached version to be searched when users use the search tool. This allows for finding specific words across every text block on the site and without having to wait for the search tool to scan through the various pages.
+2. To see what topics people are searching for and then add corresponding documentation that answers those searches. This section here was included in large part because people have searched for it. 
+3. To see what features people are looking for. Sometimes when features that are not in the addon have been searched for, they have then consequently been either included or planned for future releases. Many of whom were not directly requested via [issue feature requests](https://github.com/ramokz/phantom-camera/issues/new?template=feature_proposal.yml), so have proven useful for adding new features I didn't know people were looking for.
 
 
 ## Troubleshooting
@@ -72,7 +90,7 @@ If you are working on a 2D project, then it's highly recommended to upgrade to *
 #### 3D
 If you are working on a 3D project, then it's highly recommended to upgrade to **Godot 4.4** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody3D` as a `Follow Target` without causing jitter.
 
-#### 2D (Godot 4.2) or 3D (Godot 4.3 / 4.2)
+#### 2D (Older than Godot 4.2) or 3D (Older than Godot 4.4)
 For older versions of Godot, the steps below are meant to
 
 The solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node. This can be achieved in a few ways.
@@ -134,17 +152,3 @@ Depending on your scene structure, this can be more cumbersome to set than the p
 There is a planned change for Godot that will enable nodes to [set the physics interpolation](https://docs.godotengine.org/en/3.6/tutorials/physics/interpolation/2d_and_3d_physics_interpolation.html). It's unfortunately only fully supported in Godot 3 at the minute — Godot 3.5 introduced it to 3D scenes, and Godot 3.6 introduced it to 2D scene.
 
 2D Physics Interpolation was ported for Godot 4.3, and 3D Physics Interpolation should be happening at some point.
-
----
-
-### Where can I go for support?
-If there's something you're unsure about or can't quite work out, then feel free to make a [discussion post on the GitHub repo](https://github.com/ramokz/phantom-camera/discussions/new/choose), you're likely not the only person who has had a particular question. Remember, there are **_no_** stupid questions!
-
-Also feel free to reach out to me personally on [Mastodon](https://mastodon.gamedev.place/@marcusskov) or [Bluesky](https://bsky.app/profile/marcusskov.bsky.social) - DMs are always open and happy to help!
-
-#### Some minor house rules when asking for help
-- Always be polite and respectful.
-- Try to only ask questions concerning this addon. General Godot questions can be better answered in dedicated communities where more members are active in.
-- Always check existing, and closed, issues before making a post.
-- Be as specific as possible and, if you can, include a minimal reproducible project (see [Godot's guideline description for more context](https://github.com/godotengine/godot/blob/master/CONTRIBUTING.md#provide-a-simple-example-project)). Much like typical IT troubleshooting, it's difficult to help without seeing how you've done things.
-- And remember, this project is free, open-source and currently maintained by a single individual so don't expect a response nor fix right away.
