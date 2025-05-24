@@ -181,7 +181,7 @@ export default defineConfig({
         text: 'Resource Types',
         items: [
           {
-            text: 'Tween', link: "/resource-types/tween",
+            text: 'PhantomCameraTween', link: "/resource-types/phantom-camera-tween",
           },
           {
             text: 'Camera3DResource', link: "/resource-types/camera-3d-resource",
