@@ -1,3 +1,6 @@
+<img src="/assets/icons/csharp-wrapper.svg" height="256" width="256"/>
+
+
 # C# Wrapper
 
 ## What Is This?
