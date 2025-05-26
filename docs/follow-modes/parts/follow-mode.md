@@ -11,13 +11,13 @@ Defines the current `Follow Mode` of the `PCam` based on `FOLLOW_MODE` enum.
 | GROUP        | 3     |
 | PATH         | 4     |
 | FRAMED       | 5     |
-| THIRD PERSON | 6     |
+| THIRD_PERSON | 6     |
 
 Only [Third Person Follow](third-person) is exclusive to 3D scenes.
 
 ::: warning Important
 This property should _**not**_ be changed during runtime, as such the setter for this has purposely been excluded.<br><br>
-To use another `follow mode` at runtime, switch to a separate `PCam` with the specific type applied.<br>
+To use another `follow_mode` at runtime, switch to a separate `PCam` with the specific `follow_mode` applied.<br>
 :::
 
 </template>

@@ -119,3 +119,20 @@ pcam.get_follow_axis_lock()
 
 </template>
 </Property>
+
+
+## Methods
+
+<Property propertyName="is_following" propertyType="bool" isMethod="true">
+<template v-slot:propertyDescription>
+
+Returns `true` if the `PCam` [follow_mode](#follow_mode) is **not** set to `NONE` and has a valid `follow_target`.
+
+::: details Example
+```gdscript
+pcam.is_following()
+```
+:::
+
+</template>
+</Property>

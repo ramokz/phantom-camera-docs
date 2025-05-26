@@ -267,7 +267,6 @@ pcam.get_margin()
 
 ## Methods
 
-
 <Property propertyName="Rotation (Quaternion)" propertyType="Quaternion" propertyDefault="n/a">
 <template v-slot:propertyDescription>
 
