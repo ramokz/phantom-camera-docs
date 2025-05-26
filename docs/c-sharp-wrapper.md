@@ -6,9 +6,10 @@
 ## What Is This?
 The addon is written in `GDScript` (`.gd`) and makes use of typed declarations of its methods and properties.
 
-While the addon works just fine out-of-the-box in other languages that Godot supports, including `C#`, the way you reference properties, methods and signals from the `.gd` files in other languages are cumbersome, not type safe and prone to errors.
+While the addon works just fine out-of-the-box in other languages that Godot supports, including `C#`, the way you reference properties, methods and signals from the `.gd` files in other languages are cumbersome, not type safe and thus prone to errors.
 
 It's very easy to make a slight spelling mistake that would result in a runtime error that a given IDE would not warn or otherwise flag. For example, to reference a property or call a method from a `PCam` node, you would normally have to type the _**exact**_ name of the method. So to update the priority of a given `PCam` in a `C#` you would have to type:
+
 ```csharp
 _pcam.Set("priority", 10); // Without the wrapper
 ```
@@ -21,7 +22,7 @@ _pcam.Priority = 10 // With the wrapper
 ```
 
 ::: info Note
-`C#` was chosen specifically due to popular demand and was introduced to this project by the effort of contributors. Other languages _could_ be supported too, but, from a maintainability perspective, that is not really feasible.
+`C#` was chosen specifically due to popular demand and was introduced to this project by the effort of contributors. Other languages _could_ be supported too, but, from a maintainability perspective, that is not really feasible. For better support in other languages, the addon would have be rewritten as a GDExtension. See [the FAQ section](/support/faq#has-rewriting-it-as-an-gdextension-been-considered) about that topic.
 :::
 
 ## How To Use It
