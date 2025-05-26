@@ -96,7 +96,9 @@ export default defineConfig({
             text: 'Installation', link: '/introduction/installation'
           },
           {
-            text: 'Scene Requirements', link: '/introduction/scene-requirements'
+            text: 'Scene Requirements', link: '/overview/scene-requirements'
+          },{
+            text: 'License', link: '/overview/license'
           },
         ]
       },
