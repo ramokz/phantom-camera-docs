@@ -70,7 +70,7 @@ export default defineConfig({
         text: 'Home', link: '/'
       },
       {
-        text: 'Docs', link: '/introduction/what-is-this'
+        text: 'Docs', link: '/overview/what-is-this'
       },
       {
         text: 'FAQ', link: '/support/faq'
@@ -87,13 +87,13 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Introduction',
+        text: 'Overview',
         items: [
           {
-            text: 'What is this?', link: '/introduction/what-is-this'
+            text: 'What is this?', link: '/overview/what-is-this'
           },
           {
-            text: 'Installation', link: '/introduction/installation'
+            text: 'Installation', link: '/overview/installation'
           },
           {
             text: 'Scene Requirements', link: '/overview/scene-requirements'
