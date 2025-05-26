@@ -6,6 +6,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  arguments: {
+    type: String,
+    required: false,
+  },
   disableOutlineEntry: {
     type: String,
     required: false
@@ -26,6 +30,7 @@ const props = defineProps({
       <slot name="signalName">
         Missing name
       </slot>
+      (<span v-html="arguments"></span>)
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${signalName}`">&#8203;</a>
     </h3>
 

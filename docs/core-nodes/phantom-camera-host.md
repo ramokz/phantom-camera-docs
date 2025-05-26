@@ -87,3 +87,32 @@ pcam_host.get_active_pcam()
 
 </template>
 </Property>
+
+
+## Signals
+
+<Signal signalRef="pcam_became_active" arguments="pcam: <code>Node</code>">
+<template v-slot:signalName>
+pcam_became_active
+</template>
+<template v-slot:signalDescription>
+
+Emitted when a new `PCam` becomes active and assigned to this `PCamHost`.
+
+The argument is the `PCam` that became active.
+
+</template>
+</Signal>
+
+<Signal signalRef="pcam_became_inactive" arguments="pcam: <code>Node</code>">
+<template v-slot:signalName>
+pcam_became_inactive
+</template>
+<template v-slot:signalDescription>
+
+Emitted when the currently active `PCam` goes from being active to inactive.
+
+The argument is the `PCam` that became inactive.
+
+</template>
+</Signal>

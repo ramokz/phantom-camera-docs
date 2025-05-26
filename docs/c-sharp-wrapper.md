@@ -56,11 +56,9 @@ public partial class MyClassName : Node
 ```
 
 
-You may notice the perhaps slightly odd inclusion of `.AsPhantomCamera2D()` and the usage of `GetNode<Node2D>` instead of the more intuitive `GetNode<PhantomCamera2D>`. What it is doing is essentially casting the `Node2D` as a `PhantomCamera2D`, which allows for referencing the various public properties, methods, and signals available from the `PhantomCamera` `GDScript` class.
+You may notice the perhaps slightly odd inclusion of `.AsPhantomCamera2D()` and the usage of `GetNode<Node2D>` instead of the more intuitive `GetNode<PhantomCamera2D>`. What it is doing is essentially casting the `Node2D` as a `PhantomCamera2D`, which allows for referencing the various public properties, methods, and signals available from the `PhantomCamera` `GDScript` class. This isn't a desired approach, but rather a compromise. Due to nodes and classes for the addon having been defined in `GDScript`, they cannot be treated _as_ natively in `C#` as ideally they should; hence the minor reference quirk here.
 
 The same approach is also needed for other addon nodes:
-
-
 ```csharp
 _pcam2D = GetNode<Node2D>("PathToNode").AsPhantomCamera2D(); // PhantomCamera2D
 _pcam3D = GetNode<Node3D>("PathToNode").AsPhantomCamera3D(); // // PhantomCamera3D
@@ -68,8 +66,8 @@ _pcamHost = GetNode<Node>("PathToNode").AsPhantomCameraHost(); // PhantomCameraH
 _pcamNoiseEmitter2D = GetNode<Node2D>("PathToNode").AsPhantomCameraNoiseEmitter2D(); // PhantomCameraNoiseEmitter2D
 _pcamNoiseEmitter3D = GetNode<Node3D>("PathToNode").AsPhantomCameraNoiseEmitter3D(); // PhantomCameraNoiseEmitter3D
 ```
-The side effect of this system means that in order to change the properties, call method or connect signals inherited from the `Node2D` class, you would need to explicitly reference the `Node2D` class before doing so.
-For example, to change the visibility of the `Node2D` property that the `_`pcam variable above is based on, you can do that with:
+The side effect of this system means that in order to change the properties, call method or connect signals inherited from the `Node2D`, you would need to explicitly reference the `Node2D` class before doing so.
+For example, to change the visibility of the `Node2D` property that the `_pcam` variable above is based on, you can do that with:
 
 ```csharp
 _pcam.Node2D.Visible = false; // Sets the Visible property of the Node2D class to false
