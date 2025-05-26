@@ -78,9 +78,9 @@ I have no actual clue about who and how many use the addon, so GitHub stars, mes
 It tracks what people are searching for when using the search bar, but not at any other point in time. It doesn't provide any personalised information, at least to my knowledge, about who uses the search tool, just that _someone_ searched for something specific that may or may not be on the site.
 
 The site uses this for three reasons:
-1. For improved search results; as the tool scraps the sites and allows for a cached version to be searched when users use the search tool. This allows for finding specific words across every text block on the site and without having to wait for the search tool to scan through the various pages.
-2. To see what topics people are searching for and then add corresponding documentation that answers those searches. This section here was included in large part because people have searched for it. 
-3. To see what features people are looking for. Sometimes when features that are not in the addon have been searched for, they have then consequently been either included or planned for future releases. Many of whom were not directly requested via [issue feature requests](https://github.com/ramokz/phantom-camera/issues/new?template=feature_proposal.yml), so have proven useful for adding new features I didn't know people were looking for.
+1. For improved search results. The tool regularly scrapes the site and allows for a cached version to be searched when users use the search tool. This allows for finding specific words across every text block on the site and without having to wait for the search tool to scan through the various pages.
+2. To see what topics people are searching for and then add corresponding documentation that answers those searches. This section here, as an example, was included in large part because people have searched for it. 
+3. To see what features people are looking for. Sometimes when features that are not part of the addon have been searched for, they have then consequently been either included or planned for future releases. Many of whom were not directly requested via [issue feature requests](https://github.com/ramokz/phantom-camera/issues/new?template=feature_proposal.yml), so have proven useful for adding new features that was directly communicated as a want, but made sense to include.
 
 
 ## Troubleshooting
