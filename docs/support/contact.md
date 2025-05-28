@@ -19,7 +19,7 @@ Keep in mind that any technical, or code, related support is very limited due to
 </a>
 </td>
 <td>
-<a href="https://mastodon.gamedev.place/@marcusskov">
+<a href="https://mastodon.social/@marcusskov">
 <img src="/assets/social/mastodon.svg" width="64"/>
 </a>
 </td>
