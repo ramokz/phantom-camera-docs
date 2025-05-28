@@ -173,7 +173,7 @@ The resource that defines how this `PCam` should be transitioned to.
 
 Can be shared across multiple `PCams`.
 
-See the [Tween](/resource-types/tween) page for more details.
+See the [Tween](/resource-types/phantom-camera-tween) page for more details.
 
 </template>
 <template v-slot:setMethod>
@@ -212,7 +212,7 @@ pcam.get_tween_resource()
 <Property propertyName="tween_duration" propertyType="float" propertyDefault="1">
 <template v-slot:propertyDescription>
 
-Property reference to [tween_duration of the `PhantomCameraTween`](/resource-types/tween#duration).
+Property reference to [tween_duration of the `PhantomCameraTween`](/resource-types/phantom-camera-tween#duration).
 
 </template>
 <template v-slot:setMethod>
@@ -251,7 +251,7 @@ pcam.get_tween_duration()
 <Property propertyName="tween_transition" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
-Property reference to [tween_transition of the `PhantomCameraTween`](/resource-types/tween#transition).
+Property reference to [tween_transition of the `PhantomCameraTween`](/resource-types/phantom-camera-tween#transition).
 
 </template>
 <template v-slot:setMethod>
@@ -290,7 +290,7 @@ pcam.get_tween_transition()
 <Property propertyName="tween_ease" propertyType="int" propertyDefault="2">
 <template v-slot:propertyDescription>
 
-Property reference to [tween_ease of the `PhantomCameraTween`](/resource-types/tween#ease).
+Property reference to [tween_ease of the `PhantomCameraTween`](/resource-types/phantom-camera-tween#ease).
 
 </template>
 <template v-slot:setMethod>

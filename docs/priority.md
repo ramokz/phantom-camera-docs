@@ -7,7 +7,7 @@ It defines which `PCam` a scene's `Camera` should be corresponding with and be a
 
 Changing `Priority` will send an event to the scene's `PCamHost`, which will then determine whether if the `Priority` value is greater than or equal to the currently highest `pcam`'s in the scene. The `PCam` with the highest value will then reattach the `Camera` accordingly.
 
-When a new `PCam` has the highest priority, it will trigger an interpolation to the `PCam`. See the [Tween](/resource-types/tween) page for more information.
+When a new `PCam` has the highest priority, it will trigger an interpolation to the `PCam`. See the [Tween](/resource-types/phantom-camera-tween) page for more information.
 
 ## Properties 
 <Property propertyName="priority_override" propertyType="bool" propertyDefault="false">
@@ -28,7 +28,7 @@ It's partly designed to work within the [Viewfinder](./viewfinder), and will be 
 
 Determines which `PCam` is currently active. The one with the highest priority will be what decides what `PCam` a scene's `Camera` is attached to.
 
-Modifying this is also what triggers a tween between different `PCams`. See th [Tween page](/resource-types/tween) for more details.
+Modifying this is also what triggers a tween between different `PCams`. See th [Tween page](/resource-types/phantom-camera-tween) for more details.
 
 </template>
 <template v-slot:setMethod>
