@@ -15,7 +15,7 @@ _pcam.Set("priority", 10); // Without the wrapper
 ```
 Because you have to pass everything as `Strings`, it means misspelling `priority` would trigger an error when that line of code is called at runtime. Normally, IDEs would warn about misspelled references, but when using string references that is effectively impossible.
 
-The intent for the `C#` wrapper is to prevent situations like that and make using the addon in `C#` more elegant. Where all the properties, methods and signals of the `.gd` addon files can be accessed using typed references instead. So rather than the above, the wrapper allows for changing the priority in a safer and along with features such as autocomplete:
+The intent for the `C#` wrapper is to prevent situations like that and make using the addon in `C#` more elegant. Where all the properties, methods and signals of the `.gd` addon files can be accessed using typed references instead. So rather than the above, the wrapper allows for changing the priority in a safer way, along with making using of common features such as autocomplete:
 
 ```csharp
 _pcam.Priority = 10 // With the wrapper

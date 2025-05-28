@@ -5,7 +5,9 @@ The addon is **MIT** licensed.
 Put simply, it means you do **not** have to ask for permission to use it for personal or commercial work.
 You can copy, modify and do whatever you want with it.
 
-A the license file can be read below or in the [project's repository](https://github.com/ramokz/phantom-camera/blob/main/LICENSE).
+The license file can be read below or found in the [project's repository](https://github.com/ramokz/phantom-camera/blob/main/LICENSE).
+
+That said, will appreciate any mentions, be it social media posts or DMs, if you're using the addon in your projects. Always enjoy seeing how folks are using it.
 
 ---
 
