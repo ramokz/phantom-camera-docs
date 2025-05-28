@@ -45,9 +45,9 @@ Value is based on `LookAtMode` enum.
 | SIMPLE       | 2     |
 | GROUP        | 3     |
 
-::: info Note
-The Setter for `Look_at_mode` has purposely not been added.<br>
-A separate `PCam3D` should be used instead.
+::: warning Important
+This property should _**not**_ be changed during runtime, as such the setter for this has purposely been excluded.<br><br>
+To use another `look_at_mode` at runtime, switch to a separate `PCam` with the specific `look_at_mode` applied.<br>
 :::
 
 </template>
@@ -143,6 +143,23 @@ pcam.set_up_target(node_target)
 ::: details Example
 ```gdscript
 pcam.get_up_target()
+```
+:::
+
+</template>
+</Property>
+
+
+## Methods
+
+<Property propertyName="is_looking" propertyType="bool" isMethod="true">
+<template v-slot:propertyDescription>
+
+Returns `true` if [look_at_mode](#look_at_mode) is **not** set to `NONE` and has a valid `look_at_target`.
+
+::: details Example
+```gdscript
+pcam.is_looking()
 ```
 :::
 

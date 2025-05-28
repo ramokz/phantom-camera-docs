@@ -464,7 +464,7 @@ pcam.get_limit_margin()
 <Property propertyName="noise" propertyType="PhantomCameraNoise2D" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Applies a noise, or shake, to a `Camera2D`.
+Applies a noise, or shake, to a `Camera2D` using the [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-2d) resource.
 Once set, the noise will run continuously after the tween to the `PhantomCamera2D` is complete.
 
 </template>
@@ -706,9 +706,9 @@ Emitted when the `Camera` starts to tween to the `PCam`.
 
 
 
-<Signal signalRef="tween_interrupted">
+<Signal signalRef="tween_interrupted" arguments="<code>Node</code> pcam">
 <template v-slot:signalName>
-tween_interrupted (<code>PhantomCamera</code>: pcam)
+tween_interrupted
 </template>
 
 <template v-slot:signalDescription>

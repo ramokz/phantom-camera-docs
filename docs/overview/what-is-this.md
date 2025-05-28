@@ -18,7 +18,7 @@ Shortened to `PCam` (text) and `pcam` (code) is the primary node type for this a
 
 Its purpose is to contain the positional, rotational, tween and other data that should be applied to a scene's `Camera`. Upon a `PCam` becoming active it will effectively take over the scene's `Camera` node and apply its data to it.
 
-<img src="/assets/icons/phantom-camera-host.svg" width="128" />
+<img alt="PhantomCameraHost" src="/assets/icons/phantom-camera-host.svg" width="128" />
 
 ### Phantom Camera Host
 Shortened to `PCamHost` (text) and `pcam_host` (code) is a managerial node for a scene's `PCam` and `Camera` nodes. This node decides which `PCam` the `Camera` should be attached to and, consequently, what logic it should have. For all intents and purposes, it's a set and forget node once it's a child of a `Camera` node.
