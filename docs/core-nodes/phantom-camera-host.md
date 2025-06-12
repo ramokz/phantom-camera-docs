@@ -72,6 +72,55 @@ pcam_host.get_host_layers() # Returns the layer value as a bitmask
 </template>
 </Property>
 
+
+
+
+<Property propertyName="interpolation_mode" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Determines whether the `PhantomCamera2D` / `PhantomCamera3D` nodes this `PhantomCameraHost` controls should use physics interpolation or not.
+
+| InterpolationMode | Value |
+|-------------------|-------|
+| AUTO              | 0     |
+| IDLE              | 1     |
+| PHYSICS           | 2     |
+
+</template>
+
+<template v-slot:setMethod>
+
+`void` set_interpolation_mode(`int` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam_host.set_interpolation_mode(InterpolationMode.IDLE)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`int` get_interpolation_mode()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam_host.get_interpolation_mode() # Returns the current interpolation mode
+```
+:::
+
+</template>
+</Property>
+
+
+
+
 ## Methods
 
 <Property propertyName="get_active_pcam" propertyType="Node" propertyDefault="" isMethod="true">
