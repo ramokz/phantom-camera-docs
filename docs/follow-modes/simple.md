@@ -12,10 +12,7 @@ This mode is useful for things like character controllers in a fixed angle persp
 
 ## Properties
 <!--@include: ./parts/follow-target.md-->
-
 <!--@include: ./parts/follow-offset.md-->
-
 <!--@include: ./parts/damping.md-->
-
 <!--@include: ./parts/damping-value.md-->
-
+<!--@include: ./parts/rotate-with-target.md-->
