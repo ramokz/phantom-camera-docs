@@ -265,6 +265,87 @@ pcam.get_margin()
 </template>
 </Property>
 
+
+
+
+<Property propertyName="vertical_rotation_offset" propertyType="float" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Applies a rotational offset to the Third Person `follow_mode` in the `X` axis.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_vertical_rotation_offset(`float` vertical_offset)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_vertical_rotation_offset(42)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_vertical_rotation_offset()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_vertical_rotation_offset()
+```
+:::
+
+</template>
+</Property>
+
+
+
+<Property propertyName="horizontal_rotation_offset" propertyType="float" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Applies a rotational offset to the Third Person `follow_mode` in the `Y` axis.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_horizontal_rotation_offset(`float` horizontal_offset)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_horizontal_rotation_offset(42)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_horizontal_rotation_offset()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_horizontal_rotation_offset()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+
 ## Methods
 
 <Property propertyName="Rotation (Quaternion)" propertyType="Quaternion" propertyDefault="n/a">
