@@ -5,7 +5,7 @@ Makes the `PhantomCamera2D` copy the rotation of its `follow_target`
 This behavior is only available when `follow_mode` is set and only has one `follow_target`.
 
 ::: warning Important
-Be sure to **disable** `Camera2D.ignore_rotation` to enable this mechanic.
+Be sure to **disable** `ignore_rotation` on the `Camera2D` node to enable this feature.
 :::
 
 <Property2D3DOnly :is2D="true" />

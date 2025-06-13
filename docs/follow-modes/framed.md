@@ -49,3 +49,5 @@ _Dead zones will always be disabled in build exports._
 
 </template>
 </Property>
+
+<!--@include: ./parts/rotate-with-target.md-->
