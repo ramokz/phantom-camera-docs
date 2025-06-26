@@ -17,7 +17,7 @@ See the [project page](https://github.com/users/ramokz/projects/3/views/8) to se
 ---
 
 ### What Godot version is supported?
-The minimum Godot version this addon supports is 4.2.
+The minimum Godot version this addon supports is 4.3.
 The version requirement will change over time as the addon evolves and takes advantage of new features.
 The intent is to support as many versions of Godot as possible, but exceptions are made if significant engine changes or additions are introduced in more recent releases that affect the addon's codebase.
 
@@ -91,13 +91,10 @@ If you're using a physics object, such as `CharacterBody2D/3D` as a target, and 
 
 > This is not to be confused with stutter, which [Godot has a good example of showing the difference between the two.](https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html)
 
-#### 2D
-If you are working on a 2D project, then it's highly recommended to upgrade to **Godot 4.3** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody2D` as a `Follow Target` without causing jitter.
+#### 2D or 3D (Godot 4.4 or above)
+It's recommended to enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody2D` as a `Follow Target` without causing jitter.
 
-#### 3D
-If you are working on a 3D project, then it's highly recommended to upgrade to **Godot 4.4** and enable `Physics Interpolation` inside `Project Setting`. Doing so will effectively achieve the steps outlined below, but without having to do anything extra and allow setting a `PhysicsBody3D` as a `Follow Target` without causing jitter.
-
-#### 2D (Older than Godot 4.2) or 3D (Older than Godot 4.4)
+#### 3D (Godot 4.3)
 For older versions of Godot, the steps below are meant to
 
 The solution here is to make the visual representation, i.e. the thing you're seeing being jittery, only move in the `_process` rather than being controlled by its parent node. This can be achieved in a few ways.
