@@ -880,7 +880,7 @@ Emitted when the `Camera` completes its tween to the `PCam`.
 These buttons position and rotate the `PCam3D` to match the 3D viewport's camera transform.
 They are visible depending on if the `PCam3D` is following or looking at a target(s); e.g. if a `PCam3D` is following a target, then only `Align Rotation with View` will be available as the position will instantly be overridden.
 
-![align-with-wiew.png](../public/assets/editor/align-with-wiew.png)
+![align-with-wiew.png](/assets/editor/align-with-wiew.png)
 
 <Property propertyName="viewport_index" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
