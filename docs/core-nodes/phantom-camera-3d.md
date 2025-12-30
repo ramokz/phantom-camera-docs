@@ -27,7 +27,7 @@ Enables the `PCam3D` to follow specific target(s) using various logics.
 </template>
 </PropertyCore>
 
-<PropertyCore propertyName="Look At" propertyPageLink="../look-at-modes/overview" propertyIcon="feature-look-at.svg">
+<PropertyCore propertyName="Look At Mode" propertyPageLink="../look-at-modes/overview" propertyIcon="feature-look-at.svg">
 <template v-slot:propertyDescription>
 
 
@@ -871,3 +871,63 @@ Emitted when the `Camera` completes its tween to the `PCam`.
 
 </template>
 </Signal>
+
+
+
+
+# Editor-only
+## Align with View
+![align-with-wiew.avif](/assets/editor/align-with-wiew.avif)
+
+Positions and rotates the `PCam3D` to match the 3D viewport's camera transform.
+
+They are visible depending on if the `PCam3D` is following or looking at a target(s); e.g. if a `PCam3D` is **following** a target, then only `Align Rotation with View` will be available as the position will instantly be overridden.
+
+The buttons can be found in `Align with View` submenu nested within the `Editor` property inspector group of the `PCam3D` node.
+
+<Property propertyName="viewport_index" propertyType="int" propertyDefault="0">
+<template v-slot:propertyDescription>
+
+Changes which viewport the alignment buttons should be based on - ranging from 0 to 3.  If you are only using 1 editor viewport, keep the default value to `0`.
+
+</template>
+</Property>
+
+
+
+
+## Target Gizmo Line
+![target-gizmo-line.avif](/assets/editor/target-gizmo-line.avif)
+
+Draws a gizmo line between a `PCam3D` and its `Follow` / `Look At` target. If no target has been set, no line(s) will appear.
+
+This can be toggled on / off (default) from the `Gizmo Line` submenu inside the `Editor` property inspector group of the `PCam3D` node.<br>
+
+Line color definition:<br>
+**Red** = Following <br>
+**Blue** = Looking At
+
+::: tip Note
+A [Follow Mode](#follow-mode) or [Look At Mode](#look-at-mode) needs to be set for the corresponding toggles to appear in the inspector.
+:::
+
+::: tip Important
+The lines will **not** be visible at runtime.
+:::
+
+
+<Property propertyName="draw_follow_line" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Draws a line between the `PCam3D` and the target position it is following. 
+
+</template>
+</Property>
+
+<Property propertyName="draw_look_at_line" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Draws a line between the `PCam3D` and the target position it is looking at. 
+
+</template>
+</Property>

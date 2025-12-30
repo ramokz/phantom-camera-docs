@@ -77,7 +77,7 @@ const hasGetterContent = computed(() => {
         Type: <code>{{ propertyType }}</code>
       </h4>
       <h4 v-if="propertyDefault && !isMethod">
-        Default: {{ propertyDefault }}
+        Default: <code>{{ propertyDefault }}</code>
       </h4>
     </div>
     <slot name="propertyDescription">
