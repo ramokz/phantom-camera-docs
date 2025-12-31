@@ -86,6 +86,7 @@ pcam.get_follow_path()
 
 </Property2D3D>
 
+<!--@include: ./parts/follow-offset.md-->
 <!--@include: ./parts/damping.md-->
 <!--@include: ./parts/damping-value.md-->
 <!--@include: ./parts/rotate-with-target.md-->
