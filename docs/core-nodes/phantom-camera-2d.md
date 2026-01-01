@@ -366,13 +366,13 @@ pcam.get_limit(SIDE_BOTTOM)
 <Property propertyName="limit_target" propertyType="NodePath" propertyDefault="null">
 <template v-slot:propertyDescription>
 
-Allows for setting either a `TileMap` / `TileMapLayer` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
+Allows for setting either a `TileMapLayer` or `CollisionShape2D` node to automatically apply a limit size instead of manually adjusting the `Left`, `Top`, `Right` and `Left` properties.
 
-**TileMap / TileMapLayer**
+**TileMapLayer**
 
-The `Limit` will update after the `TileSet` of the `TileMap` / `TileMapLayer`  has changed.
+The `Limit` will update after the `TileSet` of the `TileMapLayer`  has changed.
 
-_Note:_ The limit size will only update after closing the `TileMap` / `TileMapLayer` editor bottom panel.
+_Note:_ The limit size will only update after closing the / `TileMapLayer` editor bottom panel.
 
 **CollisionShape2D**
 
@@ -391,7 +391,7 @@ _Note:_ For performance reasons, resizing the `Shape2D` while running the game w
 
 ::: details Example
 ```gdscript
-# TileMap / TileMapLayer node
+# TileMapLayer node
 pcam.set_limit_target(tile_map_node)
 
 # CollisionShape2D node
