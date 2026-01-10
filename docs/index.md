@@ -11,11 +11,14 @@ hero:
     alt: Phantom Camera icon
   actions:
     - theme: brand
-      text: Get Started
+      text: Documentation
       link: /overview/what-is-this
     - theme: alt
       text: GitHub Repo
       link: https://github.com/ramokz/phantom-camera
+    - theme: alt
+      text: Asset Store
+      link: https://store-beta.godotengine.org/asset/ramokz/phantom-camera/
 
 features:
   - icon:

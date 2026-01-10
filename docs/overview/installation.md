@@ -6,15 +6,19 @@
 3. Download then install the addon.
 4. Enable the addon inside `Project/Project Settings/Plugins`.
 
-## GitHub Release (Recommended, Stable)
-1. Download a [release build](https://github.com/ramokz/phantom-camera/releases/).
-2. Extract the zip file and move the `addons/phantom_camera` directory into the project root location.
+## Asset Store (Recommended, Stable)
+1. Download the latest release from the [Asset Store](https://store-beta.godotengine.org/asset/ramokz/phantom-camera/).
+2. Extract the zip file and move the `addons/phantom_camera` folder into the Godot project's root directory.
 3. Enable the addon inside `Project/Project Settings/Plugins`.
 
+## GitHub Release (Recommended, Stable)
+1. Download a [release build](https://github.com/ramokz/phantom-camera/releases/).
+2. Extract the zip file and move the `addons/phantom_camera` folder into the Godot project's root directory.
+3. Enable the addon inside `Project/Project Settings/Plugins`.
 
 ## GitHub Branch (Latest, Unstable)
 1. Download the [latest main branch](https://github.com/ramokz/phantom-camera/archive/refs/heads/main.zip).
-2. Extract the zip file and move the `addons/phantom_camera` directory into project's root location.
+2. Extract the zip file and move the `addons/phantom_camera` folder into Godot project's root directory.
 3. Enable the addon inside `Project/Project Settings/Plugins`.
 
 ---
