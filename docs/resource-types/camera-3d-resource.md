@@ -147,7 +147,7 @@ Overrides the `v_offset` property of the `Camera3D` once becoming active.
 </template>
 <template v-slot:setMethod>
 
-`void` v_offset(`float` offset)
+`void` set_v_offset(`float` offset)
 
 </template>
 <template v-slot:setExample>
