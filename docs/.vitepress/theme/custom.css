@@ -19,6 +19,7 @@
     --vp-font-family-base: 'Nunito', sans-serif;
     --vp-font-family-mono: 'JetBrains Mono', sans-serif;
     --vp-code-font-size: 0.9rem;
+    --vp-custom-block-font-size: 1rem;
 
     /* Background */
     --vp-c-bg: #141C21;
@@ -121,7 +122,6 @@ body, .vp-doc td {
 .name {
     font-weight: 900 !important;
 }
-
 
 .property-core-group {
     display: flex;
@@ -242,5 +242,11 @@ body, .vp-doc td {
         & code {
             font-size: calc(var(--font-size) - 2px);
         }
+    }
+}
+
+.details > p {
+    & code {
+        padding: 1px 4px;
     }
 }
