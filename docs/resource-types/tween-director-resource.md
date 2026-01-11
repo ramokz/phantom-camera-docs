@@ -9,14 +9,6 @@ based on a list of **To** and **From** targets.
 The targets are defined by either individually selected `PCams` in the current scene,
 or by the [PhantomCameraTween](/resource-types/phantom-camera-tween) resource applied to them.
 
-::: details Example use case
-Let's say you have 4 `Phantom Cameras`, `PCamA`, `PCamB`, `PCamC` and `PCamD`, and you want a unique tween `duration` and `ease` when the camera tweens from `PCamA` to `PCamC`, but want the tween to `PCamC` otherwise be the same in all other instances.<br>
-
-The `TweenDirectorResource` allows for setting a custom `tween_resource` along with `PCams` in a `From` and `To` list. If `PCamA` is added to the `From` list, and `PCamC` is added to the `To` list, then whenever the priority shifts from `PCamA` to `PCamC` that custom `tween_resource` will be used instead of what has been declared in `PCamC`.
-
-If you then later want to use the same custom `tween_resource` when `PCamA` tweens to `PCamD`, then it's just a case of adding `PCamD` to the same `To` list as `PCamC`.
-:::
-
 ## Properties
 
 <Property propertyName="tween_resource" propertyType="PhantomCameraTween" propertyDefault="null">
