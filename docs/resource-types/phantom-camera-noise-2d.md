@@ -5,7 +5,7 @@
 
 Is a resource type that defines, calculates and outputs the noise values to a `Camera2D` through active `PCam2Ds`.
 
-It can be applied to either [PhantomCameraNoiseEmitter2D](/noise/phantom-camera-noise-emitter-2d) or a [PhantomCamera2D noise property](/core-nodes/phantom-camera-2d#noise) directly
+It can be applied to either [PhantomCameraNoiseEmitter2D](/secondary-nodes/phantom-camera-noise-emitter-2d) or a [PhantomCamera2D noise property](/core-nodes/phantom-camera-2d#noise) directly
 
 ## Properties
 <Property propertyName="amplitude" propertyType="float" propertyDefault="10">

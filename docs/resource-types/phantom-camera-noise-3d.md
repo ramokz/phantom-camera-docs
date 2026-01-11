@@ -5,7 +5,7 @@
 
 Is a resource type that defines, calculates and outputs the noise values to a `Camera3D` through active `PCam3Ds`.
 
-It can be applied to either [PhantomCameraNoiseEmitter3D](/noise/phantom-camera-noise-emitter-3d) or a [PhantomCamera3D noise property](/core-nodes/phantom-camera-3d#noise) directly
+It can be applied to either [PhantomCameraNoiseEmitter3D](/secondary-nodes/phantom-camera-noise-emitter-3d) or a [PhantomCamera3D noise property](/core-nodes/phantom-camera-3d#noise) directly
 
 ## Properties
 <Property propertyName="amplitude" propertyType="float" propertyDefault="10">
