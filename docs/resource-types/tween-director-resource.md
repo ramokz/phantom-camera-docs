@@ -63,7 +63,7 @@ pcam_tween_director.get_tween_resource()
 
 The type identifier for the **From**, or currently active, `PCam` that should make the [tween_resource](#tween_resource) override the tween defined in the **To** section.
 
-| Type           | Value | Description                                                                                                                                                                   |
+| TYPE           | Value | Description                                                                                                                                                                   |
 |----------------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PHANTOM_CAMERA | 0     | Target individual `PCams` from the current current scene.                                                                                                                     |
 | TWEEN_RESOURCE | 1     | Target `PCams` based on the `PhantomCameraTween` resource applied to them. The resources **must** be saved on the filesystem and applied to `PCams` in order to be referenced. |
@@ -199,7 +199,7 @@ pcam_tween_director.get_from_tween_resources()
 The type identifier for the **To**, or about-to-become-active, `PhantomCamera` that should make the [tween-resource](#tween-resource) override
 the tween defined in the **To** section.
 
-| Type           | Value | Description                                                                                                                                                                        |
+| TYPE           | Value | Description                                                                                                                                                                        |
 |----------------|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PHANTOM_CAMERA | 0     | Target individual `PCams` from the current current scene.                                                                                                                    |
 | TWEEN_RESOURCE | 1     | Target `PCams` based on the `PhantomCameraTween` resource applied to them. The resources **must** be saved on the filesystem and applied to `PCams` in order to be referenced. |

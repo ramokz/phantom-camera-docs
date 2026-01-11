@@ -80,11 +80,12 @@ pcam_host.get_host_layers() # Returns the layer value as a bitmask
 
 Determines whether the `PhantomCamera2D` / `PhantomCamera3D` nodes this `PhantomCameraHost` controls should use physics interpolation or not.
 
-| InterpolationMode | Value |
-|-------------------|-------|
-| AUTO              | 0     |
-| IDLE              | 1     |
-| PHYSICS           | 2     |
+| InterpolationMode | Value | Description                                                                            |
+|-------------------|-------|----------------------------------------------------------------------------------------|
+| AUTO              | 0     | Automatically detects the physics interpolation based on the active `PCam`             |
+| IDLE              | 1     | Forces the camera to only update in the `idle` / `process` ticks                       |
+| PHYSICS           | 2     | Forces the camera to only update in the `physics` / `physics process` ticks            |
+| MANUAL            | 3     | Only updates when the [process](#process) function is called from the `PCamHost` node. |
 
 </template>
 
@@ -136,6 +137,29 @@ pcam_host.get_active_pcam()
 
 </template>
 </Property>
+
+
+
+
+<Property propertyName="process" propertyType="void" propertyDefault="(<code>float</code> delta)" isMethod="true">
+<template v-slot:propertyDescription>
+
+Manually updates the process for this `PCamHost`.
+
+::: warning Important
+This function should only be needed if [InterpolationMode](#interpolation_mode) is set to `InterpolationMode.MANUAL`.
+:::
+
+::: details Example
+```gdscript
+pcam_host.process(delta)
+```
+:::
+
+</template>
+</Property>
+
+
 
 
 ## Signals
