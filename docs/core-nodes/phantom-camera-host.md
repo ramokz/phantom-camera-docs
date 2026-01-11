@@ -11,7 +11,7 @@ Each scene can contain an unlimited amount of `PCamHosts` and `Camera2D/3D` node
 ::: tip Tip
 
 In the vast majority of cases, having multiple `PCamHosts` is **not** necessary.
-Using more than one is mainly for use-cases where multiple cameras need to render different at the same time, such as for splitscreen co-op.
+Using more than one is mainly for use-cases where multiple cameras need to render different things at the same time, such as for splitscreen co-op.
 
 :::
 
