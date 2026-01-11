@@ -1,6 +1,7 @@
 <img src="/assets/icons/feature-camera-3d-resource.svg" height="256" width="256"/>
 
 # Camera3D Resource
+> Inherits: Resource
 
 A resource type that overrides the various properties of the `Camera3D` that the `PCam3D` will control once becoming active.
 
