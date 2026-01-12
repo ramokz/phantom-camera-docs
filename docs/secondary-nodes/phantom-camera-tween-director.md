@@ -3,9 +3,9 @@
 # PhantomCameraTweenDirector
 > Inherits: Node
 
-Using the [TweenDirectorResource](/resource-types/tween-director-resource), this node allows for custom tweens between specific `PhantomCameras` in a scene.
+Using the [TweenDirectorResource](/resource-types/tween-director-resource), this node allows for custom tweens between specific `PCams` in a scene.
 
-Whenever a tween between two `PCams` occurs, this node can override the [PhantomCameraTween](/resource-types/phantom-camera-tween) applied to the newly active `PCam` if an entry on both the `From` and `To` lists match the previously and newly active `PCam` respectively defined within the [TweenDirectorResource](/resource-types/tween-director-resource).
+Whenever a tween between two `PCams` occurs, this node can override the [PhantomCameraTween](/resource-types/phantom-camera-tween) applied to the newly active `PCam` if an instance on both the `From` and `To` lists match the previously and newly active `PCam` respectively.
 
 ::: details Example use case
 Let's say you have 4 `Phantom Cameras`, `PCamA`, `PCamB`, `PCamC` and `PCamD`, and you want a unique tween `duration` and `ease` when the camera tweens from `PCamA` to `PCamC`, but want the tween to `PCamC` otherwise be the same in all other instances.<br>
