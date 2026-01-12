@@ -19,6 +19,14 @@ If you then later want to use the same custom `tween_resource` when `PCamA` twee
 Multiple `PhantomCameraTweenDirector` instances can be in a given scene with different [TweenDirectorResource](/resource-types/tween-director-resource) lists. This can be useful for better scene management.
 :::
 
+## Video Example
+
+<video controls>
+<source src="/assets/videos/tween-director.mp4">
+</video>
+
+## Properties
+
 <Property propertyName="tween_director" propertyType="Array[TweenDirectorResource]" propertyDefault="[]">
 
 <template v-slot:propertyDescription>
