@@ -5,8 +5,8 @@
 			src="/assets/icons/error-page-icon.svg"
 			width="256"
 		/>
-		<p class="code">404</p>
-		<h1 class="title">PAGE NOT FOUND</h1>
+		<p class="code">OH</p>
+		<h1 class="title">NOTHING TO SEE HERE</h1>
 		<div class="divider"></div>
 		<blockquote class="quote">
 			You are not the only one disappointed
@@ -26,7 +26,6 @@
 	height: 100%;
 	text-align: center;
 	flex: 1;
-	height: 100%;
 	width: 100%;
 
 	@media (min-width: 768px) {
@@ -35,8 +34,8 @@
 }
 
 .code {
-	line-height: 64px;
-	font-size: 64px;
+	line-height: 80px;
+	font-size: 48px;
 	font-weight: 900;
 }
 
@@ -56,7 +55,6 @@
 }
 
 .quote {
-	margin: 0 auto;
 	font-size: 14px;
 	font-weight: 500;
 	margin-bottom: 12px;
@@ -78,10 +76,10 @@
 	transition:
 		border-color 0.25s,
 		color 0.25s;
+  &:hover {
+    border-color: var(--vp-c-brand-dark);
+    color: var(--vp-c-brand-dark);
+  }
 }
 
-.link:hover {
-	border-color: var(--vp-c-brand-dark);
-	color: var(--vp-c-brand-dark);
-}
 </style>
