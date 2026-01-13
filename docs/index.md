@@ -4,10 +4,10 @@ layout: home
 
 hero:
   name: "Phantom Camera"
-  text: "Documentation"
+#  text: "Documentation"
   tagline: A Camera Addon for Godot
   image:
-    src: ./assets/icons/phantom-camera-icon.png
+    src: ./assets/icons/phantom-camera.svg
     alt: Phantom Camera icon
   actions:
     - theme: brand

@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "Phantom Camera",
-	description: "A dynamic 2D & 3D camera addon for Godot 4",
+	description: "A camera addon for Godot",
 	head: [
 		[
 			"link",
@@ -21,7 +21,7 @@ export default defineConfig({
 			"meta",
 			{
 				property: "og:description",
-				content: "A dynamic 2D & 3D camera addon for Godot 4",
+				content: "A camera addon for Godot",
 			},
 		],
 		["meta", { property: "og:url", content: "https://phantom-camera.dev" }],
@@ -33,7 +33,7 @@ export default defineConfig({
 			"meta",
 			{
 				name: "twitter:description",
-				content: "A dynamic 2D & 3D camera addon for Godot 4",
+				content: "A camera addon for Godot",
 			},
 		],
 		["meta", { name: "twitter:site", content: "@marcusskov" }],
@@ -82,15 +82,6 @@ export default defineConfig({
 				"https://github.com/ramokz/phantom-camera-docs/edit/main/docs/:path",
 			text: "Suggest changes to this page",
 		},
-
-		notFound: {
-			title: "PAGE NOT FOUND",
-			quote: "You are not the only one who is disappointed", // set to '' to hide
-			linkLabel: "go to home", // aria-label
-			linkText: "Back to the Documentation",
-			code: "404",
-		},
-
 		nav: [
 			{
 				text: "Home",

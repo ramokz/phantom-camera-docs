@@ -43,24 +43,89 @@
 		rgba(27, 158, 127, 1) 100%
 	);
 
-	/* Hero Image */
-	.image-bg {
-		display: none;
-	}
-	.VPImage {
-		max-width: 300px;
-		max-height: 400px;
-		@media (min-width: 640px) {
-			max-width: 400px;
-			max-height: 800px;
-		}
-	}
-
 	/* Cards */
 	--vp-c-bg-soft: var(--vp-c-bg-alt);
 
 	/* Search Menu */
 	--docsearch-hit-active-color: var(--vp-c-bg);
+}
+
+/* Hero Image */
+.image-bg {
+	display: none;
+}
+
+.VPHomeHero {
+	.container {
+		/*gap: 2rem;*/
+		/*flex-direction: column;*/
+		@media (min-width: 640px) {
+			margin-bottom: -10px;
+		}
+		@media (min-width: 960px) {
+			/*flex-direction: row-reverse;*/
+			margin-bottom: inherit;
+		}
+		.main {
+			flex: 2;
+			@media (min-width: 640px) {
+				max-width: inherit !important;
+			}
+			.name {
+				font-weight: 900;
+				max-width: 100%;
+				/*font-size: rem;*/
+
+				@media (min-width: 640px) {
+					font-size: 4.1rem;
+				}
+
+				@media (min-width: 960px) {
+					font-size: 4.1rem;
+				}
+
+				@media (min-width: 1100px) {
+					font-size: 4.8rem;
+				}
+			}
+		}
+
+		.image {
+			margin-bottom: -70px;
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			@media (min-width: 640px) {
+				margin-bottom: -90px;
+			}
+			@media (min-width: 960px) {
+				justify-content: flex-start;
+				margin-bottom: inherit;
+			}
+
+			.image-container {
+				margin: 0;
+				transform: initial;
+
+				width: 240px;
+				/*margin: 0;*/
+				/*@media (min-width: 960px) {*/
+				/*	height: 200px;*/
+				/*	margin: auto;*/
+				/*}*/
+				.VPImage {
+					width: 200px;
+					@media (min-width: 640px) {
+						width: 240px;
+					}
+				}
+			}
+		}
+	}
+
+	.tagline{
+		padding-top: 0;
+	}
 }
 
 ::selection {
@@ -127,10 +192,6 @@ body,
 	margin: 30px 0 20px 0;
 }
 
-/* Changes the weight for the header text on the homepage */
-.name {
-	font-weight: 900 !important;
-}
 
 .property-core-group {
 	display: flex;
@@ -138,7 +199,7 @@ body,
 	gap: 5%;
 	& > .property-method-container {
 		width: 100%;
-		@media (min-width: 600px) {
+		@media (min-width: 640px) {
 			width: 47.5%;
 		}
 	}
