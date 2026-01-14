@@ -644,7 +644,7 @@ This property has no effect on runtime behaviour.
 <Property propertyName="noise_emitter_layer" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
-Enable a corresponding layer for a [PhantomCameraNoiseEmitter3D noise_emitter_layer](/noise/phantom-camera-noise-emitter-3d#noise_emitter_layer) to make this `PhantomCamera3D` be affected by it.
+Enable a corresponding layer for a [PhantomCameraNoiseEmitter3D noise_emitter_layer](/secondary-nodes/phantom-camera-noise-emitter-3d#noise_emitter_layer) to make this `PhantomCamera3D` be affected by it.
 
 Enabling multiple corresponding layers on the same `PhantomCamera3D` causes no additional effect.
 

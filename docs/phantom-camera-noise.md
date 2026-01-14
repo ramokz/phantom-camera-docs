@@ -35,7 +35,7 @@ The noise will only go into effect after a tween to it has completed.
 </div>
 
 
-Add a [PhantomCameraNoiseEmitter2D](/noise/phantom-camera-noise-emitter-2d) / [PhantomCameraNoiseEmitter3D](/noise/phantom-camera-noise-emitter-3d) node to a scene, assign a [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-2d) / [PhantomCameraNoise3D](/resource-types/phantom-camera-noise-3d) resource and trigger it at any time by calling the `emit()` [(2D)](/noise/phantom-camera-noise-emitter-2d#emit) / [(3D)](/noise/phantom-camera-noise-emitter-3d#emit) respectively.
+Add a [PhantomCameraNoiseEmitter2D](/secondary-nodes/phantom-camera-noise-emitter-2d) / [PhantomCameraNoiseEmitter3D](/secondary-nodes/phantom-camera-noise-emitter-3d) node to a scene, assign a [PhantomCameraNoise2D](/resource-types/phantom-camera-noise-2d) / [PhantomCameraNoise3D](/resource-types/phantom-camera-noise-3d) resource and trigger it at any time by calling the `emit()` [(2D)](/secondary-nodes/phantom-camera-noise-emitter-2d#emit) / [(3D)](/secondary-nodes/phantom-camera-noise-emitter-3d#emit) respectively.
 
 The effect can be previewed in the viewfinder within the editor, and during runtime, by toggling the `Preview` button in the noise emitter's inspector.
 
