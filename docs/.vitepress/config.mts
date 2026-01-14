@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "Phantom Camera",
-	description: "A camera addon for Godot",
+	description: "A Camera Addon for Godot",
 	head: [
 		[
 			"link",
@@ -21,23 +21,13 @@ export default defineConfig({
 			"meta",
 			{
 				property: "og:description",
-				content: "A camera addon for Godot",
+				content: "A Camera Addon for Godot",
 			},
 		],
 		["meta", { property: "og:url", content: "https://phantom-camera.dev" }],
 		["meta", { property: "og:image", content: "/meta-image.png" }],
-
-		["meta", { name: "twitter:card", content: "summary" }],
-		["meta", { name: "twitter:title", content: "Phantom Camera" }],
-		[
-			"meta",
-			{
-				name: "twitter:description",
-				content: "A camera addon for Godot",
-			},
-		],
-		["meta", { name: "twitter:site", content: "@marcusskov" }],
-		["meta", { name: "twitter:image", content: "/meta-image.png" }],
+		["meta", { property: "og:image:width", content: "1200" }],
+		["meta", { property: "og:image:height", content: "630" }],
 	],
 	cleanUrls: true,
 	appearance: "force-dark",
