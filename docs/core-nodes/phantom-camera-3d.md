@@ -36,7 +36,7 @@ Enables the `PCam3D` to look at specific node(s), effectively adjusting its rota
 </template>
 </PropertyCore>
 
-<PropertyCore propertyName="Tween" propertyPageLink="../phantom-camera-tween" propertyIcon="feature-tween.svg">
+<PropertyCore propertyName="Tween" propertyPageLink="../resource-types/phantom-camera-tween" propertyIcon="feature-tween.svg">
 <template v-slot:propertyDescription>
 
 Determines how the `Camera3D` should tween to this `PhantomCamera3D` upon becoming active.

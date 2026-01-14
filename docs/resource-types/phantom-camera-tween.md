@@ -1,6 +1,7 @@
-<img src="/assets/icons/feature-tween.svg" height="256" width="256"/>
+<img src="/assets/icons/phantom-camera-tween.svg" height="256" width="256"/>
 
 # PhantomCameraTween
+> Inherits: Resource
 
 Defines how `PCams` transition between one another. Changing the tween values for a given `PCam` determines how transitioning _to that_ instance will look like.
 

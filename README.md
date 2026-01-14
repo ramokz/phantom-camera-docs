@@ -1,4 +1,4 @@
-![phantom-camera-docu-readme-header](https://github.com/ramokz/phantom-camera-docs/assets/5159399/423d2a42-4308-40ac-921b-fb6f98be6942)
+<img alt="Phantom Camera documentation header" src="https://phantom-camera.dev/assets/github/readme-header-documentation.svg" width="1200"/>
 
 # Phantom Camera Documentation
 Documentation site for the [Phantom Camera Godot addon](https://github.com/ramokz/phantom-camera).

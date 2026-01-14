@@ -25,7 +25,7 @@ Enables the `PCam2D` to follow specific target(s) using various logics.
 </template>
 </PropertyCore>
 
-<PropertyCore propertyName="Tween" propertyPageLink="../phantom-camera-tween" propertyIcon="feature-tween.svg">
+<PropertyCore propertyName="Tween" propertyPageLink="../resource-types/phantom-camera-tween" propertyIcon="feature-tween.svg">
 <template v-slot:propertyDescription>
 
 Determines how the `Camera2D` should tween to this `PCam2D` upon becoming active.
