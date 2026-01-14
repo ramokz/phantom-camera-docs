@@ -308,5 +308,9 @@ export default defineConfig({
 				ariaLabel: "Ko-Fi",
 			},
 		],
+		footer: {
+			message: "Made with ♥ in Vitepress",
+			copyright: "Released under the MIT License."
+		}
 	},
 });
