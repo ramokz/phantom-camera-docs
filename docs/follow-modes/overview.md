@@ -164,147 +164,140 @@ pcam.get_lookahead()
 </template>
 </Property>
 
-<Property2D3D propertyName="lookahead" propertyName2D="lookahead" propertyName3D="follow_lookahead" propertyType2D="bool" propertyDefault2D="false" propertyType3D="bool" propertyDefault3D="false">
+[//]: # (<Property2D3D propertyName="lookahead" propertyName2D="lookahead" propertyName3D="follow_lookahead" propertyType2D="bool" propertyDefault2D="false" propertyType3D="bool" propertyDefault3D="false">)
 
+[//]: # ()
+[//]: # ()
+[//]: # (<template v-slot:propertyDescription>)
 
-<template v-slot:propertyDescription>
+[//]: # ()
+[//]: # ()
+[//]: # (Enables velocity-based lookahead. As the `follow target` moves the camera will move further ahead based on its velocity. The faster the `follow target` moves, the further ahead the camera will move.)
 
+[//]: # ()
+[//]: # (</template>)
 
-Enables velocity-based lookahead. As the `follow target` moves the camera will move further ahead based on its velocity. The faster the `follow target` moves, the further ahead the camera will move.
+[//]: # ()
+[//]: # (<template v-slot:setMethod2D>)
 
+[//]: # ()
+[//]: # (`void` set_lookahead&#40;`bool` value&#41;)
 
-</template>
+[//]: # ()
+[//]: # (</template>)
 
+[//]: # (<template v-slot:setMethod3D>)
 
+[//]: # (`void` set_follow_lookahead&#40;`bool` value&#41;)
 
-<template v-slot:setMethod2D>
+[//]: # (</template>)
 
+[//]: # ()
+[//]: # ()
+[//]: # ()
+[//]: # (<template v-slot:setExample2D>)
 
-`void` set_lookahead(`bool` value)
+[//]: # ()
+[//]: # (::: details Example)
 
+[//]: # ()
+[//]: # (```gdscript)
 
-</template>
+[//]: # (pcam.set_lookahead&#40;value&#41;)
 
+[//]: # ()
+[//]: # (```)
 
+[//]: # ()
+[//]: # (:::)
 
-<template v-slot:setMethod3D>
+[//]: # ()
+[//]: # (</template>)
 
+[//]: # (<template v-slot:setExample3D>)
 
-`void` set_follow_lookahead(`bool` value)
+[//]: # ()
+[//]: # (::: details Example)
 
+[//]: # ()
+[//]: # (```gdscript)
 
-</template>
+[//]: # (pcam.set_follow_lookahead&#40;value&#41;)
 
+[//]: # ()
+[//]: # (```)
 
+[//]: # ()
+[//]: # (:::)
 
-<template v-slot:setExample2D>
+[//]: # ()
+[//]: # (</template>)
 
+[//]: # (<template v-slot:getMethod2D>)
 
-::: details Example
+[//]: # ()
+[//]: # (`bool` get_lookahead&#40;&#41;)
 
+[//]: # ()
+[//]: # (</template>)
 
-```gdscript
+[//]: # ()
+[//]: # ()
+[//]: # ()
+[//]: # (<template v-slot:getMethod3D>)
 
+[//]: # ()
+[//]: # (`bool` get_follow_lookahead&#40;&#41;)
 
-pcam.set_lookahead(value)
+[//]: # ()
+[//]: # (</template>)
 
+[//]: # ()
+[//]: # ()
+[//]: # ()
+[//]: # (<template v-slot:getExample2D>)
 
-```
+[//]: # ()
+[//]: # (::: details Example)
 
+[//]: # ()
+[//]: # (```gdscript)
 
-:::
+[//]: # (pcam.get_lookahead&#40;&#41;)
 
+[//]: # (```)
 
-</template>
+[//]: # ()
+[//]: # (:::)
 
+[//]: # ()
+[//]: # ()
+[//]: # (</template>)
 
+[//]: # ()
+[//]: # (<template v-slot:getExample3D>)
 
-<template v-slot:setExample3D>
+[//]: # ()
+[//]: # ()
+[//]: # (::: details Example)
 
+[//]: # ()
+[//]: # ()
+[//]: # (```gdscript)
 
-::: details Example
+[//]: # (pcam.get_follow_lookahead&#40;&#41;)
 
+[//]: # ()
+[//]: # (```)
 
-```gdscript
+[//]: # ()
+[//]: # (:::)
 
+[//]: # ()
+[//]: # (</template>)
 
-pcam.set_follow_lookahead(value)
-
-
-```
-
-:::
-
-
-
-</template>
-
-
-
-<template v-slot:getMethod2D>
-
-
-`bool` get_lookahead()
-
-
-</template>
-
-
-
-<template v-slot:getMethod3D>
-
-
-`bool` get_follow_lookahead()
-
-
-</template>
-
-
-
-<template v-slot:getExample2D>
-
-
-::: details Example
-
-
-```gdscript
-
-
-pcam.get_lookahead()
-
-
-```
-
-
-:::
-
-
-</template>
-
-
-
-<template v-slot:getExample3D>
-
-
-::: details Example
-
-
-```gdscript
-
-
-pcam.get_follow_lookahead()
-
-
-```
-
-
-:::
-
-
-</template>
-
-
-</Property2D3D>
+[//]: # ()
+[//]: # (</Property2D3D>)
 
 
 
@@ -690,7 +683,7 @@ pcam.get_lookahead_acceleration()
 
 
 
-<Property propertyName="lookahead_deceleration" propertyType="float" propertyDefault="0.15">
+<Property propertyName="lookahead_deceleration" propertyType="float" propertyDefault="0.2">
 <template v-slot:propertyDescription>
 
 Determines the damping speed of how fast the camera should decelerate back to the `follow target`'s position once it has no positional velocity.<br>
