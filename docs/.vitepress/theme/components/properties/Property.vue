@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import {computed, useSlots} from "vue";
+import { store } from "../../../../store.ts";
 
 const props = defineProps({
   propertyName: {
     type: String,
     required: true,
+  },
+  propertyName2D: {
+    type: String,
+    required: false,
+  },
+  propertyName3D: {
+    required: false,
   },
   propertyType: {
     type: String,
@@ -51,6 +59,18 @@ const callerExample: string = "callerExample"
 const slots = useSlots()
 const slotContent: Array<string> = Object.keys(slots)
 
+const computedPropertyName = computed(() => {
+  if (props.propertyName2D || props.propertyName3D) {
+      if (store.is2D) {
+        return props.propertyName2D
+      } else {
+        return props.propertyName3D
+      }
+  } else {
+    return props.propertyName
+  }
+});
+
 const hasPropertyType = (typeArray: Array<string>) => {
   return slotContent.some(value => typeArray.includes(value))
 }
@@ -68,7 +88,7 @@ const hasGetterContent = computed(() => {
   <div class="property-method-signal-container">
     <h3 :id="id" tabindex="-1">
       <code v-if="isMethod">{{ propertyType }}</code>
-      {{ propertyName }}
+      {{ computedPropertyName }}
       <span v-if="isMethod && propertyDefault" v-html="propertyDefault"></span>
       <a class="header-anchor" :href="`#${id}`" :aria-label="`Permalink to ${propertyName}`">&#8203;</a>
     </h3>
