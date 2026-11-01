@@ -66,7 +66,7 @@ The licence file can also be found in the [project's repository](https://github.
 
 ### What is the project's stance on AI?
 Put simply, the project does **not** use and does **not** allow AI contributions.<br>
-(Slightly) More details can be found on the [Contribution page](/support/how-to-contribute#🛑-ai-contributions).
+(Slightly) More details can be found on the [Contribution page](/support/how-to-contribute#🛑-llm-ai-contributions).
 
 ---
 ### Does the addon do any data collection?
