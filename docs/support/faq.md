@@ -17,7 +17,7 @@ See the [project page](https://github.com/users/ramokz/projects/3/views/8) to se
 ---
 
 ### What Godot version is supported?
-The minimum Godot version this addon supports is 4.3.
+The minimum Godot version this addon supports is 4.4.
 The version requirement will change over time as the addon evolves and takes advantage of new features.
 The intent is to support as many versions of Godot as possible, but exceptions are made if significant engine changes or additions are introduced in more recent releases that affect the addon's codebase.
 
@@ -34,7 +34,7 @@ There's no deadline or precise timeframe for when things get implemented. The [m
 ---
 
 ### Is there C# support?
-**Yes**, While the addon is written in `GDScript`, it has an official [C# Wrapper](/c-sharp-wrapper). In short, it allows for strongly typed references to the various properties and methods `GDScript` users have access to and makes using the addon in `C#` feel a lot more native.
+**Yes**, while the addon is written in `GDScript`, it has an official [C# Wrapper](/c-sharp-wrapper). In short, it allows for strongly typed references to the various properties and methods `GDScript` users have access to and makes using the addon in `C#` feel a lot more native.
 
 ---
 
@@ -60,17 +60,31 @@ It has, and likely will happen one day when the addon reaches a more mature stat
 
 Put simply, it means you don't have to ask for permission to use it for personal or professional work.
 You can copy, modify and do whatever you want with it.
-The license file can also be found in the [project's repository](https://github.com/ramokz/phantom-camera/blob/main/LICENSE).
+The licence file can also be found in the [project's repository](https://github.com/ramokz/phantom-camera/blob/main/LICENSE).
 
 ---
 
+### What is the project's stance on AI?
+Put simply, the project does **not** use and does **not** allow AI contributions.<br>
+(Slightly) More details can be found on the [Contribution page](/support/how-to-contribute#🛑-ai-contributions).
+
+---
 ### Does the addon do any data collection?
 #### Addon
-**No**. There's no tracking or any kind of telemetry that tracks the usage of the addon and there **never** will be.
+**No**. There's no tracking or any kind of telemetry within the addon itself and there **never** will be.
 
-The only "metrics" this project have are [GitHub stars](https://github.com/ramokz/phantom-camera), [donations](https://ko-fi.com/ramokz), [issue reports](https://github.com/ramokz/phantom-camera/issues) / [discussion posts](https://github.com/ramokz/phantom-camera/discussions), and whenever someone posts about the addon.
+##### Godot Asset Store
+When the addon is accessed through the [Godot Asset Store](https://store.godotengine.org/asset/ramokz/phantom-camera/), there will be some, anonymous, basic telemetry collected. The ones I (the author) are exposed to are:
+- Number of views on the asset page
+- Number of users who has added the addon to their Godot Asset Store library
+- Number of downloads
 
-I have no actual clue about who and how many use the addon, so GitHub stars, messages or social posts are always appreciated.
+Beyond that, the only "metrics" this project have are:
+- [GitHub stars](https://github.com/ramokz/phantom-camera/stargazers)
+- [Donations](https://ko-fi.com/ramokz)
+- [Issue reports](https://github.com/ramokz/phantom-camera/issues) / [Discussion posts](https://github.com/ramokz/phantom-camera/discussions)
+- Whenever someone posts about the addon on various sites
+
 
 #### Documentation Site
 **Partially**. This site uses [Algolia via their open source program](https://www.algolia.com/for-open-source), which is the search tool that is used on the site. It is a commonly used tool by many open-source documentation sites, including [VueJS](https://vuejs.org/).

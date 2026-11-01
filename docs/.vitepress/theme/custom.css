@@ -183,6 +183,19 @@ body,
 	}
 }
 
+.vp-doc h5 {
+	color: var(--vp-c-white);
+	opacity: 0.6;
+	font-size: 16px;
+	margin-bottom: -18px;
+	font-weight: 900;
+
+	@media (min-width: 600px) {
+		margin-bottom: -10px;
+		font-size: 16px;
+	}
+}
+
 .method-container > h4 {
 	color: var(--vp-c-gray-1);
 	margin-bottom: 0.6rem;

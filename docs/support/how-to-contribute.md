@@ -2,6 +2,9 @@
 
 Whether if you're technical or not, there are many ways to help improve the addon!
 
+## 🛑 LLM (AI) Contributions
+LLM contributions will **not** be accepted for this project - neither for the addon itself nor the documentation. This includes issues, pull-requests, and messages/comments. The project was started by human passion and so will continue to be maintained by human effort and learnings.
+
 ## 🐛 Bug Reports
 If you experience any functionality that breaks or otherwise causes undesired effects, please make a [Bug Report](https://github.com/ramokz/phantom-camera/issues/new?assignees=&labels=&projects=&template=bug_report.yml).
 
@@ -9,13 +12,13 @@ If you experience any functionality that breaks or otherwise causes undesired ef
 Not every possible feature has been planned nor considered, so if you feel there's something you would love to see please submit a [Feature Proposal](https://github.com/ramokz/phantom-camera/issues/new?assignees=&labels=feature-proposal%2Cneeds-triage&projects=&template=feature_proposal.yml).
 
 ## ⌨️ Addon Contributions
-If you're technically savy and would like to help making the addon better then code contributions are very welcome!
+If you're technically savy and would like to help making the addon better, then code contributions are very welcome!
 
 ### Large Changes
 **Examples**
 - New features
 - Reworking how something works
-- Small changes that has system wide implications 
+- Small changes that has system-wide implications 
 
 Please do raise a [Feature Proposal](https://github.com/ramokz/phantom-camera/issues/new?assignees=&labels=feature-proposal%2Cneeds-triage&projects=&template=feature_proposal.yml) or [Bug Report](https://github.com/ramokz/phantom-camera/issues/new?assignees=&labels=&projects=&template=bug_report.yml) prior to committing to any work or submitting any PRs. This is just to be aligned on the goal and avoid anyone who wish to help spending time on things that might not get merged in the end.
 
