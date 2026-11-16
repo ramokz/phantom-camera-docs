@@ -37,6 +37,7 @@ pcam.get_look_at_damping()
 </Property>
 
 
+
 <Property propertyName="look_at_damping_value" propertyType="float" propertyDefault="false">
 <template v-slot:propertyDescription>
 

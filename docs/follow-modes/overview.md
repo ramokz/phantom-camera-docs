@@ -122,23 +122,28 @@ pcam.get_follow_axis_lock()
 
 
 
-<Property propertyName="lookahead" propertyType="bool" propertyDefault="false">
+
+<Property2D3D propertyName="lookahead" propertyName2D="lookahead" propertyName3D="follow_lookahead" propertyType2D="bool" propertyDefault2D="false" propertyType3D="bool" propertyDefault3D="false">
+
 <template v-slot:propertyDescription>
 
-Enables velocity-based lookahead.<br>
-As the `follow target` moves the camera will move further ahead based on its velocity. The faster the `follow target` moves, the further ahead the camera will move.
-
-<Property2D3DOnly :is2D="true" />
+Enables velocity-based lookahead. As the `follow target` moves, the camera will move further ahead based on its velocity. The faster the `follow target` moves, the further ahead the camera will move.
 
 </template>
 
-<template v-slot:setMethod>
+<template v-slot:setMethod2D>
 
-`void` set_lookahead(`bool` enable)
+`void` set_lookahead(`bool` value)
 
 </template>
 
-<template v-slot:setExample>
+<template v-slot:setMethod3D>
+
+`void` set_follow_lookahead(`bool` value)
+
+</template>
+
+<template v-slot:setExample2D>
 
 ::: details Example
 ```gdscript
@@ -148,12 +153,29 @@ pcam.set_lookahead(true)
 
 </template>
 
-<template v-slot:getMethod>
+<template v-slot:setExample3D>
+
+::: details Example
+```gdscript
+pcam.set_follow_lookahead(true)
+```
+:::
+
+</template>
+
+<template v-slot:getMethod2D>
 
 `bool` get_lookahead()
 
 </template>
-<template v-slot:getExample>
+
+<template v-slot:getMethod3D>
+
+`bool` get_follow_lookahead()
+
+</template>
+
+<template v-slot:getExample2D>
 
 ::: details Example
 ```gdscript
@@ -162,179 +184,79 @@ pcam.get_lookahead()
 :::
 
 </template>
-</Property>
 
-[//]: # (<Property2D3D propertyName="lookahead" propertyName2D="lookahead" propertyName3D="follow_lookahead" propertyType2D="bool" propertyDefault2D="false" propertyType3D="bool" propertyDefault3D="false">)
+<template v-slot:getExample3D>
 
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription>)
+::: details Example
+```gdscript
+pcam.get_follow_lookahead()
+```
+:::
 
-[//]: # ()
-[//]: # ()
-[//]: # (Enables velocity-based lookahead. As the `follow target` moves the camera will move further ahead based on its velocity. The faster the `follow target` moves, the further ahead the camera will move.)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (<template v-slot:setMethod2D>)
-
-[//]: # ()
-[//]: # (`void` set_lookahead&#40;`bool` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # (<template v-slot:setMethod3D>)
-
-[//]: # (`void` set_follow_lookahead&#40;`bool` value&#41;)
-
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # (pcam.set_lookahead&#40;value&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # (<template v-slot:setExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # (pcam.set_follow_lookahead&#40;value&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # (<template v-slot:getMethod2D>)
-
-[//]: # ()
-[//]: # (`bool` get_lookahead&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod3D>)
-
-[//]: # ()
-[//]: # (`bool` get_follow_lookahead&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # (pcam.get_lookahead&#40;&#41;)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (<template v-slot:getExample3D>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # (pcam.get_follow_lookahead&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (</Property2D3D>)
+</template>
+</Property2D3D>
 
 
 
 
-<Property propertyName="lookahead_time" propertyType="Vector2" propertyDefault="Vector2(0.5, 0.5)">
+<Property2D3D propertyName="lookahead_time" propertyName2D="lookahead_time" propertyName3D="follow_lookahead_time" propertyType2D="Vector2" propertyDefault2D="Vector2(0.5, 0.5)" propertyType3D="Vector3" propertyDefault3D="Vector3(0.1, 0.1, 0.1)">
+
 <template v-slot:propertyDescription>
 
-The amount of `seconds` to look ahead of the [param follow target]'s position per axis based on the [param follow target]'s velocity.<br><br>
-Each axis has its own prediction time in `seconds`.
-A value of `0` can be set either to disable lookahead for the corresponding axis.
+The amount of `seconds` to look ahead of the `follow target`'s position per axis based on the `follow target`'s velocity.<br>
 
-<Property2D3DOnly :is2D="true" />
+Each axis has its own prediction time in `seconds`.
+
+A value of `0` can be set to disable lookahead for the corresponding axis.
 
 </template>
 
-<template v-slot:setMethod>
+<template v-slot:setMethod2D>
 
 `void` set_lookahead_time(`Vector2` value)
 
 </template>
 
-<template v-slot:setExample>
+<template v-slot:setMethod3D>
+
+`void` set_follow_lookahead_time(`Vector3` value)
+
+</template>
+
+<template v-slot:setExample2D>
 
 ::: details Example
 ```gdscript
-pcam.set_lookahead_time(Vector2(0.4, 0.2))
+pcam.set_lookahead_time(Vector2(0.3, 0.3))
+
 ```
 :::
 
 </template>
 
-<template v-slot:getMethod>
+<template v-slot:setExample3D>
 
-`Vector2` get_lookahead_time()
+::: details Example
+```gdscript
+pcam.set_follow_lookahead_time(Vector3(1, 1, 1))
+```
+:::
 
 </template>
-<template v-slot:getExample>
+
+<template v-slot:getMethod2D>
+
+`bool` get_lookahead_time()
+
+</template>
+
+<template v-slot:getMethod3D>
+
+`bool` get_follow_lookahead_time()
+
+</template>
+
+<template v-slot:getExample2D>
 
 ::: details Example
 ```gdscript
@@ -343,189 +265,80 @@ pcam.get_lookahead_time()
 :::
 
 </template>
-</Property>
 
-[//]: # (<Property2D3D propertyName="lookahead_time" propertyName2D="lookahead_time" propertyName3D="follow_lookahead_time" propertyType2D="Vector2" propertyDefault2D="Vector2&#40;0.5, 0.5&#41;" propertyType3D="Vector3" propertyDefault3D="Vector3&#40;0.1, 0.1, 0.1&#41;">)
+<template v-slot:getExample3D>
 
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription>)
+::: details Example
+```gdscript
+pcam.get_follow_lookahead_time()
+```
+:::
 
-[//]: # ()
-[//]: # (The amount of `seconds` to look ahead of the `follow target`'s position per axis based on the `follow target`'s velocity.<br>)
-
-[//]: # (Each axis has its own prediction time in `seconds`.<br><br>)
-
-[//]: # (A value of `0` can be set either to disable lookahead for the corresponding axis.)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod2D>)
-
-[//]: # ()
-[//]: # (`void` set_lookahead_time&#40;`Vector2` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod3D>)
-
-[//]: # ()
-[//]: # (`void` set_follow_lookahead_time&#40;`Vector3` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_lookahead_time&#40;Vector2&#40;0.3, 0.3&#41;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_follow_lookahead_time&#40;Vector3&#40;1, 1, 1&#41;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod2D>)
-
-[//]: # ()
-[//]: # (`bool` get_lookahead_time&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod3D>)
-
-[//]: # ()
-[//]: # (`bool` get_follow_lookahead_time&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_lookahead_time&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_follow_lookahead_time&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (</Property2D3D>)
+</template>
+</Property2D3D>
 
 
 
-<Property propertyName="lookahead_acceleration" propertyType="float" propertyDefault="0.2">
+
+<Property2D3D propertyName="lookahead_acceleration" propertyName2D="lookahead_acceleration" propertyName3D="follow_lookahead_acceleration" propertyType2D="float" propertyDefault2D="0.2" propertyType3D="float" propertyDefault3D="0.1">
+
 <template v-slot:propertyDescription>
 
-Determines the damping speed of how fast the camera should reach the `lookahead_time` target once the `follow target` has a positional velocity.<br>
-**Lower value** = faster.<br>
+Determines the damping speed of how fast the camera should reach the `lookahead_time` target once the `follow target` moves
+
+**Lower value** = faster.
+
 **Higher value** = slower.
 
-<Property2D3DOnly :is2D="true" />
 
 </template>
 
-<template v-slot:setMethod>
+<template v-slot:setMethod2D>
 
 `void` set_lookahead_acceleration(`float` value)
 
 </template>
 
-<template v-slot:setExample>
+<template v-slot:setMethod3D>
+
+`void` set_follow_lookahead_acceleration(`float` value)
+
+</template>
+
+<template v-slot:setExample2D>
+
 
 ::: details Example
 ```gdscript
-pcam.set_lookahead_acceleration(0.6)
+pcam.set_lookahead_acceleration(0.8)
 ```
 :::
 
 </template>
 
-<template v-slot:getMethod>
+<template v-slot:setExample3D>
 
-`float` get_lookahead_acceleration()
+::: details Example
+```gdscript
+pcam.set_follow_lookahead_acceleration(0.6)
+```
+:::
 
 </template>
-<template v-slot:getExample>
+
+<template v-slot:getMethod2D>
+
+`bool` get_lookahead_acceleration()
+
+</template>
+
+<template v-slot:getMethod3D>
+
+`bool` get_follow_lookahead_acceleration()
+
+</template>
+
+<template v-slot:getExample2D>
 
 ::: details Example
 ```gdscript
@@ -534,188 +347,77 @@ pcam.get_lookahead_acceleration()
 :::
 
 </template>
-</Property>
 
+<template v-slot:getExample3D>
 
-[//]: # (<Property2D3D propertyName="lookahead_acceleration" propertyName2D="lookahead_acceleration" propertyName3D="follow_lookahead_acceleration" propertyType2D="float" propertyDefault2D="0.2" propertyType3D="float" propertyDefault3D="0.1">)
+::: details Example
+```gdscript
+pcam.get_follow_lookahead_acceleration()
+```
+:::
 
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription>)
-
-[//]: # ()
-[//]: # (Determines the damping speed of how fast the camera should reach the `lookahead_time` target once the `follow target` has a positional velocity.<br>)
-
-[//]: # (**Lower value** = faster.<br>)
-
-[//]: # (**Higher value** = slower.)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod2D>)
-
-[//]: # ()
-[//]: # (`void` set_lookahead_acceleration&#40;`float` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod3D>)
-
-[//]: # ()
-[//]: # (`void` set_follow_lookahead_acceleration&#40;`float` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_lookahead_acceleration&#40;0.8&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_follow_lookahead_acceleration&#40;0.6&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod2D>)
-
-[//]: # ()
-[//]: # (`bool` get_lookahead_acceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod3D>)
-
-[//]: # ()
-[//]: # (`bool` get_follow_lookahead_acceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_lookahead_acceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_follow_lookahead_acceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (</Property2D3D>)
+</template>
+</Property2D3D>
 
 
 
-<Property propertyName="lookahead_deceleration" propertyType="float" propertyDefault="0.2">
+<Property2D3D propertyName="lookahead_deceleration" propertyName2D="lookahead_deceleration" propertyName3D="follow_lookahead_deceleration" propertyType2D="float" propertyDefault2D="0.2" propertyType3D="float" propertyDefault3D="0.1">
+
 <template v-slot:propertyDescription>
 
-Determines the damping speed of how fast the camera should decelerate back to the `follow target`'s position once it has no positional velocity.<br>
-**Lower value** = faster.<br>
-**Higher value** = slower.
+Determines the damping speed of how fast the camera should decelerate back to the `follow target`'s position when it stops moving.
 
-<Property2D3DOnly :is2D="true" />
+**Lower value** = faster.
+
+**Higher value** = slower.
 
 </template>
 
-<template v-slot:setMethod>
+<template v-slot:setMethod2D>
 
 `void` set_lookahead_deceleration(`float` value)
 
 </template>
 
-<template v-slot:setExample>
+<template v-slot:setMethod3D>
+
+`void` set_follow_lookahead_deceleration(`float` value)
+
+</template>
+
+<template v-slot:setExample2D>
 
 ::: details Example
 ```gdscript
-pcam.set_lookahead_deceleration(0.6)
+pcam.set_lookahead_deceleration(0.4)
 ```
 :::
 
 </template>
 
-<template v-slot:getMethod>
+<template v-slot:setExample3D>
 
-`float` get_lookahead_deceleration()
+::: details Example
+```gdscript
+pcam.set_follow_lookahead_deceleration(0.6)
+```
+:::
 
 </template>
-<template v-slot:getExample>
+
+<template v-slot:getMethod2D>
+
+`bool` get_lookahead_deceleration()
+
+</template>
+
+<template v-slot:getMethod3D>
+
+`bool` get_follow_lookahead_deceleration()
+
+</template>
+
+<template v-slot:getExample2D>
 
 ::: details Example
 ```gdscript
@@ -724,539 +426,194 @@ pcam.get_lookahead_deceleration()
 :::
 
 </template>
-</Property>
 
-[//]: # (<Property2D3D propertyName="lookahead_deceleration" propertyName2D="lookahead_deceleration" propertyName3D="follow_lookahead_deceleration" propertyType2D="float" propertyDefault2D="0.2" propertyType3D="float" propertyDefault3D="0.1">)
+<template v-slot:getExample3D>
 
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription>)
+::: details Example
+```gdscript
+pcam.get_follow_lookahead_deceleration()
+```
+:::
 
-[//]: # ()
-[//]: # (Determines the damping speed of how fast the camera should decelerate back to the `follow target`'s position once it has no positional velocity.<br>)
-
-[//]: # (**Lower value** = faster.<br>)
-
-[//]: # (**Higher value** = slower.)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod2D>)
-
-[//]: # ()
-[//]: # (`void` set_lookahead_deceleration&#40;`float` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod3D>)
-
-[//]: # ()
-[//]: # (`void` set_follow_lookahead_deceleration&#40;`float` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_lookahead_deceleration&#40;0.4&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_follow_lookahead_deceleration&#40;0.6&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod2D>)
-
-[//]: # ()
-[//]: # (`bool` get_lookahead_deceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod3D>)
-
-[//]: # ()
-[//]: # (`bool` get_follow_lookahead_deceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_lookahead_deceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_follow_lookahead_deceleration&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # (</Property2D3D>)
+</template>
+</Property2D3D>
 
 
-<Property propertyName="lookahead_max" propertyType="bool" propertyDefault="false">
-<template v-slot:propertyDescription>
 
-Enables a maximum velocity limit in `pixels per second` for the `follow_lookahead` effect.<br><br>
-If `true`, the `follow target`'s velocity will be clamped to the `follow_lookahead_max_value` before calculating lookahead.<br>
+
+<Property2D3D propertyName="lookahead_max" propertyName2D="lookahead_max" propertyName3D="follow_lookahead_max" propertyType2D="bool" propertyDefault2D="false" propertyType3D="bool" propertyDefault3D="false">
+
+<template v-slot:propertyDescription2D>
+
+Enables a maximum velocity limit in `pixels per second` for the `follow_lookahead` effect.
+
+If `true`, the `follow target`'s trakced velocity will be clamped to the [`follow_lookahead_max_value`](#lookahead_max_value) before calculating lookahead.
+
 In other words, no matter how fast the target's actual velocity is, the lookahead will only follow up to the speed defined here.
 
-<Property2D3DOnly :is2D="true" />
+</template>
+
+<template v-slot:propertyDescription3D>
+
+Enables a maximum velocity limit in `meters per second` for the `follow_lookahead` effect.
+
+If `true`, the `follow target`'s tracked velocity will be clamped to the [`follow_lookahead_max_value`](#lookahead_max_value) before calculating lookahead.<br>
+
+In other words, no matter how fast the target's actual velocity is, the lookahead will only follow up to the speed defined here.
 
 </template>
 
-<template v-slot:setMethod>
+<template v-slot:setMethod2D>
 
-`void` set_lookahead_max(`float` value)
+`void` set_lookahead_max(`bool` value)
 
 </template>
 
-<template v-slot:setExample>
+<template v-slot:setMethod3D>
+
+`void` set_follow_lookahead_max(`bool` value)
+
+</template>
+
+<template v-slot:setExample2D>
 
 ::: details Example
 ```gdscript
-pcam.set_lookahead_max(Vector2(500, 500))
+pcam.set_lookahead_max(true)
 ```
 :::
 
 </template>
 
-<template v-slot:getMethod>
-
-`float` get_lookahead_deceleration()
-
-</template>
-<template v-slot:getExample>
+<template v-slot:setExample3D>
 
 ::: details Example
 ```gdscript
-pcam.get_lookahead_deceleration()
+pcam.set_follow_lookahead_max(true)
 ```
 :::
 
 </template>
-</Property>
 
-[//]: # (<Property2D3D propertyName="lookahead_max" propertyName2D="lookahead_max" propertyName3D="follow_lookahead_max" propertyType2D="bool" propertyDefault2D="false" propertyType3D="bool" propertyDefault3D="false">)
+<template v-slot:getMethod2D>
 
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription2D>)
+`bool` get_lookahead_max()
 
-[//]: # ()
-[//]: # (Enables a maximum velocity limit in `pixels per second` for the `follow_lookahead` effect.<br><br>)
+</template>
 
-[//]: # (If `true`, the `follow target`'s velocity will be clamped to the `follow_lookahead_max_value` before calculating lookahead.<br>)
+<template v-slot:getMethod3D>
 
-[//]: # (In other words, no matter how fast the target's actual velocity is, the lookahead will only follow up to the speed defined here.)
+`bool` get_follow_lookahead_max()
 
-[//]: # (</template>)
+</template>
 
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription3D>)
+<template v-slot:getExample2D>
 
-[//]: # ()
-[//]: # (Enables a maximum velocity limit in `meters per second` for the `follow_lookahead` effect.<br><br>)
+::: details Example
+```gdscript
+pcam.get_lookahead_max()
+```
+:::
 
-[//]: # (If `true`, the `follow target`'s velocity will be clamped to the `follow_lookahead_max_value` before calculating lookahead.<br>)
+</template>
 
-[//]: # (In other words, no matter how fast the target's actual velocity is, the lookahead will only follow up to the speed defined here.)
+<template v-slot:getExample3D>
 
-[//]: # ()
-[//]: # (</template>)
+::: details Example
+```gdscript
+pcam.get_follow_lookahead_max()
+```
+:::
 
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod2D>)
-
-[//]: # ()
-[//]: # (`void` set_lookahead_max&#40;`bool` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod3D>)
-
-[//]: # ()
-[//]: # (`void` set_follow_lookahead_max&#40;`bool` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # (```gdscript)
-
-[//]: # (pcam.set_lookahead_max&#40;true&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # (```gdscript)
-
-[//]: # (pcam.set_follow_lookahead_max&#40;true&#41;)
-
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod2D>)
-
-[//]: # ()
-[//]: # (`bool` get_lookahead_max&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod3D>)
-
-[//]: # ()
-[//]: # (`bool` get_follow_lookahead_max&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # (pcam.get_lookahead_max&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # (```gdscript)
-
-[//]: # (pcam.get_follow_lookahead_max&#40;&#41;)
-
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # (</template>)
-
-[//]: # (</Property2D3D>)
+</template>
+</Property2D3D>
 
 
 
-<Property propertyName="lookahead_max_value" propertyType="Vector2" propertyDefault="Vector2(200, 200)">
-<template v-slot:propertyDescription>
+
+<Property2D3D propertyName="lookahead_max_value" propertyName2D="lookahead_max_value" propertyName3D="follow_lookahead_max_value" propertyType2D="Vector2" propertyDefault2D="Vector2(200, 200)" propertyType3D="Vector3" propertyDefault3D="Vector3(5, 5, 5)">
+
+<template v-slot:propertyDescription2D>
 
 The maximum `lookahead` velocity in `pixels per second`.
-The follow target's velocity will be clamped within these bounds on each axis before applying lookahead time.
 
-<Property2D3DOnly :is2D="true" />
-
-</template>
-
-<template v-slot:setMethod>
-
-`void` set_lookahead_max(`float` value)
+The `follow target`'s tracked velocity will be clamped within these bounds on each axis before applying lookahead time.
 
 </template>
 
-<template v-slot:setExample>
+<template v-slot:propertyDescription3D>
+
+The maximum `follow_lookahead` velocity in `meters per second`.
+
+The `follow target`'s tracked velocity will be clamped within these bounds on each axis before applying lookahead time.
+
+</template>
+
+<template v-slot:setMethod2D>
+
+`void` set_lookahead_max_value(`Vector2` value)
+
+</template>
+
+<template v-slot:setMethod3D>
+
+`void` set_follow_lookahead_max_value(`Vector3` value)
+
+</template>
+
+<template v-slot:setExample2D>
 
 ::: details Example
 ```gdscript
-pcam.set_lookahead_max(Vector2(500, 500))
+pcam.set_lookahead_max_value(Vector2(600, 600))
 ```
 :::
 
 </template>
 
-<template v-slot:getMethod>
-
-`float` get_lookahead_deceleration()
-
-</template>
-<template v-slot:getExample>
+<template v-slot:setExample3D>
 
 ::: details Example
 ```gdscript
-pcam.get_lookahead_deceleration()
+pcam.set_lookahead_max_value(Vector3(10, 10, 10))
 ```
 :::
 
 </template>
-</Property>
 
-[//]: # (<Property2D3D propertyName="lookahead_max_value" propertyName2D="lookahead_max_value" propertyName3D="follow_lookahead_max_value" propertyType2D="Vector2" propertyDefault2D="Vector2&#40;200, 200&#41;" propertyType3D="Vector3" propertyDefault3D="Vector3&#40;5, 5, 5&#41;">)
+<template v-slot:getMethod2D>
 
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription2D>)
+`Vector2` get_lookahead_max_value()
 
-[//]: # ()
-[//]: # (The maximum `lookahead` velocity in `pixels per second`.)
+</template>
 
-[//]: # ()
-[//]: # (The `follow target`'s velocity will be clamped within these bounds on each axis before applying lookahead time.)
+<template v-slot:getMethod3D>
 
-[//]: # ()
-[//]: # (</template>)
+`Vector3` get_lookahead_max_value()
 
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:propertyDescription3D>)
+</template>
 
-[//]: # ()
-[//]: # (The maximum `follow_lookahead` velocity in `meters per second`.)
+<template v-slot:getExample2D>
 
-[//]: # ()
-[//]: # (The `follow target`'s velocity will be clamped within these bounds on each axis before applying lookahead time.)
+::: details Example
+```gdscript
+pcam.get_lookahead_max_value()
+```
+:::
 
-[//]: # ()
-[//]: # (</template>)
+</template>
 
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod2D>)
+<template v-slot:getExample3D>
 
-[//]: # ()
-[//]: # (`void` set_lookahead_max_value&#40;`Vector2` value&#41;)
+::: details Example
+```gdscript
+pcam.get_lookahead_max_value()
+```
+:::
 
-[//]: # ()
-[//]: # (</template>)
+</template>
 
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setMethod3D>)
-
-[//]: # ()
-[//]: # (`void` set_follow_lookahead_max_value&#40;`Vector3` value&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # (pcam.set_lookahead_max_value&#40;Vector2&#40;600, 600&#41;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:setExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.set_lookahead_max_value&#40;Vector3&#40;10, 10, 10&#41;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod2D>)
-
-[//]: # ()
-[//]: # (`bool` get_lookahead_max_value&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getMethod3D>)
-
-[//]: # ()
-[//]: # (`bool` get_follow_lookahead_max_value&#40;&#41;)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<template v-slot:getExample2D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # ()
-[//]: # (```gdscript)
-
-[//]: # ()
-[//]: # (pcam.get_lookahead_max_value&#40;&#41;)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (<template v-slot:getExample3D>)
-
-[//]: # ()
-[//]: # (::: details Example)
-
-[//]: # (```gdscript)
-
-[//]: # (pcam.get_follow_lookahead_max_value&#40;&#41;)
-
-[//]: # (```)
-
-[//]: # (:::)
-
-[//]: # ()
-[//]: # (</template>)
-
-[//]: # ()
-[//]: # (</Property2D3D>)
-
+</Property2D3D>
 
 ## Methods
 

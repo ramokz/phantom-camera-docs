@@ -14,9 +14,6 @@ This _can_ lead to sudden camera jumps if the `Path` spline has steep curvatures
 ## Properties
 <!--@include: ./parts/follow-target.md-->
 
-
-
-
 <Property2D3D propertyName="follow_path" propertyType2D="Path2D" propertyDefault2D="null" propertyType3D="Path3D" propertyDefault3D="null">
 
 <template v-slot:propertyDescription>
@@ -83,7 +80,6 @@ pcam.get_follow_path()
 :::
 
 </template>
-
 </Property2D3D>
 
 <!--@include: ./parts/follow-offset.md-->
