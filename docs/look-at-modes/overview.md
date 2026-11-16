@@ -150,6 +150,257 @@ pcam.get_up_target()
 </Property>
 
 
+
+
+<Property propertyName="look_at_lookahead" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Enables velocity-based look-ahead. As the look at target moves the camera will move further ahead based on its velocity. The faster the `look at target` moves, the further ahead the camera will look.
+
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_look_at_lookahead(`bool` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_look_at_lookahead(true)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`bool` get_look_at_lookahead()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_lookahead()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="look_at_lookahead_time" propertyType="float" propertyDefault="0.1">
+<template v-slot:propertyDescription>
+
+The amount of seconds to look ahead of the follow target's position per axis based on the follow target's velocity.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_look_at_lookahead_time(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_look_at_lookahead_time(0.5)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_look_at_lookahead_time()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_lookahead_time()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="look_at_lookahead_acceleration" propertyType="float" propertyDefault="0.1">
+<template v-slot:propertyDescription>
+
+Determines the damping speed of how fast the camera should reach the [look_at_lookahead_time](#look_at_lookahead_time)
+target once the `look_at target` has positional velocity.
+
+**Lower value** = faster<br>
+**Higher value** = slower
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_look_at_lookahead_acceleration(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_look_at_lookahead_acceleration(0.5)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_look_at_lookahead_acceleration()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_lookahead_acceleration()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="look_at_lookahead_deacceleration" propertyType="float" propertyDefault="0.1">
+<template v-slot:propertyDescription>
+
+Determines the damping speed of how fast the camera should decelerate back to the `follow target`'s position
+once it has no positional velocity.
+
+**Lower value** = faster<br>
+**Higher value** = slower
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_look_at_lookahead_deacceleration(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_look_at_lookahead_deacceleration(0.5)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_look_at_lookahead_deacceleration()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_lookahead_deacceleration()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="look_at_lookahead_max" propertyType="bool" propertyDefault="false">
+<template v-slot:propertyDescription>
+
+Enables a maximum velocity limit in `meters per second` for [look_at_lookahead](#look_at_lookahead).
+
+If `true`, the `look at target`'s velocity will be clamped to the [`look_at_lookahead_max_value`](#look_at_lookahead_max_value).
+
+In other words, no matter how fast the target's actual velocity is, the lookahead will only follow up to the speed defined here.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_look_at_lookahead_max(`bool` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_look_at_lookahead_max(true)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`bool` get_look_at_lookahead_max()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_lookahead_max()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+<Property propertyName="look_at_lookahead_max_value" propertyType="float" propertyDefault="5">
+<template v-slot:propertyDescription>
+
+The maximum [`look_at_lookahead`](#look_at_lookahead) velocity in `meters per second` that will be tracked.
+
+</template>
+<template v-slot:setMethod>
+
+`void` set_look_at_lookahead_max_value(`float` value)
+
+</template>
+<template v-slot:setExample>
+
+::: details Example
+```gdscript
+pcam.set_look_at_lookahead_max_value(10)
+```
+:::
+
+</template>
+<template v-slot:getMethod>
+
+`float` get_look_at_lookahead_max_value()
+
+</template>
+<template v-slot:getExample>
+
+::: details Example
+```gdscript
+pcam.get_look_at_lookahead_max()
+```
+:::
+
+</template>
+</Property>
+
+
+
+
+
+
 ## Methods
 
 <Property propertyName="is_looking" propertyType="bool" isMethod="true">

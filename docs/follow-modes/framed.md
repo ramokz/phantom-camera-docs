@@ -12,6 +12,13 @@ Alternatively, enable the [show_viewfinder_in_play](#show_viewfinder_in_play) pr
 
 <VideoTabs propertyName="follow-framed-videos" video2d="../assets/videos/follow-framed-2d.mp4" video3d="../assets/videos/follow-framed-3d.mp4"/>
 
+::: tip Interactive Dead Zone Dragging
+Dead Zone, the green lines, can be manually dragged and adjusted in both the viewfinder and at runtime in the scene itself.
+The only requirement is that the active `PCam` is editable in the scene that is active / running.
+
+If a `PCam` is located within a instantiated scene, then that scene needs to have `Editable Children` (right-click and toggle it from the dropdown menu) enabled first - much like editing instantiated nodes in general. 
+:::
+
 ## Properties
 
 <!--@include: ./parts/follow-target.md-->
