@@ -235,7 +235,7 @@ _Dead zones will always be disabled in build exports._
 <Property propertyName="interactive_dead_zone" propertyType="int" propertyDefault="0">
 <template v-slot:propertyDescription>
 
-Defines where the [`dead_zone_width`](#dead_zone_width) and [`dead_zone_height`](dead_zone_height) edges should be editable by dragging the edges of the dead zone lines.
+Defines where the [`dead_zone_width`](#dead_zone_width) and [`dead_zone_height`](#dead_zone_height) edges should be editable by dragging the edges of the dead zone lines.
 
 By default, it is editable from both the editor viewfinder and at runtime.
 

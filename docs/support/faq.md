@@ -107,4 +107,4 @@ If you're using a physics object, such as `CharacterBody2D/3D` as a target, and 
 
 #### Suggestions
 1. The first recommendation is to enable `Physics Interpolation` inside `Project Setting`. This is generally recommended, and in many cases necessary.
-2. For 3D scenes, particularly when using [`Third Person Follow`](http://localhost:5173/follow-modes/third-person) with collision detection, switching the Physics Engine to `Jolt` inside `Project Settings/Physics/3D` can address the issue.
+2. For 3D scenes, particularly when using [`Third Person Follow`](/follow-modes/third-person) with collision detection, switching the Physics Engine to `Jolt` inside `Project Settings/Physics/3D` can address the issue.
