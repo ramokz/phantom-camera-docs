@@ -18,7 +18,7 @@ hero:
       link: https://github.com/ramokz/phantom-camera
     - theme: alt
       text: Asset Store
-      link: https://store-beta.godotengine.org/asset/ramokz/phantom-camera/
+      link: https://store.godotengine.org/asset/ramokz/phantom-camera/
 
 features:
   - icon:
